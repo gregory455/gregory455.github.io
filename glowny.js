@@ -36,4 +36,4 @@ window.setInterval(function(){
 	
 	Lama(1);
 	
-}, 1000);
+}, 10);
