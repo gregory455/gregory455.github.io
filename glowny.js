@@ -1,6 +1,7 @@
 var lamy = 0;
 var pastwiska = 0;
 var schabowe = 0;
+var kupno1 = 2;
 
 function Lama(number){
     lamy = lamy + number;
@@ -16,6 +17,18 @@ function sprzedanieLam(number){
 	}
     document.getElementById("lamy").innerHTML = lamy;
 	document.getElementById("schabowe").innerHTML = schabowe;
+};
+
+function kupnoPastwiska{
+	
+	if(schabowe >= kupno1){
+		
+    		schabowe = schabowe - kupno1;
+		pastwiska = pastwiska + 1;
+		kupno1 = kupno1 + 2;
+    		document.getElementById("schabowe").innerHTML = schabowe;
+		document.getElementById("pastwiska").innerHTML = pastwiska;
+	}
 };
 
 window.setInterval(function(){
