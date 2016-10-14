@@ -28,7 +28,7 @@ function kupnoPastwiska(number){
 		kupno1 = kupno1 + 2;
     		document.getElementById("schabowe").innerHTML = schabowe;
 		document.getElementById("pastwiska").innerHTML = pastwiska;
-		document.getElementById("kupno1").innerHTML =kupno1;
+		document.getElementById("kupno1").innerHTML = kupno1;
 	}
 };
 
