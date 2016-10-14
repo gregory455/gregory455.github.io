@@ -4,7 +4,7 @@ var schabowe = 0;
 var kupno1 = 2;
 
 function Lama(number){
-    lamy = lamy + number;
+    lamy = lamy + pastwiska + number;
     document.getElementById("lamy").innerHTML = lamy;
 };
 
