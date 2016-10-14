@@ -19,7 +19,7 @@ function sprzedanieLam(number){
 	document.getElementById("schabowe").innerHTML = schabowe;
 };
 
-function kupnoPastwiska{
+function kupnoPastwiska(number){
 	
 	if(schabowe >= kupno1){
 		
