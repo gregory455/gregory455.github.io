@@ -10,10 +10,10 @@ function Lama(number){
 
 function sprzedanieLam(number){
     
-	if(lamy >= 10){
+	if(lamy >= number){
 		
-		schabowe = schabowe + 1;
-		lamy = lamy - 10;
+		schabowe = schabowe + (number/10);
+		lamy = lamy - number;
 	}
     document.getElementById("lamy").innerHTML = lamy;
 	document.getElementById("schabowe").innerHTML = schabowe;
