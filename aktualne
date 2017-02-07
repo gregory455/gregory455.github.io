@@ -1,0 +1,73 @@
+<head>
+
+<style>
+    .czerwony
+    {
+        color:red;
+    }
+    .zolty
+    {
+        color:yellow;
+    }
+	.niebieski
+	{
+		color:blue;
+	}
+	.czarny
+	{
+		color:black;
+	}
+	.zielony
+	{
+		color:green;
+	}
+	.rozowy
+	{
+		color:pink;
+	}
+	.pomarancz
+	{
+		color:orange;
+	}
+	.c-zielony
+	{
+		color:darkgreen;
+	}
+</style>
+
+<meta charset="utf-8">
+<b><p><center>Wszystkie projekty: niedokończone, w trakcie prac i ukończone<p></b>
+<p><a href="index.html">Cofnij</center></a></p>
+</head>
+
+<body>
+<p>Kolory statusu - ale o co chodzi?</p>
+Czarny - coś co na 100% nie zostanie dokończone, nie ma sensu kontynuować prac nad tym lub rozpoczynać od nowa.</br>
+<span class="czerwony">Czerwony</span> - Raczej nie będzie kontynuowane na 99% (zawsze pozostaje ten 1%).</br>
+<span class="pomarancz">Pomarańczowy</span> - Może tak, może nie, trudno powiedzieć. Zazwyczaj projekty z brakiem motywacji do dokończenia ich.</br>
+<span class="zolty">Żółty</span> - Możliwe dokończenie w bliższej (lub dalszej) przyszłości.</br>
+<span class="niebieski">Niebieski</span> - Prace są ale idą bardzo wolno lub wolno.</br>
+<span class="rozowy">Różowy</span> - Prace idą w umiarkowanym stopniu.</br>
+<span class="c-zielony">Ciemno zielony</span> - Projekt priorytetowy robiony szybko, lub po prostu coś na co mam "faze".</br>
+<span class="zielony">Zielony</span> - Projekt ukończony.</br>
+<p></p><p></p>
+<p>Priorytet projektów</p>
+99+ -   Projekt priorytetowy</br>
+99-90 - Projekt super ważny</br>
+89-80 - Projekt bardzo ważny</br>
+79-70 - Projekt ważny</br>
+69-50 - Projekt normalny</br>
+49-30 - Projekt mniej ważny</br>
+29-20 - Projekt mało ważny</br>
+19-10 - Projekt bardzo mało ważny</br>
+9-1   - Projekt "w sumie niepotrzebny"</br>
+<p></p>
+<fieldset>
+Nazwa: "test"</br>
+Status: [<span class="zielony">#</span>]</br>
+Priorytet: 89</br>
+Opis: Tutaj wstaw długi i niepotrzebny opis w celu zapewnienia jak największych emocji podczas czytania.</br>
+Notka: Tutaj wstaw swoje wypociny na temat projektu.</br>
+Ocena: (TYLKO GDY SKOŃCZONY!!!) Tutaj wstaw ocene.</br>
+Download: Link do downloadu. Bo czego nie.
+</fieldset>
