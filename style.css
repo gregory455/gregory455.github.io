@@ -9,6 +9,20 @@
 				background-color: #ffff00;
 				cursor: pointer;
 				border: none;
+				color: yellow;
+				width: 220px;
+				height: 50px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 20px;
+				text-shadow:1px 1px black;
+				}
+
+			.button_button /* button */ {
+				background-color: #000000;
+				cursor: pointer;
+				border: none;
 				color: white;
 				width: 220px;
 				height: 50px;
