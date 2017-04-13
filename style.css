@@ -1,0 +1,123 @@
+		<style type="text/css">
+			
+			a.mouse1:hover, a.mouse1:active {
+			font-size: 150%;
+			background: blue;
+			}
+			
+			.button_yellow /* yellow */ {
+				background-color: #ffff00;
+				cursor: pointer;
+				border: none;
+				color: white;
+				width: 220px;
+				height: 50px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 20px;
+				text-shadow:1px 1px black;
+				}
+				
+			.button_yellow_s /* yellow */ {
+				background-color: #ffff00;
+				cursor: pointer;
+				border: none;
+				color: white;
+				width: 220px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				text-shadow:1px 1px black;
+				}
+				
+			.button_yellow:hover {background: orange;}
+			
+			.button_yellow_s:hover {background: orange;}
+			
+			table {
+				border: 1.5mm solid #ff6600;
+				table-layout: auto;
+				border-collapse: collapse;
+				empty-cells: show;
+			}
+			
+			td {
+				border: 0.5mm solid #e65c00;
+				background: #ff751a;
+				padding-left: 1.5mm;
+				padding-right: 1.5mm;
+				padding-top: 0.5mm;
+				padding-bottom: 0.5mm;
+			}
+			
+			th {
+				border: 1mm solid #e65c00;
+				background: #ff8533;
+				padding-left: 1.5mm;
+				padding-right: 1.5mm;
+				padding-top: 0.5mm;
+				padding-bottom: 0.5mm;
+			}
+			
+			h1 {
+				color: #ffff00;
+				font-size: 36px;
+				font-family: Sans;
+				font-style: italic;
+			}
+			
+			p.dotted {
+				border-color: #ffff00;
+				border-style: dotted;
+			}
+			
+			p.dashed {
+				border-color: #ffff00;
+				border-style: dashed;
+			}
+			
+			p.solid {
+				border-color: #ffff00;
+				border-style: solid;
+			}
+			
+			p.double {
+				border-color: #ffff00;
+				border-style: double;
+			}
+			
+			p.groove {
+				border-color: #ffff00;
+				border-style: groove;
+			}
+			
+			p.ridge {
+				border-color: #ffff00;
+				border-style: ridge;
+			}
+			
+			p.inset {
+				border-color: #ffff00;
+				border-style: inset;
+			}
+			
+			p.outset {
+				border-color: #ffff00;
+				border-style: outset;
+			}
+			
+			p.none {
+				border-color: #ffff00;
+				border-style: none;
+			}
+			
+			p.youtube {
+				border-color: #ffff00;
+				border-style: solid;
+				width: 560px;
+			}
+			
+			p.hidden {border-style: hidden;}
+		</style>
