@@ -20,6 +20,36 @@
 				text-shadow:1px 1px black;
 				}
 
+			.button2 {
+				background-color: cd0000;
+				cursor: pointer;
+				border: solid;
+				border-color: black;
+				color: white;
+				width: 150px;
+				height: 30px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 20px;
+				text-shadow:1px 1px black;
+				}
+
+			.button3 {
+				background-color: ae0000;
+				cursor: pointer;
+				border: solid;
+				border-color: black;
+				color: white;
+				width: 150px;
+				height: 30px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 20px;
+				text-shadow:1px 1px black;
+				}
+
 			.button_button /* button */ {
 				background-color: #05fdff;
 				cursor: pointer;
