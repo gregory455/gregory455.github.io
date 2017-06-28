@@ -234,6 +234,26 @@
 			height: 50px;
 			}
 			
+#dev {
+    margin     : auto;
+    border     : 1px solid white;
+    padding    : 0px;
+    width      : 650px;
+	background-color: gray;
+	color: white;
+	text-shadow:1px 1px black;
+}
+
+#data {
+    margin     : left;
+    border     : 1px solid white;
+    padding    : 0px;
+    width      : 150px;
+	background-color: #05fdff;
+	color: white;
+	text-shadow:1px 1px black;
+}
+			
 			p.dotted {
 				border-color: #ffff00;
 				border-style: dotted;
