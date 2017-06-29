@@ -187,11 +187,18 @@
 				padding-bottom: 0.5mm;
 			}
 			
-			h1 {
+			h2 {
 				color: #05fdff;
 				font-size: 36px;
 				text-shadow:1px 1px white;
 			}
+			
+			h1 {
+				color: #46c7f2;
+				font-size: 26px;
+				text-shadow:1px 1px white;
+			}
+			
 			
 			#pasek {
 			position: fixed;
@@ -233,7 +240,27 @@
 			background-color: #05fdff;
 			height: 50px;
 			}
-			
+		
+#projekt {
+    margin     : auto;
+    border     : 1px solid white;
+    padding    : 0px;
+    width      : 700px;
+	background-color: #366060;
+	color: white;
+	text-shadow:1px 1px black;
+}
+
+#zdjecie {
+    margin     : auto;
+    border     : 1px solid white;
+    padding    : 0px;
+    width      : 600px;
+	background-color: black;
+	color: white;
+	text-shadow:1px 1px black;
+}
+		
 #dev {
     margin     : auto;
     border     : 1px solid white;
