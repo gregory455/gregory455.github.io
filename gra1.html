@@ -1,0 +1,129 @@
+﻿<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	
+	<div id="div1">
+		Czas do zakończenia wyprawy: <span id="czas">0</span></br></p>
+		<button onclick="Wyprawa1()">Wyrusz do piwnicy</button>
+	</div>
+	
+	<div id="div2">
+		Przedmioty: <span id="przedmioty">0</span></br><p>
+		<button id="ukrywanie1">Pokaż/Ukryj przedmioty</button></br>
+		<div id="panel">Odrdzewiacz: <span id="odrdzewiacz">0</span><br>
+		Zardzewiały miedziany miecz: <span id="miecz1Z">0</span><br/>
+		Zardzewiały żelazny miecz: <span id="miecz2Z">0</span><br/>
+		Zardzewiały stalowy miecz: <span id="miecz3Z">0</span><br/>
+		Miedziany miecz: <span id="miecz1">0</span><br/>
+		Żelazny miecz: <span id="miecz2">0</span><br/>
+		Stalowy miecz: <span id="miecz3">0</span><br/></div>
+		<p>
+	</div>
+	
+	<div id="div2a">
+	Odrdzewianie</br></p>
+	<button onclick="odr()">Odrdzewiaj</button></br>
+		</center><div id="progress">
+			<div id="bar"></div>
+		</div></center>
+	</div>
+	
+	<div id="div3">
+		Sklep
+	</p>
+		Monety: <span id="monety">10</span>
+	</p>
+		<button onclick="KupOdrdzewiacz()">Kup Odrdzewiacz</button>
+	</div>
+
+			<script type="text/javascript" src="gra1.js"></script>
+	</body>
+	
+<script>
+$(document).ready(function(){
+    $("#ukrywanie1").click(function(){
+        $("#panel").slideToggle();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+ $("#div2a").toggle();
+});
+</script>
+
+<style> 
+#panel, #flip {
+}
+
+#panel {
+	border: solid 1px #c3c3c3;
+    display: none;
+	background-color: #CED6D4;
+}
+
+#div1 {
+	position:absolute;
+    left:10px;
+    top:10px;
+	width:250px;height:150px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+	padding: 5px;
+}
+
+#div2 {
+	position:absolute;
+    left:270px;
+	top:10px;
+	width:250px;height:150px;
+    text-align: center;
+    background-color: #e5eeec;
+    border: solid 1px #c3c3c3;
+	padding: 5px;
+}
+
+#div2a {
+	position:absolute;
+    left:270px;
+	top:171px;
+	width:249px;height:150px;
+    text-align: center;
+    background-color: #e5eeec;
+    border: solid 1px #c3c3c3;
+	padding: 5px;
+}
+
+#div3 {
+	position:absolute;
+    left:530px;
+	top:10px;
+	width:250px;height:150px;
+    text-align: center;
+    background-color: #e5e5cc;
+    border: solid 1px #c3c3c3;
+	padding: 5px;
+}
+
+#progress {
+	padding: 3px;
+	top:3px;
+    width: 97%;
+    background-color: grey;
+}
+
+#bar {
+	text-align: center;
+    width: 1%;
+    height: 15px;
+    background-color: orange;
+}
+</style>
+	
+</html>
