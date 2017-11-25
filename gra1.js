@@ -7,6 +7,17 @@ var ran3 = 0;
 var ran4 = 0;
 var blokada = false;
 var odrdzewianie = false;
+var max_cena = 10;
+var rage = 0;
+var popyt = 0;
+var start_sklep = false;
+var cena = 1;
+var cenaDod = 0;
+var wys = 0;
+var nic = 0;
+    var stanSklepu = document.getElementById("stanSklepu");  
+    stanSklepu.textContent = "zamknięty";  
+    var text = stanSklepu.textContent;  
 
 //Deklaracje przedmiotów
 var miecz1Z = 0;
@@ -65,27 +76,30 @@ function odr()	{
 		miecz3Z = miecz3Z - 1;
 		miecz3 = miecz3 + 1;
 		document.getElementById("odrdzewiacz").innerHTML = odrdzewiacz;
-		document.getElementById("miecz3Z").innerHTML = miecz1Z;
+		document.getElementById("miecz3Z").innerHTML = miecz3Z;
+		document.getElementById("miecz3").innerHTML = miecz3;
 		document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;
 		}, 10000);
 	} else if(miecz2Z >= 1 && odrdzewiacz >= 1){
-		move()
+		move();
 		setTimeout(function(){
 		odrdzewiacz = odrdzewiacz - 1;
 		miecz2Z = miecz2Z - 1;
 		miecz2 = miecz2 + 1;
 		document.getElementById("odrdzewiacz").innerHTML = odrdzewiacz;
-		document.getElementById("miecz2Z").innerHTML = miecz1Z;
+		document.getElementById("miecz2Z").innerHTML = miecz2Z;
+		document.getElementById("miecz2").innerHTML = miecz2;
 		document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;
 		}, 10000);
 	} else if(miecz1Z >= 1 && odrdzewiacz >= 1){
-		move()
+		move();
 		setTimeout(function(){
 		odrdzewiacz = odrdzewiacz - 1;
 		miecz1Z = miecz1Z - 1;
 		miecz1 = miecz1 + 1;
 		document.getElementById("odrdzewiacz").innerHTML = odrdzewiacz;
 		document.getElementById("miecz1Z").innerHTML = miecz1Z;
+		document.getElementById("miecz1").innerHTML = miecz1;
 		document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;
 		}, 10000);
 	}
@@ -104,6 +118,22 @@ function move() {
         } else {
             width++; 
             elem.style.width = width + '%'; 
+        }
+    }
+}
+
+function move2() {
+    var elem2 = document.getElementById("bar2"); 
+    var width2 = 1;
+    var id2 = setInterval(frame, 100);
+    function frame() {
+        if (width2 >= 100) {
+            clearInterval(id2);
+			width2 = 0;
+			elem2.style.width = 0;
+        } else {
+            width2++; 
+            elem2.style.width = width2 + '%'; 
         }
     }
 }
@@ -144,6 +174,94 @@ function Wyprawa1(){
 	document.getElementById("czas").innerHTML = czas;
 	}
 };
+
+function Sprzedaz(bron){
+	if(bron >= 1){
+	if(bron == miecz1Z){
+		max_cena = 3;
+		popyt = 50;
+		rage = 0;
+		start_sklep = true;
+		stanSklepu.textContent = "otwarty";
+		wys = miecz1Z;
+	}
+	if(bron == miecz2Z){
+		max_cena = 6;
+		popyt = 50;
+		rage = 0;
+		start_sklep = true;
+		stanSklepu.textContent = "otwarty";
+		wys = miecz2Z;
+	}
+	if(bron == miecz3Z){
+		max_cena = 10;
+		popyt = 50;
+		rage = 0;
+		start_sklep = true;
+		stanSklepu.textContent = "otwarty";
+		wys = miecz3Z;
+	}
+	if(bron == miecz1){
+		max_cena = 7;
+		popyt = 100;
+		rage = 0;
+		start_sklep = true;
+		stanSklepu.textContent = "otwarty";
+		wys = miecz1;
+	}
+	if(bron == miecz2){
+		max_cena = 11;
+		popyt = 100;
+		rage = 0;
+		start_sklep = true;
+		stanSklepu.textContent = "otwarty";
+		wys = miecz2;
+	}
+	if(bron == miecz3){
+		max_cena = 17;
+		popyt = 100;
+		rage = 0;
+		start_sklep = true;
+		stanSklepu.textContent = "otwarty";
+		wys = miecz3;
+	}
+	}
+	bron == nic;
+
+}
+
+function Sprzedaz2(){
+	if(start_sklep == true){
+		move2();
+		setTimeout(function(){
+	popyt = popyt - ((cena / max_cena) * 50);
+				document.getElementById("popyt").innerHTML = popyt;
+	ran1 = Math.floor((Math.random() * popyt) + ((popyt / 1.7)));
+				document.getElementById("ran1").innerHTML = ran1;
+	if(ran1 >= popyt && ran1 >s 0){
+		monety = monety + cena;
+		document.getElementById("monety").innerHTML = monety;
+		start_sklep = false;
+		stanSklepu.textContent = "zamknięty";
+	}
+	if(ran1 < popyt || ran1 <= 0){
+	Sprzedaz(wys);
+	}
+	}, 10000);
+	}
+}
+
+function ZwiekszCene(CenaDod){
+	cena = cena + CenaDod;
+	document.getElementById("cena").innerHTML = cena;
+}
+
+function ZmniejszCene(CenaDod){
+	if(cena >= 1){
+	cena = cena - CenaDod;
+	document.getElementById("cena").innerHTML = cena;
+	}
+}
 
 window.setInterval(function(){
 	

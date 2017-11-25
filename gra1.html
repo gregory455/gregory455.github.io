@@ -7,8 +7,8 @@
 	<body>
 	
 	<div id="div1">
-		Czas do zakończenia wyprawy: <span id="czas">0</span></br></p>
-		<button onclick="Wyprawa1()">Wyrusz do piwnicy</button>
+		<p style="color:white"><br>Czas: <span id="czas">0</span></br></p>
+		<button id="piwnica" onclick="Wyprawa1()"></button>
 	</div>
 	
 	<div id="div2">
@@ -39,6 +39,26 @@
 	</p>
 		<button onclick="KupOdrdzewiacz()">Kup Odrdzewiacz</button>
 	</div>
+	
+	<div id="div4">
+		Twój sklep jest <span id="stanSklepu"></span>
+		<button id="ukrywanie2">Pokaż/Ukryj przedmioty</button></br>
+		<div id="panel2"><button onclick="Sprzedaz(miecz1Z)">Wystaw zardzewiały miedziany miecz</button>
+		<button onclick="Sprzedaz(miecz2Z)">Wystaw zardzewiały żelazny miecz</button>
+		<button onclick="Sprzedaz(miecz3Z)">Wystaw zardzewiały stalowy miecz</button>
+		<button onclick="Sprzedaz(miecz1)">Wystaw miedziany miecz</button>
+		<button onclick="Sprzedaz(miecz2)">Wystaw żelazny miecz</button>
+		<button onclick="Sprzedaz(miecz3)">Wystaw stalowy miecz</button></p></div>
+		Cena przedmiotu: <span id="cena">0</span></br>
+		<button onclick="ZwiekszCene(1)">Zwiększ cenę</button></br>
+		<button onclick="ZmniejszCene(1)">Zmniejsz cenę</button><p>
+		<button onclick="Sprzedaz2()">Próbuj sprzedać</button><p>
+		</center><div id="progress2">
+			<div id="bar2"></div>
+		</div></center><p>
+		popyt: <span id="popyt">1</span><br>
+		ran1: <span id="ran1">1</span>
+	</div>
 
 			<script type="text/javascript" src="gra1.js"></script>
 	</body>
@@ -47,6 +67,14 @@
 $(document).ready(function(){
     $("#ukrywanie1").click(function(){
         $("#panel").slideToggle();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#ukrywanie2").click(function(){
+        $("#panel2").slideToggle();
     });
 });
 </script>
@@ -68,6 +96,13 @@ $(document).ready(function(){
 	z-index: 110;
 }
 
+#panel2 {
+	border: solid 1px #c3c3c3;
+    display: none;
+	background-color: #CED6D4;
+	z-index: 110;
+}
+
 #div1 {
 	position:absolute;
     left:10px;
@@ -77,11 +112,12 @@ $(document).ready(function(){
     background-color: #e5eecc;
     border: solid 1px #c3c3c3;
 	padding: 5px;
+	background-image: url("div1.png");
 }
 
 #div2 {
 	position:absolute;
-    left:270px;
+    left:273px;
 	top:10px;
 	width:250px;height:150px;
     text-align: center;
@@ -92,9 +128,9 @@ $(document).ready(function(){
 
 #div2a {
 	position:absolute;
-    left:270px;
-	top:171px;
-	width:249px;height:150px;
+    left:799px;
+	top:10px;
+	width:250px;height:150px;
     text-align: center;
     background-color: #e5eeec;
     border: solid 1px #c3c3c3;
@@ -104,13 +140,25 @@ $(document).ready(function(){
 
 #div3 {
 	position:absolute;
-    left:530px;
+    left:536px;
 	top:10px;
 	width:250px;height:150px;
     text-align: center;
     background-color: #e5e5cc;
     border: solid 1px #c3c3c3;
 	padding: 5px;
+}
+
+#div4 {
+	position:absolute;
+    left:1062px;
+	top:10px;
+	width:250px;height:300px;
+    text-align: center;
+    background-color: #e5eeec;
+    border: solid 1px #c3c3c3;
+	padding: 5px;
+	z-index: 100;
 }
 
 #progress {
@@ -125,6 +173,28 @@ $(document).ready(function(){
     width: 1%;
     height: 15px;
     background-color: orange;
+}
+
+#progress2 {
+	padding: 3px;
+	top:3px;
+    width: 97%;
+    background-color: grey;
+}
+
+#bar2 {
+	text-align: center;
+    width: 1%;
+    height: 15px;
+    background-color: yellow;
+}
+
+#piwnica {
+	display: absolute;
+	width: 63px;
+	height: 22px;
+	background-image: url("piwnica.png");
+	background-size: 62px 21px;
 }
 </style>
 	
