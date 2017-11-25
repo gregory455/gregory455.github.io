@@ -42,7 +42,7 @@
 	
 	<div id="div4">
 		Twój sklep jest <span id="stanSklepu"></span>
-		<button id="ukrywanie2">Pokaż/Ukryj przedmioty</button></br>
+		<button id="ukrywanie2">Pokaż/Ukryj przedmioty</button></br><p>
 		<div id="panel2"><button onclick="Sprzedaz(miecz1Z)">Wystaw zardzewiały miedziany miecz</button>
 		<button onclick="Sprzedaz(miecz2Z)">Wystaw zardzewiały żelazny miecz</button>
 		<button onclick="Sprzedaz(miecz3Z)">Wystaw zardzewiały stalowy miecz</button>
@@ -53,11 +53,10 @@
 		<button onclick="ZwiekszCene(1)">Zwiększ cenę</button></br>
 		<button onclick="ZmniejszCene(1)">Zmniejsz cenę</button><p>
 		<button onclick="Sprzedaz2()">Próbuj sprzedać</button><p>
+		max: <span id="max_cena">0</span>
 		</center><div id="progress2">
 			<div id="bar2"></div>
 		</div></center><p>
-		popyt: <span id="popyt">1</span><br>
-		ran1: <span id="ran1">1</span>
 	</div>
 			<script type="text/javascript" src="gra1.js"></script>
 	</body>
@@ -152,7 +151,7 @@ $(document).ready(function(){
 	position:absolute;
     left:1062px;
 	top:10px;
-	width:250px;height:300px;
+	width:250px;height:340px;
     text-align: center;
     background-color: #e5eeec;
     border: solid 1px #c3c3c3;

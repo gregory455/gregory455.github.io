@@ -235,20 +235,46 @@ function Sprzedaz2(){
 		move2();
 		setTimeout(function(){
 	popyt = popyt - ((cena / max_cena) * 50);
-				document.getElementById("popyt").innerHTML = popyt;
 	ran1 = Math.floor((Math.random() * popyt) + ((popyt / 1.5)));
-				document.getElementById("ran1").innerHTML = ran1;
 	if(ran1 >= popyt && ran1 > 0){
 		monety = monety + cena;
 		document.getElementById("monety").innerHTML = monety;
 		start_sklep = false;
 		stanSklepu.textContent = "zamknięty";
+			Zabranie();
 	}
 	if(ran1 < popyt || ran1 <= 0){
 	Sprzedaz(wys);
 	}
 	}, 10000);
 	}
+}
+
+function Zabranie(){
+	if(wys == miecz1Z){
+	miecz1Z = miecz1Z - 1;
+	document.getElementById("miecz1Z").innerHTML = miecz1Z;
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	if(wys == miecz2Z){
+	miecz2Z = miecz2Z - 1;
+	document.getElementById("miecz2Z").innerHTML = miecz2Z;
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	if(wys == miecz3Z){
+	miecz3Z = miecz3Z - 1;
+	document.getElementById("miecz3Z").innerHTML = miecz3Z;
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	if(wys == miecz1){
+	miecz1 = miecz1 - 1;
+	document.getElementById("miecz1").innerHTML = miecz1;
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	if(wys == miecz2){
+	miecz2 = miecz2 - 1;
+	document.getElementById("miecz2").innerHTML = miecz2;
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	if(wys == miecz3){
+	miecz3 = miecz3 - 1;
+	document.getElementById("miecz3").innerHTML = miecz3;
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
 }
 
 function ZwiekszCene(CenaDod){
