@@ -15,6 +15,7 @@ var cena = 1;
 var cenaDod = 0;
 var wys = 0;
 var nic = 0;
+var odrdzewianie_blokada = false;
 var plecak = false;
     var stanSklepu = document.getElementById("stanSklepu");  
     stanSklepu.textContent = "zamknięty";  
@@ -102,9 +103,12 @@ function Odliczanie(number){
 };
 
 function odr()	{
+	if(odrdzewianie_blokada == false){
 	if(miecz3Z >= 1 && odrdzewiacz >= 1){
 		move();
+		odrdzewianie_blokada = true;
 		setTimeout(function(){
+		odrdzewianie_blokada = false;
 		odrdzewiacz = odrdzewiacz - 1;
 		miecz3Z = miecz3Z - 1;
 		miecz3 = miecz3 + 1;
@@ -115,7 +119,9 @@ function odr()	{
 		}, 10000);
 	} else if(miecz2Z >= 1 && odrdzewiacz >= 1){
 		move();
+		odrdzewianie_blokada = true;
 		setTimeout(function(){
+		odrdzewianie_blokada = false;
 		odrdzewiacz = odrdzewiacz - 1;
 		miecz2Z = miecz2Z - 1;
 		miecz2 = miecz2 + 1;
@@ -126,7 +132,9 @@ function odr()	{
 		}, 10000);
 	} else if(miecz1Z >= 1 && odrdzewiacz >= 1){
 		move();
+		odrdzewianie_blokada = true;
 		setTimeout(function(){
+		odrdzewianie_blokada = false;
 		odrdzewiacz = odrdzewiacz - 1;
 		miecz1Z = miecz1Z - 1;
 		miecz1 = miecz1 + 1;
@@ -135,6 +143,7 @@ function odr()	{
 		document.getElementById("miecz1").innerHTML = miecz1;
 		document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;
 		}, 10000);
+	}
 	}
 }
 		
