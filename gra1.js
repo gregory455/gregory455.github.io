@@ -1,4 +1,4 @@
-﻿var monety = 10;
+﻿var monety = 30;
 var dzien = 1;
 var odrdzewiacz = 0;
 var ran1 = 0;
@@ -15,11 +15,15 @@ var cena = 1;
 var cenaDod = 0;
 var wys = 0;
 var nic = 0;
+var plecak = false;
     var stanSklepu = document.getElementById("stanSklepu");  
     stanSklepu.textContent = "zamknięty";  
     var text = stanSklepu.textContent;  
 
 //Deklaracje przedmiotów
+var smieci1 = 0;
+var smieci2 = 0;
+var smieci3 = 0;
 var miecz1Z = 0;
 var miecz1ZO = "Zardzewiały miedziany miecz";
 var miecz2Z = 0;
@@ -39,21 +43,50 @@ var czas = 0;
 var x = 0;
 
 function Losowanie() {
-	
+	if(plecak == true){
+		var lol;
+		for(lol = 0; lol < 3; lol++){
 	if(czas == 0){
 	ran1 = Math.floor((Math.random() * 3) + 1);
 			
-		x = Math.floor((Math.random() * 10) + 1);
+		x = Math.floor((Math.random() * 21) + 1);
 		
-		if(x < 8){
+		if(x <= 10){
+			smieci1 = smieci1 + 1;
+			document.getElementById("smieci1").innerHTML = smieci1;
+		} else if(x <= 16 && x > 10){
+			smieci2 = smieci2 + 1;
+			document.getElementById("smieci2").innerHTML = smieci2;
+		} else if(x <= 19 && x > 16){
 			miecz1Z = miecz1Z + 1;
 			document.getElementById("miecz1Z").innerHTML = miecz1Z;
-		} else if(x < 10 && x > 7){
+		} else if(x <= 21){
 			miecz2Z = miecz2Z + 1;
 			document.getElementById("miecz2Z").innerHTML = miecz2Z;
-		} else if(x > 9){
-			miecz3Z = miecz3Z + 1;
-			document.getElementById("miecz3Z").innerHTML = miecz3Z;
+		};
+		blokada = false;
+		document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;
+	}
+		}
+	} else
+		
+	if(czas == 0){
+	ran1 = Math.floor((Math.random() * 3) + 1);
+			
+		x = Math.floor((Math.random() * 21) + 1);
+		
+		if(x <= 10){
+			smieci1 = smieci1 + 1;
+			document.getElementById("smieci1").innerHTML = smieci1;
+		} else if(x <= 16 && x > 10){
+			smieci2 = smieci2 + 1;
+			document.getElementById("smieci2").innerHTML = smieci2;
+		} else if(x <= 19 && x > 16){
+			miecz1Z = miecz1Z + 1;
+			document.getElementById("miecz1Z").innerHTML = miecz1Z;
+		} else if(x <= 21){
+			miecz2Z = miecz2Z + 1;
+			document.getElementById("miecz2Z").innerHTML = miecz2Z;
 		};
 		blokada = false;
 		document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;
@@ -140,7 +173,7 @@ function move2() {
 
 function KupOdrdzewiacz(){
     
-	if(monety > 3){
+	if(monety >= 3){
     monety = monety - 3;
 	odrdzewiacz = odrdzewiacz + 1;
 	document.getElementById("monety").innerHTML = monety;
@@ -151,6 +184,17 @@ function KupOdrdzewiacz(){
 		 $("#div2a").toggle();
 		 odrdzewianie = true;
 	}
+	};
+};
+
+function KupPlecak(){
+    
+	if(monety >= 20 && plecak == false){
+    monety = monety - 20;
+	plecak = true;
+	document.getElementById("monety").innerHTML = monety;
+		$("#plecak").slideToggle();
+		$("#plecak").fadeIn('slow').delay(1000).hide(0);
 	};
 };
 

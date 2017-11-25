@@ -14,13 +14,17 @@
 	<div id="div2">
 		Przedmioty: <span id="przedmioty">0</span></br><p>
 		<button id="ukrywanie1">Pokaż/Ukryj przedmioty</button></br>
+		<button id="ukrywanie3">Pokaż/Ukryj śmieci</button></br>
 		<div id="panel">Odrdzewiacz: <span id="odrdzewiacz">0</span><br>
-		Zardzewiały miedziany miecz: <span id="miecz1Z">0</span><br/>
-		Zardzewiały żelazny miecz: <span id="miecz2Z">0</span><br/>
-		Zardzewiały stalowy miecz: <span id="miecz3Z">0</span><br/>
-		Miedziany miecz: <span id="miecz1">0</span><br/>
-		Żelazny miecz: <span id="miecz2">0</span><br/>
-		Stalowy miecz: <span id="miecz3">0</span><br/></div>
+		Stary zardzewiały miedziany miecz: <span id="miecz1Z">0</span><br/>
+		Stary zardzewiały żelazny miecz: <span id="miecz2Z">0</span><br/>
+		Stary zardzewiały stalowy miecz: <span id="miecz3Z">0</span><br/>
+		Stary miedziany miecz: <span id="miecz1">0</span><br/>
+		Stary żelazny miecz: <span id="miecz2">0</span><br/>
+		Stary stalowy miecz: <span id="miecz3">0</span><br/></div>
+		<div id="panel3">Miedziane śmieci: <span id="smieci1">0</span><br>
+		Żelazne śmieci: <span id="smieci2">0</span><br/>
+		Stalowe śmieci: <span id="smieci3">0</span><br/></div>
 		<p>
 	</div>
 	
@@ -37,18 +41,20 @@
 	</p>
 		Monety: <span id="monety">10</span>
 	</p>
-		<button onclick="KupOdrdzewiacz()">Kup Odrdzewiacz</button>
+		<button onclick="KupOdrdzewiacz()">Kup Odrdzewiacz</button> 3 Monety<br>
+		<button onclick="KupPlecak()">Kup Plecak</button> 20 Monet<br>
+		<div id="plecak">Kupiłeś plecak</div>
 	</div>
 	
 	<div id="div4">
 		Twój sklep jest <span id="stanSklepu"></span>
 		<button id="ukrywanie2">Pokaż/Ukryj przedmioty</button></br><p>
 		<div id="panel2"><button onclick="Sprzedaz(miecz1Z)">Wystaw zardzewiały miedziany miecz</button>
-		<button onclick="Sprzedaz(miecz2Z)">Wystaw zardzewiały żelazny miecz</button>
-		<button onclick="Sprzedaz(miecz3Z)">Wystaw zardzewiały stalowy miecz</button>
-		<button onclick="Sprzedaz(miecz1)">Wystaw miedziany miecz</button>
-		<button onclick="Sprzedaz(miecz2)">Wystaw żelazny miecz</button>
-		<button onclick="Sprzedaz(miecz3)">Wystaw stalowy miecz</button></p></div>
+		<button onclick="Sprzedaz(miecz2Z)">Wystaw stary zardzewiały żelazny miecz</button>
+		<button onclick="Sprzedaz(miecz3Z)">Wystaw stary zardzewiały stalowy miecz</button>
+		<button onclick="Sprzedaz(miecz1)">Wystaw stary miedziany miecz</button>
+		<button onclick="Sprzedaz(miecz2)">Wystaw stary żelazny miecz</button>
+		<button onclick="Sprzedaz(miecz3)">Wystaw stary stalowy miecz</button></p></div>
 		Cena przedmiotu: <span id="cena">0</span></br>
 		<button onclick="ZwiekszCene(1)">Zwiększ cenę</button></br>
 		<button onclick="ZmniejszCene(1)">Zmniejsz cenę</button><p>
@@ -78,6 +84,14 @@ $(document).ready(function(){
 
 <script>
 $(document).ready(function(){
+    $("#ukrywanie3").click(function(){
+        $("#panel3").slideToggle();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
  $("#div2a").toggle();
 });
 </script>
@@ -94,6 +108,13 @@ $(document).ready(function(){
 }
 
 #panel2 {
+	border: solid 1px #c3c3c3;
+    display: none;
+	background-color: #CED6D4;
+	z-index: 110;
+}
+
+#panel3 {
 	border: solid 1px #c3c3c3;
     display: none;
 	background-color: #CED6D4;
@@ -192,6 +213,12 @@ $(document).ready(function(){
 	height: 22px;
 	background-image: url("piwnica.png");
 	background-size: 62px 21px;
+}
+
+#plecak {
+	background-color: white;
+	border: solid 1px #c3c3c3;
+	display: none;
 }
 </style>
 	
