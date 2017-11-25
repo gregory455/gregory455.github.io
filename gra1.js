@@ -1,4 +1,4 @@
-﻿var monety = 30;
+﻿var monety = 10;
 var dzien = 1;
 var odrdzewiacz = 0;
 var ran1 = 0;
