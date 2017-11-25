@@ -236,9 +236,9 @@ function Sprzedaz2(){
 		setTimeout(function(){
 	popyt = popyt - ((cena / max_cena) * 50);
 				document.getElementById("popyt").innerHTML = popyt;
-	ran1 = Math.floor((Math.random() * popyt) + ((popyt / 1.7)));
+	ran1 = Math.floor((Math.random() * popyt) + ((popyt / 1.5)));
 				document.getElementById("ran1").innerHTML = ran1;
-	if(ran1 >= popyt && ran1 >s 0){
+	if(ran1 >= popyt && ran1 > 0){
 		monety = monety + cena;
 		document.getElementById("monety").innerHTML = monety;
 		start_sklep = false;
