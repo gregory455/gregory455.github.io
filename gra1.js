@@ -237,7 +237,7 @@ function Sprzedaz(bron){
 		start_sklep = true;
 		stanSklepu.textContent = "otwarty";
 		wys = miecz1Z;
-	}
+	} else
 	if(bron == miecz2Z){
 		max_cena = 6;
 		popyt = 50;
@@ -245,7 +245,7 @@ function Sprzedaz(bron){
 		start_sklep = true;
 		stanSklepu.textContent = "otwarty";
 		wys = miecz2Z;
-	}
+	} else
 	if(bron == miecz3Z){
 		max_cena = 10;
 		popyt = 50;
@@ -253,7 +253,7 @@ function Sprzedaz(bron){
 		start_sklep = true;
 		stanSklepu.textContent = "otwarty";
 		wys = miecz3Z;
-	}
+	} else
 	if(bron == miecz1){
 		max_cena = 7;
 		popyt = 100;
@@ -261,7 +261,7 @@ function Sprzedaz(bron){
 		start_sklep = true;
 		stanSklepu.textContent = "otwarty";
 		wys = miecz1;
-	}
+	} else
 	if(bron == miecz2){
 		max_cena = 11;
 		popyt = 100;
@@ -269,7 +269,7 @@ function Sprzedaz(bron){
 		start_sklep = true;
 		stanSklepu.textContent = "otwarty";
 		wys = miecz2;
-	}
+	} else
 	if(bron == miecz3){
 		max_cena = 17;
 		popyt = 100;
