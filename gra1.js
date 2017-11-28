@@ -222,7 +222,7 @@ function kupnoPastwiska(number){
 
 function Wyprawa1(){
 	if(blokada == false){
-	czas = 30;
+	czas = 20;
 	blokada = true;
 	document.getElementById("czas").innerHTML = czas;
 	}
