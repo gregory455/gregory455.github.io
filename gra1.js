@@ -307,23 +307,23 @@ function Zabranie(){
 	if(wys == miecz1Z){
 	miecz1Z = miecz1Z - 1;
 	document.getElementById("miecz1Z").innerHTML = miecz1Z;
-	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;} else
 	if(wys == miecz2Z){
 	miecz2Z = miecz2Z - 1;
 	document.getElementById("miecz2Z").innerHTML = miecz2Z;
-	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;} else
 	if(wys == miecz3Z){
 	miecz3Z = miecz3Z - 1;
 	document.getElementById("miecz3Z").innerHTML = miecz3Z;
-	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;} else
 	if(wys == miecz1){
 	miecz1 = miecz1 - 1;
 	document.getElementById("miecz1").innerHTML = miecz1;
-	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;} else
 	if(wys == miecz2){
 	miecz2 = miecz2 - 1;
 	document.getElementById("miecz2").innerHTML = miecz2;
-	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;}
+	document.getElementById("przedmioty").innerHTML = miecz1Z + miecz2Z + miecz3Z + miecz1 + miecz2 + miecz3 + odrdzewiacz;} else
 	if(wys == miecz3){
 	miecz3 = miecz3 - 1;
 	document.getElementById("miecz3").innerHTML = miecz3;
