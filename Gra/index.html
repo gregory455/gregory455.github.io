@@ -1,0 +1,233 @@
+﻿<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+	
+	<div id="div1">
+	</p>
+	<button id="ukrywanie1">Pokaż/Ukryj stare bronie</button></br>
+	<button id="ukrywanie2">Pokaż/Ukryj zwykłe bronie</button></br>
+	<button id="ukrywanie3">Pokaż/Ukryj przedmioty</button></br>
+	<button id="ukrywanie4">Pokaż/Ukryj kawałki metalu</button></br>
+	</p>
+		<div id="panel">
+			Stary miedziany miecz: <span id="miecz1">0</span><br/>
+			Stary cynowy miecz: <span id="miecz2">0</span><br/>
+			Stary żelazny miecz: <span id="miecz3">0</span><br/>
+			Stary miecz z brązu: <span id="miecz4">0</span><br/>
+			Stary srebrny miecz: <span id="miecz5">0</span><br/>
+			Stary stalowy miecz: <span id="miecz6">0</span><br/>
+			Stary złoty miecz: <span id="miecz7">0</span><br/>
+			Stary durastalowy miecz: <span id="miecz8">0</span><br/>
+			Stary tytanowy miecz: <span id="miecz9">0</span><br/>
+		</div>
+		
+		<div id="panel2">
+			Miedziany miecz: <span id="miecz1">0</span><br/>
+			Cynowy miecz: <span id="miecz2">0</span><br/>
+			Żelazny miecz: <span id="miecz3">0</span><br/>
+			Miecz z brązu: <span id="miecz4">0</span><br/>
+			Srebrny miecz: <span id="miecz5">0</span><br/>
+			Stalowy miecz: <span id="miecz6">0</span><br/>
+			Złoty miecz: <span id="miecz7">0</span><br/>
+			Durastalowy miecz: <span id="miecz8">0</span><br/>
+			Tytanowy miecz: <span id="miecz9">0</span><br/>
+		</div>
+		
+		<div id="panel3">
+			Odrdzewiacz: <span id="odrdzewiacz">0</span><br/>
+		</div>
+		
+		<div id="panel4">
+			Miedziane kawałki: <span id="smieci1">0</span><br/>
+			Cynowe kawałki: <span id="smieci2">0</span><br/>
+			Żelazne kawałki: <span id="smieci3">0</span><br/>
+			Kawałki z brązu: <span id="smieci4">0</span><br/>
+			Srebrne kawałki: <span id="smieci5">0</span><br/>
+			Stalowe kawałki: <span id="smieci6">0</span><br/>
+			Złote kawałki: <span id="smieci7">0</span><br/>
+			Durastalowe kawałki: <span id="smieci8">0</span><br/>
+			Tytanowe kawałki: <span id="smieci9">0</span><br/>
+		</div>
+		
+		</div>
+	
+	<div id="div3">
+	</div>
+	
+	<div id="div2">
+	</p>
+	<button onclick="odr()">Odrdzewiaj</button></br>
+		</center><div id="progress">
+			<div id="bar"></div>
+		</div></center>
+	</div>
+	
+	<div id="div4">
+		<p style="color:white"><br>Czas: <span id="czas">0</span></br></p>
+		<button id="piwnica" onclick="Wyprawa1()"></button>
+	</div>
+	
+	<script type="text/javascript" src="gra1.js"></script>
+	</body>
+
+<script>
+$(document).ready(function(){
+    $("#ukrywanie2").click(function(){
+        $("#panel2").slideToggle();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#ukrywanie1").click(function(){
+        $("#panel").slideToggle();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#ukrywanie3").click(function(){
+        $("#panel3").slideToggle();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#ukrywanie4").click(function(){
+        $("#panel4").slideToggle();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+ $("#div2a").toggle();
+});
+</script>
+
+<style> 
+#panel, #flip {
+}
+
+#panel {
+	border: solid 1px #c3c3c3;
+    display: none;
+	background-color: #CED6D4;
+}
+
+#panel2 {
+	border: solid 1px #c3c3c3;
+    display: none;
+	background-color: #CED6D4;
+}
+
+#panel3 {
+	border: solid 1px #c3c3c3;
+    display: none;
+	background-color: #CED6D4;
+}
+
+#panel4 {
+	border: solid 1px #c3c3c3;
+    display: none;
+	background-color: #CED6D4;
+}
+
+#div1 {
+	position:absolute;
+	width:252px;height:635px;
+    text-align: center;
+    background-color: #000000;
+	background-image: url("div1.png");
+}
+
+#div2 {
+	position:absolute;
+    left:260px;
+	width:700px;height:500px;
+    text-align: center;
+    background-color: #e5eeec;
+	background-image: url("tlo1.png");
+}
+
+#div2a {
+	position:absolute;
+    left:799px;
+	top:10px;
+	width:250px;height:150px;
+    text-align: center;
+    background-color: #e5eeec;
+    border: solid 1px #c3c3c3;
+	padding: 5px;
+	z-index: 100;
+}
+
+#div3 {
+	position:absolute;
+    left:260px;
+	top:500px;
+	width:700px;height:143px;
+    text-align: center;
+    background-color: gray;
+}
+
+#div4 {
+	position:absolute;
+    left:960px;
+	width:340px;height:635px;
+    text-align: center;
+	background-image: url("div4.png");
+    background-color: black;
+}
+
+#progress {
+	padding: 3px;
+	top:3px;
+    width: 97%;
+    background-color: grey;
+}
+
+#bar {
+	text-align: center;
+    width: 1%;
+    height: 15px;
+    background-color: orange;
+}
+
+#progress2 {
+	padding: 3px;
+	top:3px;
+    width: 97%;
+    background-color: grey;
+}
+
+#bar2 {
+	text-align: center;
+    width: 1%;
+    height: 15px;
+    background-color: yellow;
+}
+
+#piwnica {
+	display: absolute;
+	width: 63px;
+	height: 22px;
+	background-image: url("piwnica.png");
+	background-size: 62px 21px;
+}
+
+#plecak {
+	background-color: white;
+	border: solid 1px #c3c3c3;
+	display: none;
+}
+</style>
+	
+</html>
