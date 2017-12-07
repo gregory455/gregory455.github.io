@@ -39,6 +39,54 @@ var plecak = false;
 // 15 - ebonitowe
 // 16 - z uridium
 
+var msztabka1 = 0;
+var ssztabka1 = 0;
+var dsztabka1 = 0;
+var msztabka2 = 0;
+var ssztabka2 = 0;
+var dsztabka2 = 0;
+var msztabka3 = 0;
+var ssztabka3 = 0;
+var dsztabka3 = 0;
+var msztabka4 = 0;
+var ssztabka4 = 0;
+var dsztabka4 = 0;
+var msztabka5 = 0;
+var ssztabka5 = 0;
+var dsztabka5 = 0;
+var msztabka6 = 0;
+var ssztabka6 = 0;
+var dsztabka6 = 0;
+var msztabka7 = 0;
+var ssztabka7 = 0;
+var dsztabka7 = 0;
+var msztabka8 = 0;
+var ssztabka8 = 0;
+var dsztabka8 = 0;
+var msztabka9 = 0;
+var ssztabka9 = 0;
+var dsztabka9 = 0;
+var msztabka10 = 0;
+var ssztabka10 = 0;
+var dsztabka10 = 0;
+var msztabka11 = 0;
+var ssztabka11 = 0;
+var dsztabka11 = 0;
+var msztabka12 = 0;
+var ssztabka12 = 0;
+var dsztabka12 = 0;
+var msztabka13 = 0;
+var ssztabka13 = 0;
+var dsztabka13 = 0;
+var msztabka14 = 0;
+var ssztabka14 = 0;
+var dsztabka14 = 0;
+var msztabka15 = 0;
+var ssztabka15 = 0;
+var dsztabka15 = 0;
+var msztabka16 = 0;
+var ssztabka16 = 0;
+var dsztabka16 = 0;
 var smieci1 = 0;
 var smieci2 = 0;
 var smieci3 = 0;
@@ -201,13 +249,133 @@ var kmiecz15w = 0;
 var kmiecz16w = 0;
 //Koniec deklaracji
 
+var czas2 = 0;
 var czas = 0;
 var x = 0;
+
+function Przetapianie() {
+	if (window.document.przet.w.options[0].selected == true && smieci1 >= 3){
+		$("#lista").toggle();
+		czas2 = 10;
+		smieci1 = smieci1 - 3;
+		document.getElementById("smieci1").innerHTML = smieci1;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				msztabka1 = msztabka1 + 1;
+				document.getElementById("msztabka1").innerHTML = msztabka1;
+			}, 10000);
+	}
+	
+	if (window.document.przet.w.options[1].selected == true && smieci1 >= 7){
+		$("#lista").toggle();
+		czas2 = 20;
+		smieci1 = smieci1 - 7;
+		document.getElementById("smieci1").innerHTML = smieci1;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				ssztabka1 = ssztabka1 + 1;
+				document.getElementById("ssztabka1").innerHTML = ssztabka1;
+			}, 20000);
+	}
+	
+	if (window.document.przet.w.options[2].selected == true && smieci1 >= 16){
+		$("#lista").toggle();
+		czas2 = 30;
+		smieci1 = smieci1 - 16;
+		document.getElementById("smieci1").innerHTML = smieci1;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				dsztabka1 = mdztabka1 + 1;
+				document.getElementById("dsztabka1").innerHTML = dsztabka1;
+			}, 30000);
+	}
+	
+	if (window.document.przet.w.options[3].selected == true && smieci2 >= 3){
+		$("#lista").toggle();
+		czas2 = 15;
+		smieci2 = smieci2 - 3;
+		document.getElementById("smieci2").innerHTML = smieci2;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				msztabka2 = msztabka2 + 1;
+				document.getElementById("msztabka2").innerHTML = msztabka2;
+			}, 10000);
+	}
+	
+	if (window.document.przet.w.options[4].selected == true && smieci2 >= 7){
+		$("#lista").toggle();
+		czas2 = 23;
+		smieci2 = smieci2 - 7;
+		document.getElementById("smieci2").innerHTML = smieci2;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				ssztabka2 = ssztabka2 + 1;
+				document.getElementById("ssztabka2").innerHTML = ssztabka2;
+			}, 23000);
+	}
+	
+	if (window.document.przet.w.options[5].selected == true && smieci2 >= 16){
+		$("#lista").toggle();
+		czas2 = 31;
+		smieci2 = smieci2 - 16;
+		document.getElementById("smieci2").innerHTML = smieci2;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				dsztabka2 = dsztabka2 + 1;
+				document.getElementById("dsztabka2").innerHTML = dsztabka2;
+			}, 31000);
+	}
+	
+	if (window.document.przet.w.options[6].selected == true && smieci3 >= 3){
+		$("#lista").toggle();
+		czas2 = 20;
+		smieci3 = smieci3 - 3;
+		document.getElementById("smieci3").innerHTML = smieci3;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				msztabka3 = msztabka3 + 1;
+				document.getElementById("msztabka3").innerHTML = msztabka3;
+			}, 20000);
+	}
+	
+	if (window.document.przet.w.options[7].selected == true && smieci3 >= 7){
+		$("#lista").toggle();
+		czas2 = 30;
+		smieci3 = smieci3 - 7;
+		document.getElementById("smieci3").innerHTML = smieci3;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				ssztabka3 = ssztabka3 + 1;
+				document.getElementById("ssztabka3").innerHTML = ssztabka3;
+			}, 30000);
+	}
+	
+	if (window.document.przet.w.options[8].selected == true && smieci3 >= 16){
+		$("#lista").toggle();
+		czas2 = 40;
+		smieci3 = smieci3 - 16;
+		document.getElementById("smieci3").innerHTML = smieci3;
+		
+			setTimeout(function(){
+				$("#lista").toggle();
+				dsztabka3 = dsztabka3 + 1;
+				document.getElementById("dsztabka3").innerHTML = dsztabka3;
+			}, 40000);
+	}
+}
 
 function Losowanie() {
 	if(plecak == true){
 		var lol;
-		for(lol = 0; lol < 3; lol++){
+		for(lol = 0; lol < 5; lol++){
 	if(czas == 0){
 	ran1 = Math.floor((Math.random() * 3) + 1);
 			
@@ -230,8 +398,10 @@ function Losowanie() {
 	}
 		}
 	} else
-		
+
 	if(czas == 0){
+		var lol;
+		for(lol = 0; lol < 3; lol++){
 	ran1 = Math.floor((Math.random() * 3) + 1);
 			
 		x = Math.floor((Math.random() * 21) + 1);
@@ -251,6 +421,7 @@ function Losowanie() {
 		};
 		blokada = false;
 	}
+	}
 };
 
 function Odliczanie(number){
@@ -258,6 +429,14 @@ function Odliczanie(number){
 	if(czas > 0){
 	czas = czas - number;
     document.getElementById("czas").innerHTML = czas;
+	};
+};
+
+function Odliczanie2(number){
+    
+	if(czas2 > 0){
+	czas2 = czas2 - number;
+    document.getElementById("czas2").innerHTML = czas2;
 	};
 };
 
@@ -500,6 +679,7 @@ function ZmniejszCene(CenaDod){
 window.setInterval(function(){
 	
 	Odliczanie(1);
+	Odliczanie2(1);
 	
 	if(blokada == true){
 		Losowanie();
