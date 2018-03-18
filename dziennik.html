@@ -11,13 +11,13 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Horror w Malnour: Dziennik" startnode="1" creator="Twine" creator-version="2.2.1" ifid="859FCEF6-EC74-4A3A-97B7-F81BD1C4E3CF" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-icon.redo {
+<tw-storydata name="Horror w Malnour: Dziennik" startnode="1" creator="Twine" creator-version="2.2.1" ifid="859FCEF6-EC74-4A3A-97B7-F81BD1C4E3CF" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-icon.redo {
       visibility: hidden;
 }
 
 tw-icon.undo {
       visibility: hidden;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Początek" tags="" position="2704,3" size="100,100">Ulewa. Pada od kilku godzin, ale jest ci to bez różnicy. Twoja podróż trwa już kilkanaście dni, zdążyłeś się przyzwczaić do zmian pogody. Po jakimś czasie ledwo zauważyłeś tlące się w oddali światła. To twój cel -  |a2&gt;[posiadłość Artonów.]
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Początek" tags="" position="2704,3" size="100,100">(set: $medalion_otwarty to false)Ulewa. Pada od kilku godzin, ale jest ci to bez różnicy. Twoja podróż trwa już kilkanaście dni, zdążyłeś się przyzwczaić do zmian pogody. Po jakimś czasie ledwo zauważyłeś tlące się w oddali światła. To twój cel -  |a2&gt;[posiadłość Artonów.]
 
 (click: ?a2)[Twój dziadek niegdyś tu mieszkał, póki jego ciągła ciekawość świata nie postanowiła go stamtąd na jakiś czas wyrwać. Okazało się, że trwało to kilkadziesiąt lat, i już nigdy nie zdołał ponownie wrócić do domu. Założył rodzinę na drugim końcu kraju, a kilka tygodni temu odszedł, zostawiając tylko jedno słowo |a3&gt;[&quot;Dziennik&quot;.]]
 
@@ -26,67 +26,165 @@ tw-icon.undo {
 Zbliżając się do niego czułeś się dziwnie. Był ogromny, bogato przystrojony, pełny okien i marmurowych fasad. *Dlaczego go opuścił?* myślałeś sobie, stojąc przed nim. Nie ma to już jednak znaczenia.
 [[Zapukaj-&gt;Przed drzwiami]]]</tw-passagedata><tw-passagedata pid="2" name="Przed drzwiami" tags="" position="2705,108" size="100,100">Słyszysz jak ktoś powoli podchodzi do drzwi, i spogląda na ciebie przez małe okienko. Kobieta w średnim wieku, z czarnymi, krótkimi włosami i niezbyt piękną cerą. Po kilku sekundach pyta się: &quot;Czego chcesz?&quot;
 
-|odp1&gt;[Podaj swoje prawdziwe imie i nazwisko]
-|odp2&gt;[Okłam]
-(click: ?odp1)[(replace:?odp2)[](replace:?odp1)[*Podałeś swoje prawdziwe imie i nazwisko*]&quot;Nazywam się Fen Karen-Arton, i mam ważną wiadomość dotyczącą rodu&quot; - rzekłeś jednym tchem. *Nie będę kłamał w takich sprawach.* pomyślałeś *źle to by mogło się skończyć*.
+|odp1&gt;[Przedstaw się]
 
-Zobaczyłeś jak obieta odchodzi od okienka i z kimś rozmawia. Po chwili podchodzi do drzwi i je otwiera.
+(click: ?odp1)[(replace:?odp2)[](replace:?odp1)[*Przedstawiłeś się*]&quot;Nazywam się Fen Karen-Arton, i mam ważną wiadomość dotyczącą rodu&quot; - rzekłeś jednym tchem.
+Zobaczyłeś jak kobieta odchodzi od okienka i z kimś rozmawia. Po chwili podchodzi do drzwi i je otwiera.
 &quot;Wejdź&quot;
-[[Dalej|W posiadłości Prawda]]]
+[[Dalej|W posiadłości Prawda]]]</tw-passagedata><tw-passagedata pid="3" name="W posiadłości Prawda" tags="" position="2702,218" size="100,100">W środku posiadłość wyglądała dość przytulnie. Dużo książek i bogato ozdobionych mebli, a także ogromny |a1&gt;[obraz] przedstawiający drzewo genealogiczne. (click: ?a1)[Był on namalowany z wielką starannością, i na pewno nie kosztował mało. Jak się spodziewałeś, Twój dziadek jest tu oznaczony jako bezdzietny. W końcu nie rozmawiał z nikim po wyprowadzce.]
 
-(click: ?odp2)[(replace:?odp1)[](replace:?odp2)[Wymyśliłeś imie i nazwisko]&quot;Nazywam się Albert Ol, i pracuje dla straży. Przyszedłem w sprawie śmierci Derek&#39;a Artona&quot; - powiedziałeś i pokazałeś podrobiony, srebrny medalion straży. Po chwili ciszy otworzono ci drzwi. &quot;Zapraszamy do środka&quot;
-[[Dalej|W posiadłości Fałsz]]]</tw-passagedata><tw-passagedata pid="3" name="W posiadłości Prawda" tags="" position="2634,212" size="100,100">W środku posiadłość wyglądała dość przytulnie. Dużo książek i bogato ozdobionych mebli, a także ogromny |a1&gt;[obraz] przedstawiający drzewo genealogiczne. (click: ?a1)[Był on namalowany z wielką starannością, i na pewno nie kosztował mało. Jak się spodziewałeś, Twój dziadek jest tu oznaczony jako bezdzietny. W końcu nie rozmawiał z nikim po wyprowadzce.]
+W salonie siedziała znana ci już kobieta, a także starszego mężczyzne. Pamiętając postacie z obrazu, już wiesz z kim masz doczynienia.
+To Henry Arton, ojciec trójki dzieci. Kobieta otwierająca ci drzwi jest jednym z nich - nazywa się Ymir.
 
-W salonie siedziała znana ci już kobieta, a także dwoje starszych ludzi. Pamiętając postacie z obrazu, już wiesz z kim masz doczynienia.
-To Henry i Evelyn Arton, rodzice trójki dzieci. Kobieta otwierająca ci drzwi jest jednym z nich - nazywa się Ymir.
+&quot;Witaj&quot; - Zaczął Henry - &quot;To jest jedna z tych wizyt, których człowiek nigdy nie przewidzi. Co przynosi cię w nasze progi?&quot;
 
-*Witaj* - Zaczął Henry - *To jest jedna z tych wizyt, których człowiek nigdy nie przewidzi. Co przynosi cię w nasze progi?*
+|o1&gt;[&quot;Przychodzę ze smutną wiadomością&quot;]
+|o2&gt;[&quot;Derek nie żyje&quot;]
 
-|o1&gt;[*Przychodzę ze smutną wiadomością*]
-|o2&gt;[*Derek nie żyje*]
+(click: ?o1)[(replace:?o2)[]&quot;Domyślam się o co może chodzić. Kto?&quot;
 
-(click: ?o1)[(replace:?o2)[]*Domyślam się o co może chodzić. Kto?*
-
-|o11&gt;[*Derek Arton. Mój dziadek.*]
+|o11&gt;[&quot;Derek Arton. Mój dziadek.&quot;]
 
 (click: ?o11)[Henry zbladł. Wszyscy siedzieli w milczeniu, do czasu gdy w pokoju pojawiła się nowa osoba. To James Arton, syn Henrego i Evelyn.
 
-*Kto to jest? Od kiedy wpuszczacie to nieznajomych?*
+&quot;Kto to jest? Od kiedy wpuszczacie to nieznajomych?&quot;
 
-*James, to jest Fen* - Powiedział Henry - *Twój kuzyn.*
+&quot;James, to jest Fen&quot; - Powiedział Henry - &quot;Twój kuzyn.&quot;
 
 [[Dalej -&gt; Kłótnia a1]]]]
 
 (click: ?o2)[(replace:?o1)[]Henry i inni milczeli. Śmierć kogokolwiek z rodziny jest żałobą, nawet jak jej członka nigdy nie widziało się na oczy. Po chwili w pokoju pojawiła się nowa osoba. To James Arton, syn Henrego i Evelyn.
 
-*Kto to jest? Od kiedy wpuszczacie to nieznajomych?*
+&quot;Kto to jest? Od kiedy wpuszczacie to nieznajomych?&quot;
 
-*James, to jest Fen* - Powiedział Henry - *Twój...*
+&quot;James, to jest Fen&quot; - Powiedział Henry - &quot;Twój...&quot;
 
-*...Kuzyn.* - Dokończyłeś.
+&quot;...Kuzyn.&quot; - Dokończyłeś.
 
-[[Dalej -&gt; Kłótnia a1]]]</tw-passagedata><tw-passagedata pid="4" name="W posiadłości Fałsz" tags="" position="2771,212" size="100,100">&quot;Było blisko&quot; pomyślałeś. Wolałeś nie myśleć co by się stało gdyby cię złapali, więc rozejrzałeś się po pokoju.
+[[Dalej -&gt; Kłótnia a1]]]</tw-passagedata><tw-passagedata pid="4" name=" Kłótnia a1" tags="" position="2706,330" size="100,100">&quot;Kuzyn?* lekko się zdziwił *Przecież jesteśmy...&quot;
 
-W środku posiadłość wyglądała dość przytulnie. Dużo książek i bogato ozdobionych mebli, a także ogromny |a1&gt;[obraz] przedstawiający drzewo genealogiczne. (click: ?a1)[Był on namalowany z wielką starannością, i na pewno nie kosztował mało. Jak się spodziewałeś, Twój dziadek jest tu oznaczony jako bezdzietny. W końcu nie rozmawiał z nikim po wyprowadzce.]
+&quot;Prawda jest bardziej zawiła, aniżeli mogło by się wydawać&quot; rzekł Henry &quot;Nasza rodzina ma jeszcze wiele różnych, nierozwikłanych tajemnic.&quot;
 
-W salonie siedziała znana ci już kobieta, a także dwoje starszych ludzi. Pamiętając postacie z obrazu, już wiesz z kim masz doczynienia.
-To Henry i Evelyn Arton, rodzice trójki dzieci. Kobieta otwierająca ci drzwi jest jednym z nich - nazywa się Ymir.
+&quot;Wiedziałeś o tym że są inni?&quot; powiedział lekko zdenerwowanym tonem James.
 
-*Straż nie przychodzi w błahych sprawach* - Zaczął Henry - *Z jakiegoż powodu postanowiła nas odwiedzić?*
+&quot;Można było tylko przypuszczać, po jego zniknięciu...&quot; zaczął jego ojciec.
 
-|o1&gt;[*Otrzymałem wiadomość o śmierci jednego z waszych członków rodziny*]
+&quot;Wiedziałeś czy nie?&quot; przerwał mu James.
 
-(click: ?o1)[(replace: ?o2)[]*Cała rodzina jest tutaj. Kto to był?*
+Starszy mężczyzna spojrzał na ciebie. &quot;Jak miałem o tym wie...&quot;
 
-*Derek Arton.*
+&quot;Dlaczego więc pierwszą rzeczą jaką zrobiłeś po zobaczeniu osoby z nazwiskiem jako jedyną wspólną cechą, to wpuszczenie go do środka i traktowanie jak członka rodziny?!&quot; James wybuchł, i zaczął coraz bardziej rzucać kolejnymi oskarżeniami &quot;Nie zauważasz że mógł to sobie wymyśleć na poczekaniu? Nie wiesz co to kłamstwo?!&quot;
 
-Henry zbladł. Wszyscy siedzieli w milczeniu, do czasu gdy w pokoju pojawiła się nowa osoba. To James Arton, syn Henrego i Evelyn.
+Wszyscy w pokoju milczeli. To nie był raczej pierwszy raz gdy się tak zachowuje, bo nikt nie wyglądał na zdziwionego.
+Czas mijał a argumentów ciągle przybywało. Jednak w pewnym momencie zdarzyło się coś niespodziewanego.
 
-*Kto to jest? Od kiedy wpuszczacie to nieznajomych?*
+&quot;Teraz będziesz milczał i udawał że nic nie wiesz? Jak zawsze, nigdy się nie zgadzasz, ale jak dojdzie co do czego to siedzisz i wpatrujesz się w sufit. A reszta? Nadal będziecie go uważać za równego?!&quot;
 
-*James, to jest*  - Henry milczał przez chwilę - *Ktoś ze straży.*
+&quot;Tak&quot;
 
-[[Dalej -&gt; Kłótnia a2]]]</tw-passagedata><tw-passagedata pid="5" name=" Kłótnia a1" tags="" position="2634,362" size="100,100">Koniec</tw-passagedata><tw-passagedata pid="6" name=" Kłótnia a2" tags="" position="2771,362" size="100,100">Koniec</tw-passagedata></tw-storydata>
+Nikt przez krzyki nie zauważył nawet że w pokoju pojawiła się nowa osoba. Młoda kobieta, na oko 27 lat, z długimi blond włosami i niebieskimi oczami. Była jak kompletne przeciwieństwo swojej starszej siostry.
+
+&quot;Zapatrzony w tę nienawiść do innych nie zauważyłeś nawet, że ma &#39;&#39;medalion&#39;&#39;&quot;
+
+|a1&gt;[Medalion]. Ciągle go nosiłeś. Przecież to było takie oczywiste! (click: ?a1)[Dostałeś go od swojego dziadka, jeszcze przed jego śmiercią. Ponoć &quot;miał pomóc w naprawieniu starych błędów&quot;, cokolwiek to znaczy. Z wyglądu przypominał zwykły srebrny medalion, z platynowym łańcuszkiem. Jedyną różnicą był wymalowany na nim herb.]
+James milcząc, po chwili wyszedł z pokoju. Po chwili za nim poszła też Ymir. 
+
+[[Dalej -&gt; Kłótnia a2]]</tw-passagedata><tw-passagedata pid="5" name=" Kłótnia a2" tags="" position="2706,444" size="100,100">&quot;Przepraszamy za jego zachowanie&quot; - powiedziała młoda kobieta - &quot;Zawsze taki jest do obcych... nawet tak blisko spokrewnionych&quot; - spojrzała się na medalion.
+
+*Ciekawy obrót spraw*, pomyślałeś. Można zrozumieć szok po dostaniu wiadomości o innych członkach rodziny, ale tak skrajne nastawienia?
+
+|o1&gt;[&quot;Zapomnijmy o tym&quot;]
+|o2&gt;[&quot;Nie wydaje się aby był miły dla kogokolwiek&quot;]
+
+(click: ?o1)[(replace:?o2)[]&quot;Myślę, że to dobry pomysł&quot; - uśmiechnęła się lekko. &quot;Więc, o czym chciałbyś posłuchać?&quot; - zapytała - &quot;Nie miałbyś chyba nic przeciwko aby coś opowiedzieć, prawda?&quot; - spojrzała się na Henry&#39;ego.
+&quot;Skądże&quot; - odpowiedział - &quot;Dawno nikt mnie o to nie prosił&quot;.
+
+|o11&gt;[&quot;O Artonach&quot;]
+|o12&gt;[&quot;Dlaczego Derek uciekł?&quot;]
+|o13&gt;[&quot;Chciałbym rozejrzeć się za przedmiotami mojego dziadka.&quot;]
+
+(click: ?o11)[&quot;Rodzina Artonów została zapoczątkowana przez Terus&#39;a Artona, który chcąc niechcąc musiał zmienić swoje własne nazwisko. Bowiem jego ojciec, którego imienia nigdy nie znałem, wydziedziczył go po kontaktach z mordercą. Nikt nigdy nie wiedział co tam się nieprawdę stało, i najpewniej na zawsze pozostanie to tajemnicą.
+Po jakimś czasie poślubił Caroline, która urodziła mu dwójkę dzieci: Vanesse i Antoniego.&quot; - Zrobił sobie krótką przerwę, i opowiadał dalej - &quot;Antoni poślubił Julienne, która ponoć była najpiękniejszą kobietą tutaj przebywającą, natomiast Vanessa zginęła podczas ataku na bank w 228 roku. Niedługo później zmarł sam Terus.&quot;
+
+&quot;Czego nigdy mi o tym nie powiedziałeś?&quot; - Zapytała się kobieta.
+
+&quot;Nie jest do miła opowieść, a złych rzeczy nie należy doświadczać, gdy nie trzeba. Kontynuując, urodziły im się dzieci: Derek, Ann i Wad. Derek opuścił dom, natomiast Wad ożenił się z Magdą. Ann miała męża, jednak przedwcześnie zmarł, i z jakiegoś powodu kazała nie umieszczać jego imienia na kartach naszej historii. Tymczasem Wad i Magda stali się rodzicami Egis&#39;a i Henry&#39;ego, czyli mnie.&quot;
+
+&quot;Egis? Dlaczego tak rzadko słyszę od ciebie to imię?&quot; - Zapytała zaciekawiona.
+
+&quot;I częściej nie będziesz&quot; - Odpowiedział poważnym tonem - &quot;Egis zmarł na chorobę niedługo po urodzeniu, natomiast ja poślubiłem Evelyn, i powiększyliśmy naszą rodzinę o James&#39;a, Ymir i Carmen. Musiałem tak skrócić, ponieważ gdyby chciało się usłyszeć wszystko na temat nas, Artonów... nie dość, że trzeba byłoby słuchać kilka godzin, to i cofnąć się w czasie, bo wiele szczegółów już nie pamiętam&quot; - Uśmiechnął się.]
+
+(click: ?o12)[Henry zamyślił się - &quot;Jeśli pamięć mnie nie myli, było to spowodowane kłótnią. Derek i Wad lubili się, w końcu byli braćmi, ale po śmierci ich ojca, Antoniego, często się kłócili. Coś powodowało, że nigdy nie mogli się ze sobą pogodzić. W końcu Derek dał za wygraną i wyprowadził się, naprawiając już na koniec stosunki z Wad&#39;em, aby nie być uznany za &quot;zdrajcę rodu&quot;, jak to kiedyś się mówiło&quot;.]
+
+(click: ?o13)[&quot;Rozumiem&quot; - Odpowiedział Henry - &quot;Carmen, zaprowadź go do pracowni&quot;.
+
+&quot;Oczywiście&quot; - Uśmiechnęła się.
+[[Dalej -&gt; Podróż do pracowni]]]]
+
+(click: ?o2)[(replace:?o1)[]&quot;Masz rację&quot; - powiedziała poważnym tonem - &quot;Jednak myślę, że z czasem się to zmieni&quot; - lekko się uśmiechnęła. &quot;Więc, o czym chciałbyś posłuchać?&quot; - zapytała - &quot;Nie miałbyś chyba nic przeciwko aby coś opowiedzieć, prawda?&quot; - spojrzała się na Henry&#39;ego.
+&quot;Skądże&quot; - odpowiedział - &quot;Dawno nikt mnie o to nie prosił&quot;
+
+|o21&gt;[&quot;O Artonach&quot;]
+|o22&gt;[&quot;Dlaczego Derek uciekł?&quot;]
+|o23&gt;[&quot;Chciałbym rozejrzeć się za przedmiotami mojego dziadka.&quot;]
+
+(click: ?o21)[&quot;Rodzina Artonów została zapoczątkowana przez Terus&#39;a Artona, który chcąc niechcąc musiał zmienić swoje własne nazwisko. Bowiem jego ojciec, którego imienia nigdy nie znałem, wydziedziczył go po kontaktach z mordercą. Nikt nigdy nie wiedział co tam się nieprawdę stało, i najpewniej na zawsze pozostanie to tajemnicą.
+Po jakimś czasie poślubił Caroline, która urodziła mu dwójkę dzieci: Vanesse i Antoniego.&quot; - Zrobił sobie krótką przerwę, i opowiadał dalej - &quot;Antoni poślubił Julienne, która ponoć była najpiękniejszą kobietą tutaj przebywającą, natomiast Vanessa zginęła podczas ataku na bank w 228 roku. Niedługo później zmarł sam Terus.&quot;
+
+&quot;Czego nigdy mi o tym nie powiedziałeś?&quot; - Zapytała się kobieta.
+
+&quot;Nie jest do miła opowieść, a złych rzeczy nie należy doświadczać, gdy nie trzeba. Kontynuując, urodziły im się dzieci: Derek, Ann i Wad. Derek opuścił dom, natomiast Wad ożenił się z Magdą. Ann miała męża, jednak przedwcześnie zmarł, i z jakiegoś powodu kazała nie umieszczać jego imienia na kartach naszej historii. Tymczasem Wad i Magda stali się rodzicami Egis&#39;a i Henry&#39;ego, czyli mnie.&quot;
+
+&quot;Egis? Dlaczego tak rzadko słyszę od ciebie to imię?&quot; - Zapytała zaciekawiona.
+
+&quot;I częściej nie będziesz&quot; - Odpowiedział poważnym tonem - &quot;Egis zmarł na chorobę niedługo po urodzeniu, natomiast ja poślubiłem Evelyn, i powiększyliśmy naszą rodzinę o James&#39;a, Ymir i Carmen. Musiałem tak skrócić, ponieważ gdyby chciało się usłyszeć wszystko na temat nas, Artonów... nie dość, że trzeba byłoby słuchać kilka godzin, to i cofnąć się w czasie, bo wiele szczegółów już nie pamiętam&quot; - Uśmiechnął się.]
+
+(click: ?o22)[Henry zamyślił się - &quot;Jeśli pamięć mnie nie myli, było to spowodowane kłótnią. Derek i Wad lubili się, w końcu byli braćmi, ale po śmierci ich ojca, Antoniego, często się kłócili. Coś powodowało, że nigdy nie mogli się ze sobą pogodzić. W końcu Derek dał za wygraną i wyprowadził się, naprawiając już na koniec stosunki z Wad&#39;em, aby nie być uznany za &quot;zdrajcę rodu&quot;, jak to kiedyś się mówiło&quot;.]
+
+(click: ?o23)[&quot;Rozumiem&quot; - Odpowiedział Henry - &quot;Carmen, zaprowadź go do pracowni&quot;.
+
+&quot;Oczywiście&quot; - Uśmiechnęła się.
+[[Dalej -&gt; Podróż do pracowni]]]]</tw-passagedata><tw-passagedata pid="6" name="Salon" tags="" position="2709.6666666666665,913" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Przedpokój" tags="" position="2706.3333333333335,801.3333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Biblioteka" tags="" position="2821.666666666667,913" size="100,100">Jest tutaj całkowicie cicho, co w połączeniu z |a1&gt;[ogromnymi] półkami pełnych różnorakich dzieł, daje dziwną, niecodzienną atmosferę. Wiesz już czego nikt tutaj nie przebywa. (click: ?a1)[Ułożone są jedna przy drugiej tak, że nie widać choćby centymetra ściany. Sama kolekcja takiej ilości książek musiała zająć całe lata.
+
+Na środku widzisz dość duże biurko, na którym znajduje się niezliczona ilość przedmiotów. Długopisy, pióra, |a2&gt;[świeca]. Nietykane od bardzo długiego czasu, co można wywnioskować o ilości kurzu na nich się znajdujących.
+
+(click: ?a2)[Widzisz jednak, że to nie jest zwykła świeca. Wyglądem przypomina bardziej lampę naftową, aniżeli produkt z wosku. Po głębszej analizie dochodzisz do wniosku, że masz rację. Najwidoczniej ktoś często przebywał tu po nocy, i zwykłe świeczki byłyby nieopłacalne.</tw-passagedata><tw-passagedata pid="9" name="Kuchnia" tags="" position="2600.0000000000005,1023" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Jadalnia" tags="" position="2708.3333333333335,1021.3333333333334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Schody" tags="" position="2603.333333333334,913" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Pokój Ymir" tags="" position="2601.666666666667,1503" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="Pokój Carmen" tags="" position="2703.3333333333335,1504.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Pokój James&#39;a" tags="" position="2806.6666666666674,1506.3333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Ogród" tags="" position="2600.0000000000005,1134.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Cmentarz" tags="" position="2490,1133" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="Korytarz 2p" tags="" position="2700.0000000000005,1399.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="Strych" tags="" position="2805.0000000000005,1401.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Piwnica" tags="" position="2491.666666666667,908" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name=" Podróż do pracowni" tags="" position="2706,559" size="100,100">Idziecie zawiłymi korytarzami posiadłości. Łatwo jest się tutaj zgubić, wszystko |1a&gt;[wygląda] tak samo. (click: ?1a)[Mocno oświetlone ściany z bogato ozdobionymi obrazami, dywany mające pozłacane frędzle, ogromne okna z widokiem na ciągnącą się bez końca ulewę. Wszystko to musiało kosztować fortunę.]
+
+Po jakimś czasie stanęliście przy mocnych, ale już starych dębowych |2a&gt;[drzwiach]. (click: ?2a)[Bardziej przypominały jednak wrota, a osoba która je zrobiła musiała być z siebie niesamowicie dumna: różnorakie wzory, wyżłobienia, pozłacania, tworzyły piękną i spójną kompozycję.] Carmen odwróciła się do ciebie i powiedziała: &quot;Tutaj znajduje się pracownia. Służyła głównie do pisania i tworzenia, ale teraz nie ma potrzeby jej używać. Jeśli gdzieś miał coś zostawić, to znajdziesz to tutaj.&quot;
+
+[[Dalej -&gt; Pracownia]]</tw-passagedata><tw-passagedata pid="21" name=" Pracownia" tags="" position="2835.9999999999995,1134.666666666667" size="100,100">Po wejściu do pokoju od razu poczułeś typową dla starych, nieużywanych pomieszczeń woń. Carmen miała racje. Nikt nie używa już tego miejsca.
+
+Bardzo słabą widoczność pokój zawdzięcza to sobie temu, że nie ma tu okna. Jedynym źródłem światła jest lampa na biurku, i mała szpara pod drzwiami.
+Cały zawalony jest różnorakimi |1a&gt;[gratami], co (pomimo jego wielkości) powoduje, że trzeba uważać na każdy krok. (click: ?1a)[Zniesiono tu chyba wszystkie nieużywane przyrządy i narzędzia: stare maszyny do szycia, maszyny do pisania, dłuta, młotki, piły, gwoździe, stare stoły, czy nawet obiekty zniszczone tak bardzo, że nie jesteś w stanie ich rozpoznać.]
+[[Wyjdź z pokoju | Korytarz]] 
+(if: $medalion_otwarty is false)[|1o&gt;[Podejdź do biurka]
+
+(click: ?1o)[Włączyłeś lampę naftową, i rozświetliłeś większość pomieszczenia. Biurko zawalone jest różnymi obiektami, znalazła się tu nawet lupa czy nożyce. Nad nim znajduje się półka z przegródkami, mająca przyklejone nazwy: Antoni, Wad i... Derek.
+|2o&gt;[Spójrz na przegródkę &quot;Antoni&quot;]
+|3o&gt;[Spójrz na przegródkę &quot;Wad&quot;]
+|4o&gt;[Spójrz na przegródkę &quot;Derek&quot;]
+
+(click: ?2o)[Zacząłeś przeszukiwać przegródkę Antoniego. Znajdują się tu głównie jego listy i zaproszenia na śluby. Nie znajdujesz w nich nic interesującego, poza jedną, jakby wyrwaną skądś kartką. Nie rozczytujesz z niej wiele poza zdaniem &quot;dajcie mi spokój&quot;.]
+(click: ?3o)[Przegródka &quot;Wad&quot; jest całkowicie pusta, poza małym dopiskiem &quot;przeniesione do biblioteki&quot;.]
+(click: ?4o)[Zerknąłeś tylko na przegródkę Derek&#39;a, a już ilość dokumentów, listów i kartek cię przerosła. Najwidoczniej uciekając z domu, większość rzeczy zostawił właśnie w nim.
+Odrzuciłeś wszelkie niepodejrzane kartki i koperty, zostawiając te najdziwniejsze.
+|5o&gt;[Pocięty papier]
+|6o&gt;[Notatka]
+|7o&gt;[Dziwna kartka]
+
+(click: ?5o)[&lt;img src=&quot;https://gregory455.github.io/img/notatka_1b.png&quot; width=&quot;209px&quot; height=&quot;100px&quot;&gt;
+Przygnieciona listami notatka. Wycięto z niej jakieś fragmenty, ale nie masz pojęcia gdzie mogą być.]
+
+(click: ?6o)[Wygląda jakby ktoś chciał ją spalić, ale zdecydował się tego nie robić. Na fragmencie napisane jest: &quot;Niech więc tak będzie. Ale nigdy, przenigdy nie pozwolę dać się tej chorej obsesji. Nawet, jakbym miał Ucie&quot;]
+
+(click: ?7o)[&lt;img src=&quot;https://gregory455.github.io/img/notatka_2.png&quot; width=&quot;209px&quot; height=&quot;100px&quot;&gt;
+Na mocno zwęglonym papierze widnieje namalowany białą farbą albo kredą obrazek, przypominający twój |o9&gt;[medalion]. Nic więcej na niej nie ma.] (click: ?o9)[Jasne! Medalion! Zdjąłeś go szybkim ruchem, i zacząłeś oglądać. Nigdy się mu bliżej nie przyglądałeś, w końcu to tylko wisiorek. Teraz jednak zauważasz, że za herbem znajduje się malutka dźwignia. Ruszyłeś nią lekko, a z medalionu wyskoczyły mocno ściśnięte |10o&gt;[zwitki papieru].]
+
+(click: ?10o)[&lt;img src=&quot;https://gregory455.github.io/img/notatka_1a.png&quot; width=&quot;209px&quot; height=&quot;55px&quot;&gt;
+Natychmiast zrozumiałeś skąd one są. Wziąłeś pociętą i niezrozumiałą wcześniej notatkę, i zacząłeś łączyć. Po kilku minutach miałeś już, co prawda pociętą, notatkę.
+&lt;img src=&quot;https://gregory455.github.io/img/notatka_1.png&quot; width=&quot;209px&quot; height=&quot;100px&quot;&gt;
+Stałeś zszokowany przez parę chwil, próbując zrozumieć, co się właśnie dzieje. Błąd? Jaki błąd? Ucieczka? Niebieskie koło? Kilof?
+Miliony pytań zaprzątały ci właśnie głowę, jednak jedno bardziej niż inne. Skąd Derek wiedział że znowu tu wróci? Ta część notatki musiała leżeć tu kilkanaście lat! Musiał zmienić zdanie przed ucieczką, ale mimo to... było już za późno? (set: $medalion_otwarty to true)]]]]</tw-passagedata><tw-passagedata pid="22" name="Sypialnia" tags="" position="2822.5,801.3333333333334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name=" Korytarz" tags="" position="2710.9999999999995,1133.0000000000002" size="100,100">[[Idź do pracowni -&gt; Pracownia]] </tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
