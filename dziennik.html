@@ -11,32 +11,33 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Horror w Malnour: Dziennik" startnode="1" creator="Twine" creator-version="2.2.1" ifid="859FCEF6-EC74-4A3A-97B7-F81BD1C4E3CF" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-icon.redo {
+<tw-storydata name="Horror w Malnour: Dziennik" startnode="22" creator="Twine" creator-version="2.2.1" ifid="859FCEF6-EC74-4A3A-97B7-F81BD1C4E3CF" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-icon.redo {
       visibility: hidden;
 }
 
 tw-icon.undo {
       visibility: hidden;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Początek" tags="" position="2704,3" size="100,100">(set: $medalion_otwarty to false)wersja 0.2. Ulewa. Pada od kilku godzin, ale jest ci to bez różnicy. Twoja podróż trwa już kilkanaście dni, zdążyłeś się przyzwczaić do zmian pogody. Po jakimś czasie ledwo zauważyłeś tlące się w oddali światła. To twój cel -  |a2&gt;[posiadłość Artonów.]
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Początek" tags="" position="2704,3" size="100,100">(set: $medalion_otwarty to false)(set: $ogrod_dos to false)(set: $wytrych to false)(set: $szukanie_kilofa to false)(set: $kilof to false)(set: $znak_znaleziony to false)(set: $z_zniszczony to false)(set: $skrzynka_1_nieot to false)(set: $skrzynka_1_ot to false)(set: $przeczytana_historia to false)(set: $notatka_zag_1 to false)(set: $kod to null)(set: $brama_otwarta to false)(set: $skrzynka_2_nieot to false)(set: $skrzynka_2_ot to false)(set: $spreparowany_pistolet to false)(set: $sekator to false)(set: $klej to false)(set: $katalizator to false)(set: $rozmowa_z_carmen to false)(set: $rozmowa_z_henrym to false)(set: $odlamek_klucza_1 to false)(set: $odlamek_klucza_2 to false)(set: $notatka_do_labolatorium to false)(set: $notatka_z_obrazu to false)(set: $klucz to false)(set: $prz_lan to false)(set: $skrzynka_3_nieot to false)(set: $skrzynka_3_ot to false)(save-game:&quot;A&quot;)Ulewa. Pada od kilku godzin, ale nie ma to dla ciebie znaczenia. Twoja podróż trwa już kilkanaście dni, zdążyłeś się przyzwczaić do zmian pogody. Po jakimś czasie zauważyłeś charakterystycznie wyglądający budynek. To twój cel -  |a2&gt;[posiadłość Artonów.]
 
 (click: ?a2)[Twój dziadek niegdyś tu mieszkał, póki jego ciągła ciekawość świata nie postanowiła go stamtąd na jakiś czas wyrwać. Okazało się, że trwało to kilkadziesiąt lat, i już nigdy nie zdołał ponownie wrócić do domu. Założył rodzinę na drugim końcu kraju, a kilka tygodni temu odszedł, zostawiając tylko jedno słowo |a3&gt;[&quot;Dziennik&quot;.]]
 
 (click: ?a3)[Bardzo się zdziwiłeś gdy to usłyszałeś. Twój dziadek nigdy nie był typem osoby zaczytanej, a tym bardziej tajemniczej. Zwykł otwarcie mówić o tym co myśli, więc wzbudziło to w ciebie dziwny niepokój, jakoby było to coś bardzo ważnego. Pewny, że to właśnie w jego rodzinnym domu okaże się co to za dziennik, postanowiłeś tam wyruszyć.
 
 Zbliżając się do niego czułeś się dziwnie. Był ogromny, bogato przystrojony, pełny okien i marmurowych fasad. *Dlaczego go opuścił?* myślałeś sobie, stojąc przed nim. Nie ma to już jednak znaczenia.
-[[Zapukaj-&gt;Przed drzwiami]]]</tw-passagedata><tw-passagedata pid="2" name="Przed drzwiami" tags="" position="2705,108" size="100,100">Słyszysz jak ktoś powoli podchodzi do drzwi, i spogląda na ciebie przez małe okienko. Kobieta w średnim wieku, z czarnymi, krótkimi włosami i niezbyt piękną cerą. Po kilku sekundach pyta się: &quot;Czego chcesz?&quot;
+[[Zapukaj-&gt;Przed drzwiami]]]</tw-passagedata><tw-passagedata pid="2" name="Przed drzwiami" tags="" position="2705,108" size="100,100">Słyszysz jak ktoś powoli podchodzi do drzwi, i spogląda na Ciebie przez małe okienko. Kobieta w średnim wieku, z czarnymi, krótkimi włosami i niezbyt piękną cerą. Po kilku sekundach pyta się: &quot;Czego chcesz?&quot;
 
 |odp1&gt;[Przedstaw się]
 
 (click: ?odp1)[(replace:?odp2)[](replace:?odp1)[*Przedstawiłeś się*]&quot;Nazywam się Fen Karen-Arton, i mam ważną wiadomość dotyczącą rodu&quot; - rzekłeś jednym tchem.
 Zobaczyłeś jak kobieta odchodzi od okienka i z kimś rozmawia. Po chwili podchodzi do drzwi i je otwiera.
 &quot;Wejdź&quot;
-[[Dalej|W posiadłości Prawda]]]</tw-passagedata><tw-passagedata pid="3" name="W posiadłości Prawda" tags="" position="2702,218" size="100,100">W środku posiadłość wyglądała dość przytulnie. Dużo książek i bogato ozdobionych mebli, a także ogromny |a1&gt;[obraz] przedstawiający drzewo genealogiczne. (click: ?a1)[Był on namalowany z wielką starannością, i na pewno nie kosztował mało. Jak się spodziewałeś, Twój dziadek jest tu oznaczony jako bezdzietny. W końcu nie rozmawiał z nikim po wyprowadzce.]
+[[Dalej|W posiadłości Prawda]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="3" name="W posiadłości Prawda" tags="" position="2702,218" size="100,100">W środku posiadłość wyglądała dość przytulnie. Dużo książek i bogato ozdobionych mebli, a także ogromny |a1&gt;[obraz] przedstawiający drzewo genealogiczne. (click: ?a1)[Był on namalowany z wielką starannością, i na pewno nie kosztował mało. Jak się spodziewałeś, Twój dziadek jest tu oznaczony jako bezdzietny. W końcu nie rozmawiał z nikim po wyprowadzce.]
 
-W salonie siedziała znana ci już kobieta, a także starszego mężczyzne. Pamiętając postacie z obrazu, już wiesz z kim masz doczynienia.
-To Henry Arton, ojciec trójki dzieci. Kobieta otwierająca ci drzwi jest jednym z nich - nazywa się Ymir.
+W salonie siedziała znana ci już kobieta, a także starszy mężczyzna. Pamiętając postacie z obrazu, już wiesz z kim masz doczynienia.
+To Henry Arton, ojciec trójki dzieci. Kobieta otwierająca Ci drzwi jest jednym z nich. Nazywa się Ymir.
 
-&quot;Witaj&quot; - Zaczął Henry - &quot;To jest jedna z tych wizyt, których człowiek nigdy nie przewidzi. Co przynosi cię w nasze progi?&quot;
+&quot;Witaj&quot; - Zaczął Henry - &quot;To jest jedna z tych wizyt, których człowiek nigdy nie przewidzi. Co przynosi Cię w nasze progi?&quot;
 
 |o1&gt;[&quot;Przychodzę ze smutną wiadomością&quot;]
 |o2&gt;[&quot;Derek nie żyje&quot;]
@@ -45,23 +46,24 @@ To Henry Arton, ojciec trójki dzieci. Kobieta otwierająca ci drzwi jest jednym
 
 |o11&gt;[&quot;Derek Arton. Mój dziadek.&quot;]
 
-(click: ?o11)[Henry zbladł. Wszyscy siedzieli w milczeniu, do czasu gdy w pokoju pojawiła się nowa osoba. To James Arton, syn Henrego i Evelyn.
+(click: ?o11)[Henry zbladł. Wszyscy siedzieli w milczeniu, do czasu gdy w pokoju pojawiła się nowa osoba. To James Arton, syn Henry&#39;ego i Evelyn.
 
-&quot;Kto to jest? Od kiedy wpuszczacie to nieznajomych?&quot;
+&quot;Kto to jest? Od kiedy wpuszczacie tu nieznajomych?&quot;
 
 &quot;James, to jest Fen&quot; - Powiedział Henry - &quot;Twój kuzyn.&quot;
 
 [[Dalej -&gt; Kłótnia a1]]]]
 
-(click: ?o2)[(replace:?o1)[]Henry i inni milczeli. Śmierć kogokolwiek z rodziny jest żałobą, nawet jak jej członka nigdy nie widziało się na oczy. Po chwili w pokoju pojawiła się nowa osoba. To James Arton, syn Henrego i Evelyn.
+(click: ?o2)[(replace:?o1)[]Henry i inni milczeli. Śmierć kogokolwiek z rodziny jest żałobą, nawet jak jej członka nigdy nie widziało się na oczy. Po chwili w pokoju pojawiła się nowa osoba. To James Arton, syn Henry&#39;ego i Evelyn.
 
-&quot;Kto to jest? Od kiedy wpuszczacie to nieznajomych?&quot;
+&quot;Kto to jest? Od kiedy wpuszczacie tu nieznajomych?&quot;
 
 &quot;James, to jest Fen&quot; - Powiedział Henry - &quot;Twój...&quot;
 
 &quot;...Kuzyn.&quot; - Dokończyłeś.
 
-[[Dalej -&gt; Kłótnia a1]]]</tw-passagedata><tw-passagedata pid="4" name=" Kłótnia a1" tags="" position="2706,330" size="100,100">&quot;Kuzyn?* lekko się zdziwił *Przecież jesteśmy...&quot;
+[[Dalej -&gt; Kłótnia a1]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="4" name=" Kłótnia a1" tags="" position="2706,330" size="100,100">&quot;Kuzyn?* lekko się zdziwił *Przecież jesteśmy...&quot;
 
 &quot;Prawda jest bardziej zawiła, aniżeli mogło by się wydawać&quot; rzekł Henry &quot;Nasza rodzina ma jeszcze wiele różnych, nierozwikłanych tajemnic.&quot;
 
@@ -89,7 +91,8 @@ Nikt przez krzyki nie zauważył nawet że w pokoju pojawiła się nowa osoba. M
 |a1&gt;[Medalion]. Ciągle go nosiłeś. Przecież to było takie oczywiste! (click: ?a1)[Dostałeś go od swojego dziadka, jeszcze przed jego śmiercią. Ponoć &quot;miał pomóc w naprawieniu starych błędów&quot;, cokolwiek to znaczy. Z wyglądu przypominał zwykły srebrny medalion, z platynowym łańcuszkiem. Jedyną różnicą był wymalowany na nim herb.]
 James milcząc, po chwili wyszedł z pokoju. Po chwili za nim poszła też Ymir. 
 
-[[Dalej -&gt; Kłótnia a2]]</tw-passagedata><tw-passagedata pid="5" name=" Kłótnia a2" tags="" position="2706,444" size="100,100">&quot;Przepraszamy za jego zachowanie&quot; - powiedziała młoda kobieta - &quot;Zawsze taki jest do obcych... nawet tak blisko spokrewnionych&quot; - spojrzała się na medalion.
+[[Dalej -&gt; Kłótnia a2]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="5" name=" Kłótnia a2" tags="" position="2706,444" size="100,100">&quot;Przepraszamy za jego zachowanie&quot; - powiedziała młoda kobieta - &quot;Zawsze taki jest do obcych... nawet tak blisko spokrewnionych&quot; - spojrzała się na medalion.
 
 *Ciekawy obrót spraw*, pomyślałeś. Można zrozumieć szok po dostaniu wiadomości o innych członkach rodziny, ale tak skrajne nastawienia?
 
@@ -128,36 +131,170 @@ Po jakimś czasie poślubił Caroline, która urodziła mu dwójkę dzieci: Vane
 |o22&gt;[&quot;Dlaczego Derek uciekł?&quot;]
 |o23&gt;[&quot;Chciałbym rozejrzeć się za przedmiotami mojego dziadka.&quot;]
 
-(click: ?o21)[&quot;Rodzina Artonów została zapoczątkowana przez Terus&#39;a Artona, który chcąc niechcąc musiał zmienić swoje własne nazwisko. Bowiem jego ojciec, którego imienia nigdy nie znałem, wydziedziczył go po kontaktach z mordercą. Nikt nigdy nie wiedział co tam się nieprawdę stało, i najpewniej na zawsze pozostanie to tajemnicą.
+(click: ?o21)[&quot;Rodzina Artonów została zapoczątkowana przez Terusa Artona, który chcąc niechcąc musiał zmienić swoje własne nazwisko. Bowiem jego ojciec, którego imienia nigdy nie znałem, wydziedziczył go po kontaktach z mordercą. Nikt nigdy nie wiedział co tam się tak naprawdę stało, i najpewniej na zawsze pozostanie to tajemnicą.
 Po jakimś czasie poślubił Caroline, która urodziła mu dwójkę dzieci: Vanesse i Antoniego.&quot; - Zrobił sobie krótką przerwę, i opowiadał dalej - &quot;Antoni poślubił Julienne, która ponoć była najpiękniejszą kobietą tutaj przebywającą, natomiast Vanessa zginęła podczas ataku na bank w 228 roku. Niedługo później zmarł sam Terus.&quot;
 
-&quot;Czego nigdy mi o tym nie powiedziałeś?&quot; - Zapytała się kobieta.
+&quot;Dlaczego nigdy mi o tym nie powiedziałeś?&quot; - Zapytała się kobieta.
 
-&quot;Nie jest do miła opowieść, a złych rzeczy nie należy doświadczać, gdy nie trzeba. Kontynuując, urodziły im się dzieci: Derek, Ann i Wad. Derek opuścił dom, natomiast Wad ożenił się z Magdą. Ann miała męża, jednak przedwcześnie zmarł, i z jakiegoś powodu kazała nie umieszczać jego imienia na kartach naszej historii. Tymczasem Wad i Magda stali się rodzicami Egis&#39;a i Henry&#39;ego, czyli mnie.&quot;
+&quot;Nie jest do miła opowieść, a złych rzeczy nie należy doświadczać, gdy nie trzeba. Kontynuując, urodziły im się dzieci: Derek, Ann i Wad. Derek opuścił dom, natomiast Wad ożenił się z Magdą. Ann miała męża, jednak przedwcześnie zmarł, i z jakiegoś powodu kazała nie umieszczać jego imienia na kartach naszej historii. Tymczasem Wad i Magda stali się rodzicami Egisa i Henry&#39;ego, czyli mnie.&quot;
 
 &quot;Egis? Dlaczego tak rzadko słyszę od ciebie to imię?&quot; - Zapytała zaciekawiona.
 
-&quot;I częściej nie będziesz&quot; - Odpowiedział poważnym tonem - &quot;Egis zmarł na chorobę niedługo po urodzeniu, natomiast ja poślubiłem Evelyn, i powiększyliśmy naszą rodzinę o James&#39;a, Ymir i Carmen. Musiałem tak skrócić, ponieważ gdyby chciało się usłyszeć wszystko na temat nas, Artonów... nie dość, że trzeba byłoby słuchać kilka godzin, to i cofnąć się w czasie, bo wiele szczegółów już nie pamiętam&quot; - Uśmiechnął się.]
+&quot;I częściej nie będziesz&quot; - Odpowiedział poważnym tonem - &quot;Egis zmarł na chorobę niedługo po urodzeniu, natomiast ja poślubiłem Evelyn, i powiększyliśmy naszą rodzinę o Jamesa, Ymir i Carmen. Musiałem tak skrócić, ponieważ gdyby chciało się usłyszeć wszystko na temat nas, Artonów... nie dość, że trzeba byłoby słuchać kilka godzin, to i cofnąć się w czasie, bo wiele szczegółów już nie pamiętam&quot; - Uśmiechnął się.]
 
-(click: ?o22)[Henry zamyślił się - &quot;Jeśli pamięć mnie nie myli, było to spowodowane kłótnią. Derek i Wad lubili się, w końcu byli braćmi, ale po śmierci ich ojca, Antoniego, często się kłócili. Coś powodowało, że nigdy nie mogli się ze sobą pogodzić. W końcu Derek dał za wygraną i wyprowadził się, naprawiając już na koniec stosunki z Wad&#39;em, aby nie być uznany za &quot;zdrajcę rodu&quot;, jak to kiedyś się mówiło&quot;.]
+(click: ?o22)[Henry zamyślił się - &quot;Jeśli pamięć mnie nie myli, było to spowodowane kłótnią. Derek i Wad lubili się, w końcu byli braćmi, ale po śmierci ich ojca, Antoniego, często się kłócili. Coś powodowało, że nigdy nie mogli się ze sobą pogodzić. W końcu Derek dał za wygraną i wyprowadził się, ostatecznie godząc się z Wadem, aby nie być uznany za &quot;zdrajcę rodu&quot;, jak to kiedyś się mówiło&quot;.]
 
 (click: ?o23)[&quot;Rozumiem&quot; - Odpowiedział Henry - &quot;Carmen, zaprowadź go do pracowni&quot;.
 
 &quot;Oczywiście&quot; - Uśmiechnęła się.
-[[Dalej -&gt; Podróż do pracowni]]]]</tw-passagedata><tw-passagedata pid="6" name="Salon" tags="" position="2709.6666666666665,913" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Przedpokój" tags="" position="2706.3333333333335,801.3333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Biblioteka" tags="" position="2821.666666666667,913" size="100,100">Jest tutaj całkowicie cicho, co w połączeniu z |a1&gt;[ogromnymi] półkami pełnych różnorakich dzieł, daje dziwną, niecodzienną atmosferę. Wiesz już czego nikt tutaj nie przebywa. (click: ?a1)[Ułożone są jedna przy drugiej tak, że nie widać choćby centymetra ściany. Sama kolekcja takiej ilości książek musiała zająć całe lata.
-
+[[Dalej -&gt; Podróż do pracowni]]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="6" name="Biblioteka" tags="" position="2850.0000000000005,761.3333333333333" size="100,100">####Biblioteka
+Jest tutaj całkowicie cicho, co w połączeniu z |a1&gt;[ogromnymi] półkami pełnych różnorakich dzieł, daje dziwną, niecodzienną atmosferę. Wiesz już czego nikt tutaj nie przebywa. (click: ?a1)[Ułożone są jedna przy drugiej tak, że nie widać choćby centymetra ściany. Sama kolekcja takiej ilości książek musiała zająć całe lata.]
 Na środku widzisz dość duże biurko, na którym znajduje się niezliczona ilość przedmiotów. Długopisy, pióra, |a2&gt;[świeca]. Nietykane od bardzo długiego czasu, co można wywnioskować o ilości kurzu na nich się znajdujących.
+(click: ?a2)[Widzisz jednak, że to nie jest zwykła świeca. Wyglądem przypomina bardziej lampę naftową, aniżeli produkt z wosku. Po głębszej analizie dochodzisz do wniosku, że masz rację. Najwidoczniej ktoś często przebywał tu po nocy, i zwykłe świeczki byłyby nieopłacalne.]
+[[Wróć do salonu | Salon]]
+(if: $skrzynka_1_ot is true)[(if: $przeczytana_historia is false)[|o1&gt;[Przeszukaj bibliotekę]]]
 
-(click: ?a2)[Widzisz jednak, że to nie jest zwykła świeca. Wyglądem przypomina bardziej lampę naftową, aniżeli produkt z wosku. Po głębszej analizie dochodzisz do wniosku, że masz rację. Najwidoczniej ktoś często przebywał tu po nocy, i zwykłe świeczki byłyby nieopłacalne.</tw-passagedata><tw-passagedata pid="9" name="Kuchnia" tags="" position="2600.0000000000005,1023" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Jadalnia" tags="" position="2708.3333333333335,1021.3333333333334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Schody" tags="" position="2603.333333333334,913" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Pokój Ymir" tags="" position="2601.666666666667,1503" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="Pokój Carmen" tags="" position="2703.3333333333335,1504.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Pokój James&#39;a" tags="" position="2806.6666666666674,1506.3333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Ogród" tags="" position="2600.0000000000005,1134.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Cmentarz" tags="" position="2490,1133" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="Korytarz 2p" tags="" position="2700.0000000000005,1399.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="Strych" tags="" position="2805.0000000000005,1401.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Piwnica" tags="" position="2491.666666666667,908" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name=" Podróż do pracowni" tags="" position="2706,559" size="100,100">Idziecie zawiłymi korytarzami posiadłości. Łatwo jest się tutaj zgubić, wszystko |1a&gt;[wygląda] tak samo. (click: ?1a)[Mocno oświetlone ściany z bogato ozdobionymi obrazami, dywany mające pozłacane frędzle, ogromne okna z widokiem na ciągnącą się bez końca ulewę. Wszystko to musiało kosztować fortunę.]
+(click: ?o1)[*&quot;Pośród ciszy, obok ostrego metalu&quot;*, to musi być biblioteka. Tylko co ma oznaczać &quot;ostry metal&quot;? Zacząłeś szukać nietypowych i wyróżniających się obiektów, przy okazji podziwiając ogromną kolekcję. A ciągnęła się ona od książek fantastycznych, przez kryminały, romanse, aż do horrorów. Ba, nawet jest dział z księgami religijnymi! Nie masz pojęcia kto to wszystko zgromadził, ale musiał nieźle się natrudzić.
+Po jakimś czasie zauważasz, że przy dziale &quot;historia&quot; znajduje się ostry jak brzytwa miecz. Natychmiast rozumiesz aluzję z notatki, i zaczynasz przeglądać książki z działu. Nie ma ich dużo w porównaniu do innych działów. Po odrzuceniu wszelkich oczywistych imitacji, zostały ci trzy, najbardziej pasujące do ukrycia czegoś książki.
+|k1&gt;[Mistrzowie budownictwa: Krótka historia architektury]
+(if: $notatka_zag_1 is false)[|k2&gt;[Historia rodu Artonów]](else:)[|k4&gt;[Historia rodu Artonów ]]
+|k3&gt;[Śmierć w Tern]
+
+(click: ?k1)[(set: $notatka_do_labolatorium to true)*&quot;Lata temu, gdy nie znano jeszcze pojęcia &#39;architektura&#39;, nie skupiano się za bardzo na ukazaniu piękna tego działu kultury. Królowały wówczas budowle małe i łatwo zniszczalne, jako że nie było odpowiednich narzędzi i warunków do wybudowania czegoś lepszego. Okres ten trwał przez bardzo długi czas, gdyby nie odkrycia w latach 17, 23 i 51. Opracowane wtedy formuły są często stosowane do dzisiaj, i umożliwiły one powstanie takich stylów jak styl &#39;Piaskowy&quot; czy styl &quot;Okrągły&quot;. O ile ten pierwszy istniał przed wszelkimi wynalazkami i za pomocą ich został tylko ulepszony, o tyle ten drugi zawdzięcza swoje istnienie nowym metodom budowy, pozwalającej na tworzenie kopół. Nic nie równa się jednakże osiągnięciom z roku 143, kiedy to opracowano najefektywniejszy sposób budowania znany nam do dzisiaj. Jego wartość najlepiej ukazuje ilość wybudowanych zamków, twierdz i fortec przed i po tym roku. Wzrosła ona bowiem o ponad 5000%! Nie jest tania, ale szybkość i jakość całkowicie...&quot;* Nagle z księgi wypada mała kartka z tekstem *&quot;3 obraz od lewej&quot;*.]
+
+(click: ?k2)[(set: $notatka_zag_1 to true)(set: $ogrod_dos to true)Od razu po otworzeniu księgi wypadła z niej mała notatka. &quot;To nie mogło być aż tak łatwe&quot;, pomyślałeś. Wziąłeś ją do ręki i przeczytałeś.
+*&quot;Tam gdzie słońce nie dochodzi i starość wolno kona, dobrze ukryta ostatnia część czerwona&quot;*.
+&quot;Część czerwona&quot;... nigdzie w domu nie widziałeś nic tego koloru, musi być gdzieś, gdzie jeszcze nie byłeś. &quot;Tam gdzie słońce nie dochodzi&quot;, może jakaś piwnica? Zamknąłeś księgę i zabrałeś notatkę.]
+
+(click: ?k3)[*&quot;Tern było niegdyś największym centrum handlowym w całym kraju, jednak pewnego feralnego roku zmieniło się to na zawsze. Już podczas festiwalu w 197 zaczęły dziać się dziwne rzeczy, jakoby ktoś lub coś usilnie próbował wywołać panikę wśród ludzi. Było słychać wystrzały z tamtejszych jeszcze mikrodział na proch, a muzyka była zagłuszana przez bębny. Winowajców złapano, i wsadzono do więzienia w Felron, w którym przebywają do dzisiaj. Tamtejsze wydarzenia nie zostały na długo zapamiętane, jako że nie odbiły się ono bardzo na tak wielkim festiwalu. Niestety, najgorsze miał dopiero nadejść.
+W roku 198 nikt nie podejrzewał że zwykłe życie w mieście zostanie już niedługo całkowicie zmienione. Dzieci bawiły się, dorośli pracowali, starzy odpoczywali. Przygotowania do kolejnego festiwalu zostały odłożone, bowiem zabrakło pieniędzy z funduszu, który przeznaczono na remont. Mimo wszystko, zaatakowano po raz drugi. Przez pierwsze 3 dni nikt nic nie zauważył, dopiero 4 było widać pierwsze oznaki że coś jest nie tak. Większość dzieci zaczęła pluć krwią. Uznano to za epidemię, i natychmiast zrządzono zamknięcie miasta. Uratowało to życie wielu handlarzy i podróżnych. Im później, tym było gorzej. Dorośli i osoby starsze zaczęły krwawić ze wszelkich otworów, dzieci już prawie nie mogły się ruszać, a żadne leki nie pomagały. Po dwóch tygodniach od rozpoczęcia epidemi, zaczęła się fala śmierci. Dzieci, dorośli, osoby starsze - wszyscy padałi jak muchy, niezależnie od płci i wieku. Potem wszelka komunikacja z miastem została przerwana. Stan &#39;ciszy&#39; trwał przez kolejny tydzień, aż do miasta nie wkroczył królewski skład medyczny drugiego stopnia, trudniący się epidemiami i masowymi pomorami. Pomimo ich twardości psychicznej, wiele z nich nie wytrzymało widoku jaki zastali.
+Całe miasto zapełnione było jakby stopionymi szczątkami. Kości, mięśnie, tłuszcz, organy - wszystko to połączyło się w papkę, której zapach wywoływał natychmiastową chęć zwymiotowania i ucieczki z tego piekielnego miejsca. Skład wziął próbkę tej niegdyś żywej masy, i raz jeszcze zamknął miasto, tym razem bardziej solidnie. Po testach przeprowadzonych na najgorszych mordercach z karą śmierci wynikało, że zatrucie powodowało roztapianie się człowieka od środka. Najpierw dotykało to najtwardsze części ciała typu kości, a dalej organy, mięśnie, żyły i tak dalej. Nie powodowało to jednak w żaden sposób uszkodzenia mózgu, co w tej krwawej ironi oznacza, że ofiara wszystko to musiała czuć, aż do samego końca. Roznosiła się drogą kropelkową i w rzadkich przypadkach, powietrzną.
+Sprawców tego hororu nie znaleziono, jednak po przepytaniu wcześniejszych więźniów odkryto, że miała w tym jakiś cel Sekta Yrona.&quot;* &quot;Więc dlatego gdy byłem mały, nikt nie chciał jechać tam na wycieczki&quot;, pomyślałeś. Nie spodziewałeś się aż takiego obrotu spraw.]
+
+(click: ?k4)[(set: $przeczytana_historia to true)Przez głowę przeszła ci myśl. Egis zmarł ponoć z powodu choroby. Może tej samej, co była w Tern? Wziąłeś księgę i otworzyłeś na rozdziale dotyczącym Egisa. *&quot;Był on synem Wada Artona i Magdy Arton, a także miał młodszego o trzy lata brata, Henry&#39;ego Artona. Wiadomo o nim niewiele, jako że nie wyróżniał się zbytnio od innych osób. Zmarł ponoć z powodu bliżej niesprecyzowanej choroby, w roku 299.&quot;*
+Siedziałeś zdziwiony, próbując zrozumieć jedną rzecz. Dlaczego pomiędzy &quot;zmarł&quot; i &quot;z powodu&quot; jest napisane &quot;ponoć&quot;. Po przypatrzeniu się słowu bliżej zawuażasz, że różni się ono od innych stylem i rodzajem atramentu. Musiał to dodać ktoś inny. Ktoś, kto wie więcej niż jest tu napisane.]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="7" name="Schody" tags="" position="2563.3333333333344,757.9999999999999" size="100,100">####Schody
+Ciężko wyglądające marmurowe schody przypominają bardziej zamek niż tego typu posiadłość, ale mimo tego prezentują się nader dobrze. Prowadzą na górę.
+[[Idź po schodach|Korytarz 2p]]
+[[Przejdź do salonu| Salon]]
+(if: $notatka_z_obrazu is true)[(if: $klucz is false)[Po kilku minutach szukania &#39;czegoś&#39; o czym mówiła notatka, za schodami znajdujesz drzwi. Nie mają nawet klamki, jedynie dziurkę od klucza.]](else:)[Znajdujesz drzwi, które mają tylko dziurkę od klucza. [[Włóż klucz -&gt; Porwanie]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="8" name="Pokój Carmen" tags="" position="2710.0000000000005,1486.3333333333335" size="100,100">####Pokój Carmen
+Pokój ten przypomina ci na myśl sypialnię twojej siostry: niezwykle przyjazna i miła. Wypełniony jest szafkami, łóżkiem, lustrem i |1a&gt;[mnóstwem książek].  Przy biurku siedzi Carmen. (click: ?1a)[Najwidoczniej jako jedyna poza Henry&#39;m jest tutaj czytelniczką.]
+[[Wróć na korytarz|Korytarz 2p]]
+|1o&gt;[Porozmawiaj z nią]
+
+(click: ?1o)[&quot;O, witaj Fen. Coś się stało?&quot;
+|2o&gt;[&quot;Opowiedz mi więcej o tym domu&quot;]
+(click: ?2o)[&quot;Jestem tutaj od urodzenia. Dawniej wyglądał pięknie, nie mogłam wymarzyć sobie lepszego miejsca, ale czasy się zmieniają. Nie ma już kto się nim opiekować, niszczy się i brudzi, a niektóre pokoje to już ruina...&quot;]
+
+|3o&gt;[&quot;Nie wyglądasz na osobę która chce tutaj być&quot;]
+(click: ?3o)[&quot;Aż tak to widać?&quot; - powiedziała lekko zdziwiona - &quot;Racja. Mam ochotę się stąd wyrwać, i pojechać gdzieś na wyspy, czy do Jandu. Nie byłby to dla mnie problem, świetnie znam języki, ale... rodzina mnie tu trzyma. Twierdzi, że jak ja ucieknę to zrobią to też wszyscy inni, więc mam tu zostać i trzymać się go jakbym nie miała żadnych perspektyw. Czekam dlatego na ten czas, kiedy to wszystko zawali się i nie będzie się miało wyboru poza wyruszeniem w świat. Jak teraz przeżyje te kłótnie, to później będzie już tylko lepiej.&quot;]
+
+(if: $przeczytana_historia is true)[|4o&gt;[&quot;Powiedz mi co wiesz o Egisie&quot;]]
+(click: ?4o)[(set: $rozmowa_z_carmen to true)&quot;O Egisie? Niewiele. Ojciec mówi że zmarł na jakąś chorobę, ale to nie trzyma się kupy. U nas prawie nikt nie choruje, a nawet jakby, to mając pieniądze prawie wszystko da się wyleczyć. To wygląda mi tak, jakby chciał coś ukryć, ale nie mam pojęcia dlaczego. Może jak ty byś go zapytał, powiedziałby ci więcej?]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="9" name="Pokój Jamesa" tags="" position="2861.666666666668,1486.3333333333335" size="100,100">####Pokój Jamesa
+Pokój jest pusty jednak od razu po przekroczeniu progu czujesz się nieswojo. Ma on mroczne barwy, a okna zasłonięte roletami. Poza szafą, biurkiem i łóżkiem nie ma tutaj nic.
+|1a&gt;[Przeszukaj biurko]
+[[Wróć na korytarz|Korytarz 2p]]
+
+(click: ?1a)[(replace: ?1a)[]Zacząłeś przeszukiwać biurko w poszukiwaniu jakichś rzeczy. W końcu James nie wygląda na osobę wartą zaufania, i nie wiadomo co przyjdzie mu do głowy. Na biurku znajduje się otwarty list, mówiący o wyrzuceniu go z pracy.
+|2a&gt;[Otwórz szufladę]
+|3a&gt;[Otwórz szufladę]
+|4a&gt;[Otwórz szufladę]]
+
+(click: ?2a)[(replace: ?2a)[]W szufladzie znajdujesz pistolet skałkowy i proch.(if: $klej is true)[|1z&gt;[Spreparuj broń]]
+(click: ?3a)[(replace: ?3a)[]Szuflada zawiera mnóstwo papierów, w większości dotyczących kupna narzędzi.]
+(click: ?4a)[(replace: ?4a)[](set: $wytrych to true)Na dnie szuflady znajduje się wytrych. Wziąłeś go, może kiedyś się przyda.]
+
+(click: ?1z)[Po tylu latach spędzonych wśród ludzi takiej osobowości jak James dobrze wiesz, że broń w jego rękach może, a nawet będzie wykorzystana nie w celach obronnych. Wiele razy dawałeś wolną rękę takim osobom, i zawsze źle się to kończyło. Teraz masz szansę to powstrzymać, zaklejając częściowo lufę, co powinno zaskutkować wybuchem broni. |2z&gt;[Użyj kleju]
+(click: ?2z)[(set: $spreparowany_pistolet to true)(replace: ?2z)[Spreparowałeś broń.]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="10" name="Ogród" tags="" position="2576.6666666666674,1044.666666666667" size="100,100">####Ogród
+Jako że nie ma już ulewy, postanowiłeś przejść do tego miejsca. Jest ciemne, z powodu ilości drzew zasłaniających dostęp do światła słonecznego. Jego wygląd przypomina ci wielkie ogrody z bogatych posiadłości, ale o wiele bardziej zarośnięte i zaniedbane. Nikt nie był tutaj od bardzo długiego czasu.
+(if: $skrzynka_2_nieot is false)[Zacząłeś rozglądać się w poszukiwaniu jakichś wskazówek. Twoją uwagę przykuła |1a&gt;[fontanna], |2a&gt;[huśtawka], |3a&gt;[róże] i (if: $brama_otwarta is false)[|4a&gt;[stara brama]].]
+[[Wróć do posiadłości| Korytarz]]
+(if: $brama_otwarta is true)[[[Przejdź do cmentarza|Cmentarz]]]
+
+(click: ?1a)[Nieco zielona, mająca pełno wody marmurowa fontanna. Wygląda bardzo źle, a była pewnie jeszcze gorsza, gdyby nie ulewa która widocznie ją umyła. Nie zauważasz w pobliżu niej nic ciekawego.]
+(click: ?2a)[Mocna, dębowa huśtawka, która ma zapewne tyle lat co sama posiadłość. Widocznie się zestarzała, a łańcuchy już dawno zardzewiały. Jeden jest pęknięty. Obok huśtawki znajdują się krzaki i |5a&gt;[czerwone lilie].]
+(click: ?3a)[Czerwone róże, które najwidoczniej wytrwały próbę czasu, i z pomocą dzikich owadów i deszczu urosły same. W notatce była mowa o &quot;Ostatniej części czerwonej&quot;, ale nie widzisz tu żadnego znaku starości, poza chwastami.]
+(click: ?4a)[(set: $brama_otwarta to true)Zauważasz starą bramę, zarośniętą chwastami i krzakami gdzieś w rogu ogrodu. Po kilku minutach wycinania ich, widzisz ją w całej okazałości. Postanowiłeś ją otworzyć, ale okazało się że potrzeba klucza. Po głębszych namyśleniach jednak doszedłeś do wniosku że jest tak zardzewiała, że nawet klucz by nie pomógł i mocnym kopnięciem wyrwałeś ją z zawiasów, otwierając drogę do cmentarza.
+[[Przejdź do cmentarza|Cmentarz]]]
+(click: ?5a)[(set: $skrzynka_2_nieot to true)Może to one są &quot;czerwoną częścią&quot;? Huśtawka jest już bardzo stara, co pasowało by do notatki, tak samo jak brak słońca. Postanowiłeś sprawdzić czy masz rację, i używając leżącej obok wejścia do ogrodu łopatki do kwiatów, wykopujesz lilie. Po jakimś czasie uderzyłeś w coś metalowego, co bez namysłu wyciągasz. To mała, metalowa skrzynka. Spowrotem zabrałeś ją do pracowni.
+[[Dalej (szybka podróż) -&gt; Pracownia]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="11" name="Cmentarz" tags="" position="2450.0000000000005,969.6666666666669" size="100,100">####Cmentarz
+Od razu po wejściu zauważasz wielką, kamienną kaplicę, z zamkniętymi na kłódkę i łańcuchy drzwiami. Obok są groby członków rodziny: Terusa, Caroline, Julienne, Antoniego, (if: $rozmowa_z_henrym is true)[|5a&gt;[Egisa]](else:)[Egisa] i Wada. Za kaplicą znajduje się już mocno podniszczony składzik. Atmosfera nie jest tu aż tak mroczna jak można byłoby się spodziewać, ale nadal nie jest to miejsce w którym chce się przebywać.
+(if: $prz_lan is false)[|1a&gt;[Obejrzyj kaplicę]]
+(if: $skrzynka_3_nieot is false)[(if: $prz_lan is true)[|3z&gt;[Wejdź do kaplicy]]]
+(if: $sekator is false)[|2a&gt;[Pójdź do składzika]]
+
+[[Wróć do ogrodu|Ogród]]
+
+(click: ?1a)[Kaplica wygląda na bardzo masywną. Nie ma okien, a na jej dachu znajduje się wielki, metalowy krzyż. Ciężko jest się do niej dostać, bowiem zamknięta jest za pomocą zardzewiałych, ale jeszcze mocnych łańcuchów.
+(if: $sekator is true)[|1z&gt;[Przetnij łańcuchy sekatorem]]
+(click: ?1z)[(set: $prz_lan to true)Bierzesz naprawiony sekator, i zaczynasz ciąć. Raz. Dwa. Trzy. O dziwo, łańcuchy puściły wcześniej niż sekator. Zrywasz kłódkę, i |3z&gt;[otwierasz masywne, metalowe drzwi]]].(click: ?3z)[W środku znajduje się kilkadziesiąt świeczek, wizerunek boga na obrazie, i małą lampę naftową. Po kilku minutach zauważasz też małą klapę w podłodze, ale jest zamknięta.
+(if: $wytrych is true)[|2z&gt;[Otwórz klapę]]
+(click: ?2z)[(set: $skrzynka_3_nieot to true)Wyciągasz wytrych z pokoju Jamesa, i próbujesz otworzyć klapę. Bawiłeś się tym już mając 14 lat, można powiedzieć że jesteś mistrzem wytrychów. Po kilku minutach klapa się otwiera. &quot;Bingo&quot;, pomyślałeś. W środku znajduje się, a jakże, mała metalowa skrzynka. Zabierasz ją do pracowni.
+[[Idź do pracowni (szybka podróż) -&gt; Pracownia]]]]
+
+(click: ?2a)[Składzik wygląda na schludny, pomimo że znajduje się w nim masa kurzu. Zauważasz tu różnorakie narzędzia ogrodnicze, typu taczka, łopata czy |3a&gt;[sekator]. (if: $klej is false)[(set: $szukanie_kleju to true)Pęknięty i nie nadający się za bardzo do użytku, ale z pomocą jakiegoś mocnego kleju powinien posłużyć jeszcze raz czy dwa.](else:)[(set: $sekator to true)Użyłeś prawie pół buteleczki kleju, ale było warto, bo sekator wygląda jakby nie miał się za chwile samoczynnie rozpaść.]]
+(click: ?5a)[Chwila. Z tego co mówił Henry, Egis zniknął, a nie zmarł. Dlaczego więc jest tu jego grób? Czyżby...
+Kierując się wskazówkami starszego mężczyzny, bierzesz starą, ale nadal użyteczną łopatę zza składzika, i zaczynasz rozkopywać grób. po kilkunastu minutach poczułeś, że uderzyłeś w coś twardego. Odgarnąłeś ziemię, i zobaczyłeś znalezisko w pełnej okazałości. Dębowa trumna.
+|4a&gt;[Otwórz]
+(click: ?4a)[(set: $katalizator to true)Uderzyłeś łopatą w ledwo trzymający się zatrzask, i otworzyłeś trumnę. To, co zobaczyłeś w środku, zszokowało cię najbardziej tego dnia.
+Trumna była prawie całkowicie pusta, poza jednym obiektem, przypominający jakiś kryształ. Był wielkości małego jabłka, a jego kolory utwierdziły cię w przekonaniu, że nie jest on dziełem natury. Mienił się na niebiesko i biało, będąc jednocześnie niesamowicie jasnym, przez co ciężko się na niego patrzyło. Wziąłeś go do ręki, i natychmiast poczułeś się... inaczej. Jak gdyby *coś* się działo, lub mogło zdarzyć. Schowałeś lśniący kryształ do tylnej kieszeni. Cokolwiek to jest i do czegokolwiek służy.]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="12" name="Korytarz 2p" tags="" position="2711.6666666666674,1289.666666666667" size="100,100">####Korytarz na piętrze
+Korytarz ten jest większy niż dolne, jednak wygląda identycznie. Obrazy na ścianach, dywany, okna - nie wyróżnia się niczym.
+[[Wróć na dół|Schody]]
+[[Przejdź na strych|Strych]]
+[[Idź do pokoju Carmen|Pokój Carmen]]
+|a1&gt;[Idź do pokoju Ymir](click: ?a1)[(replace:?a1)[]Pokój Ymir jest zamknięty]
+[[Idź do pokoju Jamesa|Pokój Jamesa]]
+(if: $notatka_do_labolatorium is true)[(if: $notatka_z_obrazu is false)[|a2&gt;[Sprawdź 3 obraz od lewej](click: ?a2)[(replace: ?a2)[Nic tu nie ma.]]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="13" name="Strych" tags="" position="2858.333333333334,1289.666666666667" size="100,100">####Strych
+Strych zapełniony jest ogromną ilością różnorakich pudeł, drewna i papieru. Przypomina trochę pracownię, ale bez narzędzi. Jako pomieszczenie jest ogromne, i zajmuje większość poddasza. Tu też znajdują się okna, a przy jednym z nich jest nawet |2a&gt;[teleskop].
+(if: $z_zniszczony is false)[(if: $znak_znaleziony is false)[|1a&gt;[Szukaj symbolu]]](if: $z_zniszczony is false)[(if: $znak_znaleziony is true)[(if: $kilof is false)
+|3a&gt;[Podejdź do symbolu]]](if: $z_zniszczony is false)[(if: $znak_znaleziony is true)[(if: $kilof is true)[
+(if: $skrzynka_1_nieot is false)[|4a&gt;[Rozwal ścianę z symbolem]]]]]
+[[Wróć na korytarz|Korytarz 2p]]
+
+(click: ?2a)[(replace: ?2a)[]Teleskop pokazuje piękne widoki. Na pierwszym planie widzisz ogród, a następnie ogromny, zarośnięty las, przypominający widoki z twoich rodzinnych stron. W tle natomiast widnieje małe, nie wyróżniające się niczym jezioro.](click: ?1a)[(replace: ?1a)[]
+
+(set: $znak_znaleziony to true)Znalezienie symbolu wśród takiej liczby materiałów graniczy z cudem, ale nie masz wyboru. Po dość długim czasie, głównie straconym przez przepychanie pudeł, znajdujesz mały, wyblakły już mocno symbol. Ściana nie wygląda jakby była możliwa do rozwalenia, potrzebujesz jakiegoś narzędzia.](click: ?3a)[(replace: ?3a)[]
+
+Podchodzisz do symbolu. Po tylu minutach w końcu go znalazłeś, ale nadal nie masz nic, czym mógłbyś rozwalić ścianę za nim.](click: ?4a)[(replace: ?4a)[]
+
+(set: $skrzynka_1_nieot to true)Podchodzisz do ściany z kilofem. Po kilku sekundach namysłu z wielką siłą uderzasz nim w symbol. Wystarczyły tylko dwa uderzenia aby odkryć małą, metalową skrzynkę, ukrytą tutaj latami. Zabierasz ją ze sobą do pracowni. [[Dalej (Szybka podróż) -&gt; Pracownia]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="14" name=" Podróż do pracowni" tags="" position="2706,559" size="100,100">Idziecie zawiłymi korytarzami posiadłości. Łatwo jest się tutaj zgubić, wszystko |1a&gt;[wygląda] tak samo. (click: ?1a)[Mocno oświetlone ściany z bogato ozdobionymi obrazami, dywany mające pozłacane frędzle, ogromne okna z widokiem na ciągnącą się bez końca ulewę. Wszystko to musiało kosztować fortunę.]
 
 Po jakimś czasie stanęliście przy mocnych, ale już starych dębowych |2a&gt;[drzwiach]. (click: ?2a)[Bardziej przypominały jednak wrota, a osoba która je zrobiła musiała być z siebie niesamowicie dumna: różnorakie wzory, wyżłobienia, pozłacania, tworzyły piękną i spójną kompozycję.] Carmen odwróciła się do ciebie i powiedziała: &quot;Tutaj znajduje się pracownia. Służyła głównie do pisania i tworzenia, ale teraz nie ma potrzeby jej używać. Jeśli gdzieś miał coś zostawić, to znajdziesz to tutaj.&quot;
 
-[[Dalej -&gt; Pracownia]]</tw-passagedata><tw-passagedata pid="21" name=" Pracownia" tags="" position="2835.9999999999995,1134.666666666667" size="100,100">Po wejściu do pokoju od razu poczułeś typową dla starych, nieużywanych pomieszczeń woń. Carmen miała racje. Nikt nie używa już tego miejsca.
+[[Dalej -&gt; Pracownia]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="15" name=" Pracownia" tags="" position="2852.6666666666665,1046.3333333333337" size="100,100">####Pracownia
+Po wejściu do pokoju od razu poczułeś typową dla starych, nieużywanych pomieszczeń woń. Carmen miała racje. Nikt nie używa już tego miejsca.
 
-Bardzo słabą widoczność pokój zawdzięcza to sobie temu, że nie ma tu okna. Jedynym źródłem światła jest lampa na biurku, i mała szpara pod drzwiami.
+Bardzo słabą widoczność pokój zawdzięcza sobie dlatego, że nie ma tu okna. Jedynym źródłem światła jest lampa na biurku, i mała szpara pod drzwiami.
 Cały zawalony jest różnorakimi |1a&gt;[gratami], co (pomimo jego wielkości) powoduje, że trzeba uważać na każdy krok. (click: ?1a)[Zniesiono tu chyba wszystkie nieużywane przyrządy i narzędzia: stare maszyny do szycia, maszyny do pisania, dłuta, młotki, piły, gwoździe, stare stoły, czy nawet obiekty zniszczone tak bardzo, że nie jesteś w stanie ich rozpoznać.]
 [[Wyjdź z pokoju | Korytarz]] 
-(if: $medalion_otwarty is false)[|1o&gt;[Podejdź do biurka]
+(if: $szukanie_kleju is true)[|1z&gt;[Szukaj kleju]]
+(if: $medalion_otwarty is false)[|1o&gt;[Podejdź do biurka]]
+(if: $kilof is false)[(if: $znak_znaleziony is true)[|11o&gt;[Szukaj jakiegoś narzędzia do rozwalenia ściany]]]
+(if: $skrzynka_1_nieot is true)[(if: $skrzynka_1_ot is false)[|3a&gt;[Podejdź do skrzynki]]]
+(if: $skrzynka_1_ot is true)[(if: $skrzynka_2_nieot is false)[|5a&gt;[Spójrz na notatkę]]]
+(if: $skrzynka_2_nieot is true)[(if: $skrzynka_2_ot is false)[|2z&gt;[Podejdź do skrzynki]]]
+(if: $skrzynka_3_nieot is true)[(if: $skrzynka_3_ot is false)[|2z&gt;[Podejdź do skrzynki]]]
+(if: $odlamek_klucza_1 is true)[(if: $odlamek_klucza_2 is true)[(if: $klucz is false)[|1v&gt;[Sklej klucz]]]]
+(click: ?1v)[(set: $klucz to true)Wziąłeś kawałki klucza i skleiłeś je, używając wcześniej znalezionego kleju. Wygląda nawet solidnie.]
+(click: ?1z)[(set: $klej to true)Po kilunastu minutach znajdujesz jakiś stary, ale bardzo mocny klej. Na pewno się nada.]
+(click: ?2x)[Skrzynka z kaplicy bardzo przypomina tą ze strzychu, tylko różni się mechanizmem zabezpieczającym. Aby ją otworzyć należy wpisać 4 liczby od 1 do 4. Widnieją na niej symbole W, T, A, M, a także napis chronologia. To nie będzie łatwe.|3x&gt;[Spróbuj wpisać kod]
+(click: ?3x)[(replace: ?3x)[](set: $kod to (prompt: &quot;Kod&quot;, &quot;&quot;))|4x&gt;[Kliknij przycisk](click: ?4x)[(replace: ?4x)[](if: $kod is &#39;4231&#39;)[(set: $odlamek_klucza_1 to true)(set: $skrzynka_3_ot to true)Skrzynka się otworzyła. Zawiera małą metalową część, przypominającą końcówkę klucza.](else:)[Nic się nie stało.]]]]
+(click: ?2z)[Skrzynka z ogrodu jest identyczna do wcześniejszej, poza innym mechanizmem zabezpieczającym. Tym razem można jedynie wpisać 3 liczby, od 1 do 3. Obok mechanizmu widnieje napis &quot;zerkaj daleko&quot;, razem z symbolami lasu, jeziora i ogrodu.|3z&gt;[Spróbuj wpisać kod]
+(click: ?3z)[(replace: ?3z)[](set: $kod to (prompt: &quot;Kod&quot;, &quot;&quot;))|4z&gt;[Kliknij przycisk](click: ?4z)[(replace: ?4z)[](if: $kod is &#39;231&#39;)[(set: $odlamek_klucza_2 to true)(set: $skrzynka_2_ot to true)Skrzynka się otworzyła. Zawiera małą metalową część, przypominającą końcówkę klucza.](else:)[Nic się nie stało.]]]]
+(click: ?11o)[(set: $kilof to true)Jeśli coś takiego jest, to tylko tutaj. Po zerknięciu okiem na wszelkie metalowe przedmioty, zauważyłeś coś, co będzie świetne do tego zadania. Stary zardzewiały kilof. To w końcu tylko rozwalenie ściany, a nie kopanie węgla.](click: ?3a)[Podszedłeś do biurka ze skrzynką, zapaliłeś lampę, i zacząłeś oglądać ten ukryty już od dawna w ścianie obiekt. Przypomina bardziej metalową kostkę niż skrzynię, ale jestem pewny że to ona. Mówi ci o tym mechanizm podobny do tych w sejfach, który znajduje się z przodu. Aby ją odblokować, trzeba wpisać 4 wybrane litery: K, A, S, N, Y, Z, M, O. Obok tego widnieje mały znak, który widziałeś wcześniej na ścianie. Musi mieć jakieś znaczenie.
+|2a&gt;[Spróbuj wpisać kod]
+(click: ?2a)[(replace: ?2a)[](set: $kod to (prompt: &quot;Kod (małe litery) &quot;, &quot;&quot;))|4a&gt;[Kliknij przycisk](click: ?4a)[(replace: ?4a)[](if: $kod is &#39;znak&#39;)[(set: $skrzynka_1_ot to true)Skrzynka się otworzyła. W środku znajdujesz małą notatkę. Kto wie, może była warta tej całej straty czasu.
+*&quot;Wiedziałem że nie będzie chciał go spalić, więc specjalnie wszystko przygotowałem, aby ktoś ko go przyślę mógł zniszczyć to diabelstwo. Klucz został złamany, ale jego odłamki nadal są wśród tego miejsca. Pierwsza część ukryta jest w najzimniejszym miejscu, a druga pośród ciszy, obok ostrego metalu&quot;*
+Mniej zszokowany niż ostatnio, zacząłeś zastanawiać się o jakich miejscach może mówić. Położyłeś notatkę na biurku, a skrzynkę rzuciłeś gdzieś w kąt. To jeszcze nie koniec.](else:)[Nic się nie stało.]]]](click: ?a5)[*&quot;Wiedziałem że nie będzie chciał go spalić, więc specjalnie wszystko przygotowałem, aby ktoś ko go przyślę mógł zniszczyć to diabelstwo. Klucz został złamany, ale jego odłamki nadal są wśród tego miejsca. Pierwsza część ukryta jest w najzimniejszym miejscu, a druga pośród ciszy, obok ostrego metalu&quot;*]
 
 (click: ?1o)[Włączyłeś lampę naftową, i rozświetliłeś większość pomieszczenia. Biurko zawalone jest różnymi obiektami, znalazła się tu nawet lupa czy nożyce. Nad nim znajduje się półka z przegródkami, mająca przyklejone nazwy: Antoni, Wad i... Derek.
 |2o&gt;[Spójrz na przegródkę &quot;Antoni&quot;]
@@ -165,26 +302,121 @@ Cały zawalony jest różnorakimi |1a&gt;[gratami], co (pomimo jego wielkości) 
 |4o&gt;[Spójrz na przegródkę &quot;Derek&quot;]
 
 (click: ?2o)[Zacząłeś przeszukiwać przegródkę Antoniego. Znajdują się tu głównie jego listy i zaproszenia na śluby. Nie znajdujesz w nich nic interesującego, poza jedną, jakby wyrwaną skądś kartką. Nie rozczytujesz z niej wiele poza zdaniem &quot;dajcie mi spokój&quot;.]
+
 (click: ?3o)[Przegródka &quot;Wad&quot; jest całkowicie pusta, poza małym dopiskiem &quot;przeniesione do biblioteki&quot;.]
-(click: ?4o)[Zerknąłeś tylko na przegródkę Derek&#39;a, a już ilość dokumentów, listów i kartek cię przerosła. Najwidoczniej uciekając z domu, większość rzeczy zostawił właśnie w nim.
+
+(click: ?4o)[Zerknąłeś tylko na przegródkę Dereka, a już ilość dokumentów, listów i kartek cię przerosła. Najwidoczniej uciekając z domu, nie brał ze sobą nic związanego z Artonami.
 Odrzuciłeś wszelkie niepodejrzane kartki i koperty, zostawiając te najdziwniejsze.
 |5o&gt;[Pocięty papier]
 |6o&gt;[Notatka]
 |7o&gt;[Dziwna kartka]
 
-(click: ?5o)[&lt;img src=&quot;https://gregory455.github.io/img/notatka_1b.png&quot; width=&quot;209px&quot; height=&quot;100px&quot;&gt;
-Przygnieciona listami notatka. Wycięto z niej jakieś fragmenty, ale nie masz pojęcia gdzie mogą być.]
+(click: ?5o)[Przygnieciona listami notatka. Wycięto z niej jakieś fragmenty, ale nie masz pojęcia gdzie mogą być.]
 
-(click: ?6o)[Wygląda jakby ktoś chciał ją spalić, ale zdecydował się tego nie robić. Na fragmencie napisane jest: &quot;Niech więc tak będzie. Ale nigdy, przenigdy nie pozwolę dać się tej chorej obsesji. Nawet, jakbym miał Ucie&quot;]
+(click: ?6o)[Wygląda jakby ktoś chciał ją spalić, ale zdecydował się tego nie robić. Na fragmencie napisane jest: &quot;Niech więc tak będzie. Ale nigdy, przenigdy nie pozwolę dać się tej chorej obsesji. Nawet, jakbym miał Ucie-&quot;]
 
-(click: ?7o)[&lt;img src=&quot;https://gregory455.github.io/img/notatka_2.png&quot; width=&quot;209px&quot; height=&quot;100px&quot;&gt;
-Na mocno zwęglonym papierze widnieje namalowany białą farbą albo kredą obrazek, przypominający twój |o9&gt;[medalion]. Nic więcej na niej nie ma.] (click: ?o9)[Jasne! Medalion! Zdjąłeś go szybkim ruchem, i zacząłeś oglądać. Nigdy się mu bliżej nie przyglądałeś, w końcu to tylko wisiorek. Teraz jednak zauważasz, że za herbem znajduje się malutka dźwignia. Ruszyłeś nią lekko, a z medalionu wyskoczyły mocno ściśnięte |10o&gt;[zwitki papieru].]
-
-(click: ?10o)[&lt;img src=&quot;https://gregory455.github.io/img/notatka_1a.png&quot; width=&quot;209px&quot; height=&quot;55px&quot;&gt;
-Natychmiast zrozumiałeś skąd one są. Wziąłeś pociętą i niezrozumiałą wcześniej notatkę, i zacząłeś łączyć. Po kilku minutach miałeś już, co prawda pociętą, notatkę.
-&lt;img src=&quot;https://gregory455.github.io/img/notatka_1.png&quot; width=&quot;209px&quot; height=&quot;100px&quot;&gt;
+(click: ?7o)[Na mocno zwęglonym papierze widnieje namalowany białą farbą albo kredą obrazek, przypominający twój |o9&gt;[medalion]. Nic więcej na niej nie ma.] (click: ?o9)[Jasne! Medalion! Zdjąłeś go szybkim ruchem, i zacząłeś oglądać. Nigdy się mu bliżej nie przyglądałeś, w końcu to tylko wisiorek. Teraz jednak zauważasz, że za herbem znajduje się malutka dźwignia. Ruszyłeś nią lekko, a z medalionu wyskoczyły mocno ściśnięte |10o&gt;[zwitki papieru].]
+(click: ?10o)[Natychmiast zrozumiałeś skąd one są. Wziąłeś pociętą i niezrozumiałą wcześniej notatkę, i zacząłeś łączyć. Po kilku minutach miałeś już, co prawda pociętą, notatkę.
+*&quot;Zrobiłem błąd. Oszaleją. Znajdź go. Strych. Niebieskie koło. Kilof.&quot;*
 Stałeś zszokowany przez parę chwil, próbując zrozumieć, co się właśnie dzieje. Błąd? Jaki błąd? Ucieczka? Niebieskie koło? Kilof?
-Miliony pytań zaprzątały ci właśnie głowę, jednak jedno bardziej niż inne. Skąd Derek wiedział że znowu tu wróci? Ta część notatki musiała leżeć tu kilkanaście lat! Musiał zmienić zdanie przed ucieczką, ale mimo to... było już za późno? (set: $medalion_otwarty to true)]]]]</tw-passagedata><tw-passagedata pid="22" name="Sypialnia" tags="" position="2822.5,801.3333333333334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name=" Korytarz" tags="" position="2710.9999999999995,1133.0000000000002" size="100,100">[[Idź do pracowni -&gt; Pracownia]] </tw-passagedata></tw-storydata>
+Miliony pytań zaprzątały ci właśnie głowę, jednak jedno bardziej niż inne. Skąd Derek wiedział że będzie chciał tu wrócić... albo kogoś przyśle? Nie bez powodu zostawił te wszelkie podpowiedzi. Ta część notatki musiała leżeć tu kilkanaście lat! Musiał zmienić zdanie przed ucieczką, ale mimo to... było już za późno? (set: $medalion_otwarty to true)]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="16" name=" Korytarz" tags="" position="2712.6666666666665,1098.0000000000005" size="100,100">####Korytarz
+Korytarz łączy jadalnię, pracownie i ogród. Od dawna nikogo tutaj nie było, co można wywnioskować po ogromnej ilości kurzu pokrywającej całą powierzchnię pomieszczenia.
+[[Idź do jadalni -&gt; Jadalnia]] 
+[[Przejdź do pracowni -&gt; Pracownia]]
+(if: $ogrod_dos is true)[[[Pójdź do ogrodu|Ogród]]]
+(if: $notatka_do_laboatorium is true)[(if: $notatka_z_obrazu is false)[|a1&gt;[Sprawdź 3 obraz od lewej]]]
+(click: ?a1)[(set: $notatka_z_obrazu to true)Za obrazem Antoniego znajdowała się notatka z tekstem *&quot;Znajdziesz go przy schodach do nieba&quot;*.]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="17" name=" Jadalnia" tags="" position="2711.6666666666674,901.3333333333337" size="100,100">####Jadalnia
+Jadalnia jest jednym z najbardziej bogatszych pokoi w całej posiadłości. Niezwykle dobrze wykonany ogromny, dębowy stół, dodaje tutaj pewnego rodzaju niesamowitość. Pomimo że nie jest w całości nakryty, nadal wygląda świetnie. Bowiem poza nim, pokój niczym się nie wyróżnia. Siedzi przy nim Henry.
+[[Przejdź do korytarza | Korytarz]]
+[[Wejdź do salonu| Salon]]
+|1a&gt;[Porozmawiaj z Henry&#39;m]
+
+(click: ?1a)[(replace: ?1a)[]Usiadłeś na krześle obok Henry&#39;ego, i zacząłeś rozmowę.
+|1o&gt;[&quot;Nie przeszkadzam wam tu?&quot;](click: ?1o)[
+&quot;Henry się zaśmiał. &quot;Oczywiście że nie. Od dawna wszystkie wydarzenia jakie tu były to kłótnie i nudne sprawy. Można powiedzieć, że jesteś powiewem świeżości. Czuj się jak u siebie, w końcu płynie w tobie też krew Artonów!&quot;]
+
+|2o&gt;[&quot;Opowiedz mi dokładniej jakim Derek był człowiekiem.&quot;](click: ?2o)[
+&quot;Awanturniczy. I w dobrym, i złym znaczeniu. Z tego co mi opowiadano, nigdy nie dawał za wygraną. Zawsze znajdywał sposoby aby dopiąć swego, nawet jak były bardzo kontrowersyjne. Mimo tego, dobrze dogadywał się ze wszystkimi. Przynajmniej do czasu jego Ojca. Nie chciał z nikim rozmawiać, ale nie sprawiał też wrażenia przygnębionego. Tak, jakby ktoś lub coś ciągle zaprzątało jego myśli. O co dokładniej mu chodziło? Nikt nie wie. Ponoć Wad przejął coś po śmierci Antoniego. Nie wiem co to było, ale na pewno musiało być ważne. Tyle mi wiadomo.]
+
+|3o&gt;[&quot;Dlaczego tyle pokoi jest nieużywanych?&quot;](click: ?3o)[
+&quot;Dom już od dawna popada w ruinę, głównie z powodu braku czasu. Nie ma kto się nim zajmować, bo wszyscy są zajęci. Używane są tylko pokoje potrzebne do codziennego życia. Nikt prócz mnie i Carmen nie korzysta na przykład z biblioteki, wszyscy przesiadują w salonie coraz mniej, a o pracowni czy ogrodzie, to już szkoda wspominać.&quot;]
+
+|4o&gt;[&quot;Skąd Artonów było stać na taką posiadłość?&quot;](click: ?4o)[
+&quot;Terus miał przyjaciela, który przepisał na niego cały swój majątek. Nie wiadomo o spadku nic, poza liczbami. Była to prawie tona złota. Wystarczyła, aby przez tyle lat utrzymać to wszystko w takiej postaci, w jakiej była na samym początku.&quot;]]
+
+(if: $rozmowa_z_carmen is true)[|5o&gt;[&quot;Coś przede mną ukrywasz.&quot;]
+(click: ?5o)[Henry siedzi przez jakiś czas zdziwiony, ale po chwili pyta się ciebie: &quot;Co miałbym ukrywać?&quot;.
+|6o&gt;[Egis nie zmarł z powodu choroby, prawda? Powiedz mi, jak to było naprawdę.]
+(click: ?6o)[Henry zastanowił się przez chwilę, i zaczął mówić ciężkim tonem. &quot;Są w tej rodzinie rzeczy, o których prawie nikt nie ma pojęcia. Tak samo jak Derek na pewno nie odszedł z domu z powodu kłótni tylko nie mógł czegoś, nie mam pojęcia czego wziąć, tak samo Egis nie zmarł z powodu choroby. Ani ze starości. Ani przez morderstwo. Wypadek. Wojna. Samobójstwo. Po prostu zniknął.&quot;
+Milczałeś. Nie spodziewałeś się takiego obrotu spraw.
+&quot;Rozumiesz? Zniknął. Nie uciekł. Po prostu, jednego dnia był, a drugiego już nie. Tak, jakby ktoś wyrwał go z rzeczywistości. I chociażby z tego jednego powodu wiem, że nie jesteś tu tylko po to, aby powiedzieć nam o śmierci Dereka. Nasz ród ma zbyt dużo niewyjaśnionych spraw, abyś przyszedł tu i mówił prawdę. Mów, po co tu jesteś. Czego od nas chcesz.&quot;
+Przez chwilę siedziałeś cicho, ale postanowiłeś powiedzieć prawdę.
+|7o&gt;[&quot;Jestem tu po Dziennik.&quot;]
+(click: ?7o)[(set: $rozmowa_z_henrym to true)Henry myślał przez pewien czas, aż nagle uśmiechnął się, i powiedział: **//Czyli są jeszcze jakieś tajemnice, o których nie mam pojęcia. Jestem ciekaw, czy zdołasz rozwikłać moją?//**, po czym dodał: &quot;Łopata leży za składzikiem&quot;.]]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="18" name=" Salon" tags="" position="2708.3333333333344,756.3333333333337" size="100,100">####Salon
+Salon wygląda jak na pokój w którym wszyscy najczęściej przebywają, jednak teraz nikogo tu nie ma. Kilka stolików z filiżankami, półki z książkami i kominek nadaje temu miejscu miłą i przyjemną atmosferę.
+[[Idź do jadalni| Jadalnia]]
+[[Pójdź do biblioteki|Biblioteka]]
+[[Idź do schodów|Schody]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="19" name=" Porwanie" tags="" position="2501.6666666666674,94.66666666666646" size="100,100">Wyciągnąłeś klucz, i wsadziłeś go zamka. Ku twojemu zdziwieniu, nie możesz nim przekręcić. Próbujesz na różne sposoby, gdy nagle klucz łamie się w pół. &quot;Cholera&quot;, myślisz sobie. Do czego w takim razie jest ten klucz? Jeszcze lepiej, po co są tu te drzwi?!
+Nie minęła sekunda, a poczułeś mocne uderzenie w tył głowy...
+|1&gt;[Dalej]
+(click: ?1)[Obudziłeś się. Nie widzisz nic, bo masz opaskę na na oczach, ale jednej rzeczy jesteś pewny. Jesteś przywiązany do krzesła. Po chwili szarpania się i nieudanej próbie zerwania więzów, przestajesz się ruszać. To nic nie daje.
+Po kilku minutach słyszysz jak ktoś podchodzi do ciebie, a następnie zdejmuje ci opaskę. To James.
+&quot;Tego się nie spodziewałeś, szmatławcu!&quot; - Powiedział z uśmiechem na ustach - &quot;Ta cała śmierć... to wszystko było zmyślone, aby dostać się tutaj, tak?!&quot;
+|2&gt;[&quot;Nie, on naprawdę...&quot;](click: ?2)[ - Odparłeś, i James ci przerwał - &quot;Milcz! Pojawiasz się tu, i w ciągu jednego dnia niszczysz WSZYSTKO! Wiesz w ogóle gdzie jesteś?&quot;
+Rozejrzałeś się. Nie masz pojęcia co to za miejsce, ale przypomina jakieś labolatorium. Wokół ciebie znajduje się kominek, narzędzia chemika, jakieś fiolki, chemikalia, a także dziwny metalowy konstrukt.
+&quot;To jest najważniejsze miejsce w całej historii rodziny Artonów, a ty teraz śmiesz plugawić to miejsce swoją obecnością&quot; - Rozpoczął - &quot;Nie znasz nawet połowy tajemnic tego miejsca, i myślisz że jesteś godzien nazywać się Artonem!&quot;
+|3&gt;[&quot;Ty je niby znasz?&quot;](click: ?3)[ - Odpowiedziałeś - |4&gt;[&quot;Proszę, pochwal się!&quot;]
+(click: ?4)[&quot;Może i przypominam ci kogoś głupiego, ale wcale taki nie jestem&quot; - Wycedził przez zaciśnięte zęby.
+|5&gt;[&quot;To czego w takim razie ode mnie chcesz?!&quot;](click: ?5)[ - Krzyknąłeś. Miałeś już dość jego gadania.
+Uśmiechnął się - &quot;Dobrze wiesz czego. Sam po to tu przyszedłeś&quot;.
+Zmroziło cię - |6&gt;[&quot;Skąd wiesz?&quot;](click: ?6)[ - Odparłeś. Może naprawdę wie więcej?
+&quot;Bo wiem do kogo ostatnio należał.&quot;
+	(if: $rozmowa_z_henrym is true)[Nagle wszystko stało się dla ciebie jasne. Już wiesz czego zniknął. |7&gt;[Egis...]
+	(click: ?7)[&quot;Skąd, do chol...&quot;
+	&quot;Może jednak jestem godzien nazywać się Artonem&quot; - Uśmiechnąłeś się.](else:)[Siedziałeś zdziwiony. Skąd on to wszystko wie?]]
+&quot;Dość tego gadania&quot; - Rozwiązał cię - &quot;Wstawaj.&quot;
+W ręku trzymał pistolet.
+&quot;Podejdź tam&quot; - Wskazał na metalową szafkę. Szybkim krokiem podszedłeś tam.
+&quot;Otwórz ją&quot; - Powiedział.
+Zamknięta była na kombinację symboli, których nigdy w życiu wcześniej nie widziałeś.
+&quot;Nie wiem jak to zrobić&quot; - Odpowiedziałeś zgodnie z prawdą.
+&quot;Kłamiesz!&quot;
+&quot;Mówię prawdę.&quot;
+&quot;Derek zamknął to miejsce, na pewno wysłał ci kombinację!&quot; - Krzyknął.
+Stałeś osłupiony. Wyciągnąłeś notatki które ci zostawił, i szukałeś jakichkolwiek poszlak. Nagle, na jednej z nich, zauważyłeś coś, co wcześniej pominąłeś. &quot;Specjalnie wszystko spreparowałem, aby ktoś, kogo przyślę, mógł zniszczyć to diabelstwo&quot;. Wszystko co jest potrzebne, znajduje się w skrzynkach. Nie było w nich nic, poza kluczem i notatkami. Czyli nie dość, że podpowiedzi masz ze sobą, to klucz wcześniej działał. Tylko ktoś zmienił zamki.
+Podszedłeś do kominka, i wyciągałeś wszystkie notatki po kolei. Wszystkie symbole były już dobrze widzialne, teraz musiałeś tylko wybrać dobrą kolejność. Wpisałeś je w kolejności chronologicznej do notatek. Nagle, szafka się otworzyła.
+&quot;Miałem rację&quot; - Powiedział James, i odrzucił cię od szafki. Wyciągnął z niej starą, zakurzoną księgę.
+&quot;Dziennik. Przekazany Artonom, przeczytany tylko przez nich. Terus, Antoni, Egis, wszyscy byli w to zamieszanie. Myślisz że z jakiego powodu twój dziadek opuścił dom? Przez kłótnię?! Ha, nie rozśmieszaj mnie! Tak naprawdę chodziło mu tylko o dziennik. Przekazywany z pokolenia na pokolenie trafił do Wad&#39;a, i nie mógł mu darować. Chciał go zniszczyć. Pozbyć się go, rozumiesz? Coś, nad czym tyle osób poświęciło całe swoje życie... mówią że Antoni był szalony, że dlatego Wad nigdy nie odważył się go przeczytać. Kłamstwa! Po prostu wybrał on lepszą drogę życia, taką, w której masz szansę być kimś, nie być uwięzionym w tym cholernym miejscu! Ta księga... w niej napisane jest wszystko, co pozwoli mi się stać najlep-&quot;
+&quot;Skończyłeś? Nie mam zamiaru już słuchać twoich głupot.&quot; - Przerwałeś mu. Naprawdę jest chory.
+&quot;Nie. Nie skończyłem&quot; - Wycelował w ciebie swój pistolet.
+(if: $spreparowany_pistolet is false)[(set: $zak to 1)Usłyszałeś tylko głuchy odgłos wystrzału. Trafił cię w szyję. Wiłeś się bezbronny dusząc się własną krwią, a James stał nad tobą i śmiał się jak szalony. &quot;Nie mogę tak skończyć&quot; - Krzyczałeś w myślach &quot;Nie w taki sposób!&quot;
+Było już jednak za późno. Czułeś że całkowicie odpływasz. Czujesz... [[Koniec -&gt; Koniec]]](else:)[(if: $katalizator is false)[(set: $zak to 2)Nacisnął na spust, lecz pistolet zamiast wystrzelić wybuchł, rozrzucając ogień po całym pomieszczeniu. James upadł na ziemię, a ogień z pistoletu spowodował, że zaczął się palić. Nie wiedząc co robić, próbowałeś odzyskać dziennik, lecz było na to już za późno - został z niego tylko proch. Ostatkiem sił uciekłeś, i trafiłeś do znanego już tobie pomieszczenia ze schodami. Wszystkie drzwi poza tymi od wyjścia były zamknięte, jakby James chciał za wszelką cenę zatrzymać cię w środku, ale zapomniał zamknąć tych najważniejszych. Wiedząc jak wielki pożar odbywa się na dole uciekłeś z posiadłości. Po kilku minutach już cała płonęła, a wśród płomieni było słychać krzyki. Tak kończy się rodzina Artonów - z bólem, i nienawiścią. [[Koniec -&gt; Koniec]]](else:)[(set: $zak to 3)Nacisnął na spust, lecz pistolet zamiast wystrzelić wybuchł, rozrzucając ogień po całym pomieszczeniu. James upadł na ziemię, a ogień z pistoletu spowodował, że zaczął się palić. Nie myśląć zbytnio, wyciągnąłeś kamień, i natychmiast poczułeś, że coś jest nie tak. Wszystko działo się w spowolnionym tempie, jak gdyby spowolnić film. Sięgnąłeś po palący się dziennik, i nie odczuwając prawie w ogóle żaru ognia, wyrywałeś jeszcze nadające się do czytania strony. Niestety ogień rozprzestrzeniał się zbyt szybko, i mimo spowolnionego czasu musiałeś uciekać. Schowałeś kamień spowrotem do kieszeni. Ostatkiem sił uciekłeś, i trafiłeś do znanego już tobie pomieszczenia ze schodami. Wszystkie drzwi poza tymi od wyjścia były zamknięte, jakby James chciał za wszelką cenę zatrzymać cię w środku, ale zapomniał zamknąć tych najważniejszych. Wiedząc jak wielki pożar odbywa się na dole uciekłeś z posiadłości. Po kilku minutach już cała płonęła, a wśród płomieni było słychać krzyki. Tak kończy się rodzina Artonów - z bólem, i nienawiścią. [[Koniec -&gt; Koniec]]]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="20" name=" Koniec" tags="" position="2500.000000000001,296.33333333333314" size="100,100">###Koniec
+Twoja podróż się zakończyła. Zakończenie jakie uzyskałeś to (if: $zak is 1)[Śmierć Fena. Postaraj się bardziej!](if: $zak is 2)[Śmierć rodziny, i ucieczka. Byłeś bliski odkrycia tajemnicy Artonów, ale czegoś ci zabrakło.](if: $zak is 3)[Śmierć rodziny, i odzyskanie dziennika. Fen dzięki tobie odzyskał przynajmniej kawałek dziennika, a sam masz szansę dowiedzieć się co stało się 20 lat po katastrofie. [[Dalej -&gt; KoniecEg]]]
+
+Jeśli chcesz więcej, wejdź na www.gregory455.github.io, znajdziesz tam informacje o kolejnych grach, a także kontakt.
+[[Kliknij tutaj, aby przejść do menu głównego -&gt;Menu]] 
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="21" name=" KoniecEg" tags="" position="2506.6666666666674,499.66666666666646" size="100,100">Idziesz zarośnietą, polną drogą. Dobrze wiesz, że musi być w tym miejscu. W końcu to tu narodził się dziennik. Malnour. Ta piekielna wyspa.
+Otwierasz wrota do zrujnowanej wieży w zamku. To idealne miejsce do ukrycia się.
+Powoli wchodzisz po kamiennych i zniszczonych przez czas i naturę schodach. Jest w tym miejscu coś magicznego, jakby zatrzymało się w czasie. Po kilku minutach byłeś już na szczycie, a od niego dzieliły cię tylko drzwi.
+Wykopujesz je z zawiasów, które przez ten czas zarosły wystarczająco, aby pozwolić na taki manewr. W pomieszczeniu znajduje się wszystko to, czego się spodziewałeś. Konstrukt, narzędzia... ha, nawet katalizator! Byłeś pewny, że gdzieś tu jest. Podszedłeś do katalizatora, którego już od tak dawna nie widziałeś. Pomimo tylu lat, nadal zachował swój blask. Już miałeś sięgać po niego ręką, ale twój wyostrzony zmysł słuchu podpowiada ci, że ktoś jest za tobą. W ostatniej chwili unikając ciosu nożem, posyłasz atakującego na posadzkę, wyciągając też pistolet skałkowy Zdziwiony, odrzuca nóż i wystawia ręce do góry. Po chwili przerywa milczenie.
+&quot;Po co tu przyszedłeś&quot;
+&quot;Chciałem odzyskać moją własność&quot; - Odpowiedziałeś. Po co innego?
+Atakujący się uśmiechnął - &quot;Nie należy już do ciebie&quot;
+Stałeś jak słup soli. Co on wygaduje?
+&quot;Łżesz&quot; - Wycedziłeś.
+&quot;Nie należy już do nikogo. Spalił się lata temu. W ogóle kim ty jesteś? Skąd wiedziałeś że tu będę?&quot;
+&quot;Mam na imię Egis. Egis Arton.&quot; - Powiedziałeś, i wystrzeliłeś mu prosto w głowę.
+Kimkolwiek był, nieważne. Odzyskałeś katalizator, a on sam wystarczy do kontynuowania prac.
+Mając go i konstrukt, z łatwością odzyskasz dziennik.
+[[Wróć do menu głównego -&gt;Menu]]
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="22" name="Menu" tags="" position="2900.833333333333,1.6666666666666667" size="100,100">####Horror w Malnour: Dziennik
+[[Rozpocznij nową grę -&gt;Początek]]
+(link: &quot;Wczytaj grę&quot;)[(load-game:&quot;A&quot;)]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
