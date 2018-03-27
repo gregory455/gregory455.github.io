@@ -178,7 +178,7 @@ Siedziałeś zdziwiony, próbując zrozumieć jedną rzecz. Dlaczego pomiędzy &
 Ciężko wyglądające marmurowe schody przypominają bardziej zamek niż tego typu posiadłość, ale mimo tego prezentują się nader dobrze. Prowadzą na górę.
 [[Idź po schodach|Korytarz 2p]]
 [[Przejdź do salonu| Salon]]
-(if: $notatka_z_obrazu is true)[(if: $klucz is false)[Po kilku minutach szukania &#39;czegoś&#39; o czym mówiła notatka, za schodami znajdujesz drzwi. Nie mają nawet klamki, jedynie dziurkę od klucza.]](else:)[Znajdujesz drzwi, które mają tylko dziurkę od klucza. [[Włóż klucz -&gt; Porwanie]]]
+(if: $notatka_z_obrazu is true)[(if: $klucz is false)[Po kilku minutach szukania &#39;czegoś&#39; o czym mówiła notatka, za schodami znajdujesz drzwi. Nie mają nawet klamki, jedynie dziurkę od klucza.](else:)[Znajdujesz drzwi, które mają tylko dziurkę od klucza. [[Włóż klucz -&gt; Porwanie]]]]
 (save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="8" name="Pokój Carmen" tags="" position="2710.0000000000005,1486.3333333333335" size="100,100">####Pokój Carmen
 Pokój ten przypomina ci na myśl sypialnię twojej siostry: niezwykle przyjazna i miła. Wypełniony jest szafkami, łóżkiem, lustrem i |1a&gt;[mnóstwem książek].  Przy biurku siedzi Carmen. (click: ?1a)[Najwidoczniej jako jedyna poza Henry&#39;m jest tutaj czytelniczką.]
 [[Wróć na korytarz|Korytarz 2p]]
@@ -203,7 +203,7 @@ Pokój jest pusty jednak od razu po przekroczeniu progu czujesz się nieswojo. M
 |3a&gt;[Otwórz szufladę]
 |4a&gt;[Otwórz szufladę]]
 
-(click: ?2a)[(replace: ?2a)[]W szufladzie znajdujesz pistolet skałkowy i proch.(if: $klej is true)[|1z&gt;[Spreparuj broń]]
+(click: ?2a)[(replace: ?2a)[]W szufladzie znajdujesz pistolet skałkowy i proch.(if: $klej is true)[|1z&gt;[Spreparuj broń]]]
 (click: ?3a)[(replace: ?3a)[]Szuflada zawiera mnóstwo papierów, w większości dotyczących kupna narzędzi.]
 (click: ?4a)[(replace: ?4a)[](set: $wytrych to true)Na dnie szuflady znajduje się wytrych. Wziąłeś go, może kiedyś się przyda.]
 
@@ -232,7 +232,7 @@ Od razu po wejściu zauważasz wielką, kamienną kaplicę, z zamkniętymi na k�
 
 (click: ?1a)[Kaplica wygląda na bardzo masywną. Nie ma okien, a na jej dachu znajduje się wielki, metalowy krzyż. Ciężko jest się do niej dostać, bowiem zamknięta jest za pomocą zardzewiałych, ale jeszcze mocnych łańcuchów.
 (if: $sekator is true)[|1z&gt;[Przetnij łańcuchy sekatorem]]
-(click: ?1z)[(set: $prz_lan to true)Bierzesz naprawiony sekator, i zaczynasz ciąć. Raz. Dwa. Trzy. O dziwo, łańcuchy puściły wcześniej niż sekator. Zrywasz kłódkę, i |3z&gt;[otwierasz masywne, metalowe drzwi]]].(click: ?3z)[W środku znajduje się kilkadziesiąt świeczek, wizerunek boga na obrazie, i małą lampę naftową. Po kilku minutach zauważasz też małą klapę w podłodze, ale jest zamknięta.
+(click: ?1z)[(set: $prz_lan to true)Bierzesz naprawiony sekator, i zaczynasz ciąć. Raz. Dwa. Trzy. O dziwo, łańcuchy puściły wcześniej niż sekator. Zrywasz kłódkę, i |3z&gt;[otwierasz masywne, metalowe drzwi].]](click: ?3z)[W środku znajduje się kilkadziesiąt świeczek, wizerunek boga na obrazie, i małą lampę naftową. Po kilku minutach zauważasz też małą klapę w podłodze, ale jest zamknięta.
 (if: $wytrych is true)[|2z&gt;[Otwórz klapę]]
 (click: ?2z)[(set: $skrzynka_3_nieot to true)Wyciągasz wytrych z pokoju Jamesa, i próbujesz otworzyć klapę. Bawiłeś się tym już mając 14 lat, można powiedzieć że jesteś mistrzem wytrychów. Po kilku minutach klapa się otwiera. &quot;Bingo&quot;, pomyślałeś. W środku znajduje się, a jakże, mała metalowa skrzynka. Zabierasz ją do pracowni.
 [[Idź do pracowni (szybka podróż) -&gt; Pracownia]]]]
@@ -276,17 +276,17 @@ Po wejściu do pokoju od razu poczułeś typową dla starych, nieużywanych pomi
 Bardzo słabą widoczność pokój zawdzięcza sobie dlatego, że nie ma tu okna. Jedynym źródłem światła jest lampa na biurku, i mała szpara pod drzwiami.
 Cały zawalony jest różnorakimi |1a&gt;[gratami], co (pomimo jego wielkości) powoduje, że trzeba uważać na każdy krok. (click: ?1a)[Zniesiono tu chyba wszystkie nieużywane przyrządy i narzędzia: stare maszyny do szycia, maszyny do pisania, dłuta, młotki, piły, gwoździe, stare stoły, czy nawet obiekty zniszczone tak bardzo, że nie jesteś w stanie ich rozpoznać.]
 [[Wyjdź z pokoju | Korytarz]] 
-(if: $szukanie_kleju is true)[|1z&gt;[Szukaj kleju]]
+(if: $szukanie_kleju is true)[(if: $klej is false)[|1z&gt;[Szukaj kleju]]]
 (if: $medalion_otwarty is false)[|1o&gt;[Podejdź do biurka]]
 (if: $kilof is false)[(if: $znak_znaleziony is true)[|11o&gt;[Szukaj jakiegoś narzędzia do rozwalenia ściany]]]
 (if: $skrzynka_1_nieot is true)[(if: $skrzynka_1_ot is false)[|3a&gt;[Podejdź do skrzynki]]]
 (if: $skrzynka_1_ot is true)[(if: $skrzynka_2_nieot is false)[|5a&gt;[Spójrz na notatkę]]]
 (if: $skrzynka_2_nieot is true)[(if: $skrzynka_2_ot is false)[|2z&gt;[Podejdź do skrzynki]]]
-(if: $skrzynka_3_nieot is true)[(if: $skrzynka_3_ot is false)[|2z&gt;[Podejdź do skrzynki]]]
+(if: $skrzynka_3_nieot is true)[(if: $skrzynka_3_ot is false)[|2x&gt;[Podejdź do skrzynki]]]
 (if: $odlamek_klucza_1 is true)[(if: $odlamek_klucza_2 is true)[(if: $klucz is false)[|1v&gt;[Sklej klucz]]]]
 (click: ?1v)[(set: $klucz to true)Wziąłeś kawałki klucza i skleiłeś je, używając wcześniej znalezionego kleju. Wygląda nawet solidnie.]
 (click: ?1z)[(set: $klej to true)Po kilunastu minutach znajdujesz jakiś stary, ale bardzo mocny klej. Na pewno się nada.]
-(click: ?2x)[Skrzynka z kaplicy bardzo przypomina tą ze strzychu, tylko różni się mechanizmem zabezpieczającym. Aby ją otworzyć należy wpisać 4 liczby od 1 do 4. Widnieją na niej symbole W, T, A, M, a także napis chronologia. To nie będzie łatwe.|3x&gt;[Spróbuj wpisać kod]
+(click: ?2x)[Skrzynka z kaplicy bardzo przypomina tą ze strychu, tylko różni się mechanizmem zabezpieczającym. Aby ją otworzyć należy wpisać 4 liczby od 1 do 4. Widnieją na niej symbole W, T, A, M, a także napis chronologia. To nie będzie łatwe.|3x&gt;[Spróbuj wpisać kod]
 (click: ?3x)[(replace: ?3x)[](set: $kod to (prompt: &quot;Kod&quot;, &quot;&quot;))|4x&gt;[Kliknij przycisk](click: ?4x)[(replace: ?4x)[](if: $kod is &#39;4231&#39;)[(set: $odlamek_klucza_1 to true)(set: $skrzynka_3_ot to true)Skrzynka się otworzyła. Zawiera małą metalową część, przypominającą końcówkę klucza.](else:)[Nic się nie stało.]]]]
 (click: ?2z)[Skrzynka z ogrodu jest identyczna do wcześniejszej, poza innym mechanizmem zabezpieczającym. Tym razem można jedynie wpisać 3 liczby, od 1 do 3. Obok mechanizmu widnieje napis &quot;zerkaj daleko&quot;, razem z symbolami lasu, jeziora i ogrodu.|3z&gt;[Spróbuj wpisać kod]
 (click: ?3z)[(replace: ?3z)[](set: $kod to (prompt: &quot;Kod&quot;, &quot;&quot;))|4z&gt;[Kliknij przycisk](click: ?4z)[(replace: ?4z)[](if: $kod is &#39;231&#39;)[(set: $odlamek_klucza_2 to true)(set: $skrzynka_2_ot to true)Skrzynka się otworzyła. Zawiera małą metalową część, przypominającą końcówkę klucza.](else:)[Nic się nie stało.]]]]
@@ -325,7 +325,7 @@ Korytarz łączy jadalnię, pracownie i ogród. Od dawna nikogo tutaj nie było,
 [[Idź do jadalni -&gt; Jadalnia]] 
 [[Przejdź do pracowni -&gt; Pracownia]]
 (if: $ogrod_dos is true)[[[Pójdź do ogrodu|Ogród]]]
-(if: $notatka_do_laboatorium is true)[(if: $notatka_z_obrazu is false)[|a1&gt;[Sprawdź 3 obraz od lewej]]]
+(if: $notatka_do_labolatorium is true)[(if: $notatka_z_obrazu is false)[|a1&gt;[Sprawdź 3 obraz od lewej]]]
 (click: ?a1)[(set: $notatka_z_obrazu to true)Za obrazem Antoniego znajdowała się notatka z tekstem *&quot;Znajdziesz go przy schodach do nieba&quot;*.]
 (save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="17" name=" Jadalnia" tags="" position="2711.6666666666674,901.3333333333337" size="100,100">####Jadalnia
 Jadalnia jest jednym z najbardziej bogatszych pokoi w całej posiadłości. Niezwykle dobrze wykonany ogromny, dębowy stół, dodaje tutaj pewnego rodzaju niesamowitość. Pomimo że nie jest w całości nakryty, nadal wygląda świetnie. Bowiem poza nim, pokój niczym się nie wyróżnia. Siedzi przy nim Henry.
@@ -377,42 +377,43 @@ Zmroziło cię - |6&gt;[&quot;Skąd wiesz?&quot;](click: ?6)[ - Odparłeś. Moż
 &quot;Bo wiem do kogo ostatnio należał.&quot;
 	(if: $rozmowa_z_henrym is true)[Nagle wszystko stało się dla ciebie jasne. Już wiesz czego zniknął. |7&gt;[Egis...]
 	(click: ?7)[&quot;Skąd, do chol...&quot;
-	&quot;Może jednak jestem godzien nazywać się Artonem&quot; - Uśmiechnąłeś się.](else:)[Siedziałeś zdziwiony. Skąd on to wszystko wie?]]
-&quot;Dość tego gadania&quot; - Rozwiązał cię - &quot;Wstawaj.&quot;
-W ręku trzymał pistolet.
-&quot;Podejdź tam&quot; - Wskazał na metalową szafkę. Szybkim krokiem podszedłeś tam.
-&quot;Otwórz ją&quot; - Powiedział.
-Zamknięta była na kombinację symboli, których nigdy w życiu wcześniej nie widziałeś.
+	&quot;Może jednak jestem godzien nazywać się Artonem&quot; - Uśmiechnąłeś się.]](else:)[Nie mogłeś pojąć, skąd on to wszystko wie?]]
+&quot;Dość tego gadania&quot; - Rozwiązał cię - &quot;Wstawaj.&quot; W ręku trzymał pistolet.
+&quot;Podejdź tam&quot; - Wskazał na metalową szafkę. Szybkim krokiem podszedłeś tam, bo broń w jego rękach naprawdę jest niebezpieczna..
+&quot;Otwórz ją&quot; - Powiedział. Zamknięta była na kombinację symboli, których nigdy w życiu wcześniej nie widziałeś.
 &quot;Nie wiem jak to zrobić&quot; - Odpowiedziałeś zgodnie z prawdą.
-&quot;Kłamiesz!&quot;
-&quot;Mówię prawdę.&quot;
+Popatrzył się na ciebie z nienawiścią, jakiej jeszcze u niego nie widziałeś - &quot;Kłamiesz!&quot;
+Przyzwyczajony do takich sytuacji odparłeś: &quot;Mówię prawdę.&quot;
 &quot;Derek zamknął to miejsce, na pewno wysłał ci kombinację!&quot; - Krzyknął.
-Stałeś osłupiony. Wyciągnąłeś notatki które ci zostawił, i szukałeś jakichkolwiek poszlak. Nagle, na jednej z nich, zauważyłeś coś, co wcześniej pominąłeś. &quot;Specjalnie wszystko spreparowałem, aby ktoś, kogo przyślę, mógł zniszczyć to diabelstwo&quot;. Wszystko co jest potrzebne, znajduje się w skrzynkach. Nie było w nich nic, poza kluczem i notatkami. Czyli nie dość, że podpowiedzi masz ze sobą, to klucz wcześniej działał. Tylko ktoś zmienił zamki.
+Stałeś osłupiony. Wyciągnąłeś notatki które ci zostawił, i szukałeś jakichkolwiek poszlak. Nagle, na jednej z nich, zauważyłeś coś, co wcześniej pominąłeś. &quot;Specjalnie wszystko spreparowałem, aby ktoś, kogo przyślę, mógł zniszczyć to diabelstwo&quot;. Derek przygotowany był na każdą ewentualność. Wszystko co jest potrzebne, znajduje się w skrzynkach, a nie było w nich nic, poza kawałkami klucza i notatkami. Czyli nie dość, że podpowiedzi masz ze sobą, to klucz wcześniej działał. Tylko ktoś zmienił zamki.
 Podszedłeś do kominka, i wyciągałeś wszystkie notatki po kolei. Wszystkie symbole były już dobrze widzialne, teraz musiałeś tylko wybrać dobrą kolejność. Wpisałeś je w kolejności chronologicznej do notatek. Nagle, szafka się otworzyła.
 &quot;Miałem rację&quot; - Powiedział James, i odrzucił cię od szafki. Wyciągnął z niej starą, zakurzoną księgę.
-&quot;Dziennik. Przekazany Artonom, przeczytany tylko przez nich. Terus, Antoni, Egis, wszyscy byli w to zamieszanie. Myślisz że z jakiego powodu twój dziadek opuścił dom? Przez kłótnię?! Ha, nie rozśmieszaj mnie! Tak naprawdę chodziło mu tylko o dziennik. Przekazywany z pokolenia na pokolenie trafił do Wad&#39;a, i nie mógł mu darować. Chciał go zniszczyć. Pozbyć się go, rozumiesz? Coś, nad czym tyle osób poświęciło całe swoje życie... mówią że Antoni był szalony, że dlatego Wad nigdy nie odważył się go przeczytać. Kłamstwa! Po prostu wybrał on lepszą drogę życia, taką, w której masz szansę być kimś, nie być uwięzionym w tym cholernym miejscu! Ta księga... w niej napisane jest wszystko, co pozwoli mi się stać najlep-&quot;
+&quot;Dziennik. Przekazany Artonom, przeczytany tylko przez nich. Terus, Antoni, Egis, wszyscy byli w to zamieszanie. Myślisz że z jakiego powodu twój dziadek opuścił dom? Przez kłótnię?! Ha, nie rozśmieszaj mnie! Tak naprawdę chodziło mu tylko o dziennik. Przekazywany z pokolenia na pokolenie trafił do Wad&#39;a, i nie mógł mu darować. Chciał go zniszczyć. Pozbyć się go, rozumiesz? Coś, nad czym tyle osób poświęciło całe swoje życie... mówią że Antoni był szalony, że dlatego Wad nigdy nie odważył się go przeczytać. Kłamstwa! Po prostu chciał zrozumieć wszystkie tajemnice naszego życia, ukryte w tym wycinku wiedzy! Ta księga... w niej napisane jest wszystko, co pozwoli mi się sta-&quot;
 &quot;Skończyłeś? Nie mam zamiaru już słuchać twoich głupot.&quot; - Przerwałeś mu. Naprawdę jest chory.
 &quot;Nie. Nie skończyłem&quot; - Wycelował w ciebie swój pistolet.
 (if: $spreparowany_pistolet is false)[(set: $zak to 1)Usłyszałeś tylko głuchy odgłos wystrzału. Trafił cię w szyję. Wiłeś się bezbronny dusząc się własną krwią, a James stał nad tobą i śmiał się jak szalony. &quot;Nie mogę tak skończyć&quot; - Krzyczałeś w myślach &quot;Nie w taki sposób!&quot;
-Było już jednak za późno. Czułeś że całkowicie odpływasz. Czujesz... [[Koniec -&gt; Koniec]]](else:)[(if: $katalizator is false)[(set: $zak to 2)Nacisnął na spust, lecz pistolet zamiast wystrzelić wybuchł, rozrzucając ogień po całym pomieszczeniu. James upadł na ziemię, a ogień z pistoletu spowodował, że zaczął się palić. Nie wiedząc co robić, próbowałeś odzyskać dziennik, lecz było na to już za późno - został z niego tylko proch. Ostatkiem sił uciekłeś, i trafiłeś do znanego już tobie pomieszczenia ze schodami. Wszystkie drzwi poza tymi od wyjścia były zamknięte, jakby James chciał za wszelką cenę zatrzymać cię w środku, ale zapomniał zamknąć tych najważniejszych. Wiedząc jak wielki pożar odbywa się na dole uciekłeś z posiadłości. Po kilku minutach już cała płonęła, a wśród płomieni było słychać krzyki. Tak kończy się rodzina Artonów - z bólem, i nienawiścią. [[Koniec -&gt; Koniec]]](else:)[(set: $zak to 3)Nacisnął na spust, lecz pistolet zamiast wystrzelić wybuchł, rozrzucając ogień po całym pomieszczeniu. James upadł na ziemię, a ogień z pistoletu spowodował, że zaczął się palić. Nie myśląć zbytnio, wyciągnąłeś kamień, i natychmiast poczułeś, że coś jest nie tak. Wszystko działo się w spowolnionym tempie, jak gdyby spowolnić film. Sięgnąłeś po palący się dziennik, i nie odczuwając prawie w ogóle żaru ognia, wyrywałeś jeszcze nadające się do czytania strony. Niestety ogień rozprzestrzeniał się zbyt szybko, i mimo spowolnionego czasu musiałeś uciekać. Schowałeś kamień spowrotem do kieszeni. Ostatkiem sił uciekłeś, i trafiłeś do znanego już tobie pomieszczenia ze schodami. Wszystkie drzwi poza tymi od wyjścia były zamknięte, jakby James chciał za wszelką cenę zatrzymać cię w środku, ale zapomniał zamknąć tych najważniejszych. Wiedząc jak wielki pożar odbywa się na dole uciekłeś z posiadłości. Po kilku minutach już cała płonęła, a wśród płomieni było słychać krzyki. Tak kończy się rodzina Artonów - z bólem, i nienawiścią. [[Koniec -&gt; Koniec]]]]
+Było już jednak za późno. Czułeś że całkowicie odpływasz. Czujesz... [[Koniec -&gt; Koniec]]](else:)[(if: $katalizator is false)[(set: $zak to 2)Nacisnął na spust, lecz pistolet zamiast wystrzelić wybuchł, rozrzucając ogień po całym pomieszczeniu. James upadł na ziemię, a ogień z pistoletu spowodował, że zaczął się palić. Nie wiedząc co robić, próbowałeś odzyskać dziennik, lecz było na to już za późno - został z niego tylko proch. Ostatkiem sił uciekłeś, i trafiłeś do znanego już tobie pomieszczenia ze schodami. Wszystkie drzwi poza tymi od wyjścia były zamknięte, jakby James chciał za wszelką cenę zatrzymać cię w środku, ale zapomniał zamknąć tych najważniejszych. Wiedząc jak wielki pożar odbywa się na dole uciekłeś z posiadłości. Po kilku minutach już cała płonęła, a wśród płomieni było słychać krzyki. Tak kończy się rodzina Artonów - z bólem, i nienawiścią. [[Koniec -&gt; Koniec]]](else:)[(set: $zak to 3)Nacisnął na spust, lecz pistolet zamiast wystrzelić wybuchł, rozrzucając ogień po całym pomieszczeniu. James upadł na ziemię, a ogień z pistoletu spowodował, że zaczął się palić. Nie myśląć zbytnio, wyciągnąłeś kamień, i natychmiast poczułeś, że coś jest nie tak. Wszystko działo się w spowolnionym tempie, jak gdyby spowolnić film. Sięgnąłeś po palący się dziennik, i nie odczuwając prawie w ogóle żaru ognia, wyrywałeś jeszcze nadające się do czytania strony. Niestety ogień rozprzestrzeniał się zbyt szybko, i mimo spowolnionego czasu musiałeś uciekać. Schowałeś kamień spowrotem do kieszeni. Ostatkiem sił uciekłeś, i trafiłeś do znanego już tobie pomieszczenia ze schodami. Wszystkie drzwi poza tymi od wyjścia były zamknięte, jakby James chciał za wszelką cenę zatrzymać cię w środku, ale zapomniał zamknąć tych najważniejszych. Wiedząc jak wielki pożar odbywa się na dole uciekłeś z posiadłości. Po kilku minutach już cała płonęła, a wśród płomieni było słychać krzyki. Tak kończy się rodzina Artonów - z bólem, i nienawiścią. [[Koniec -&gt; Koniec]]]]]]]]]]
 (save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="20" name=" Koniec" tags="" position="2500.000000000001,296.33333333333314" size="100,100">###Koniec
 Twoja podróż się zakończyła. Zakończenie jakie uzyskałeś to (if: $zak is 1)[Śmierć Fena. Postaraj się bardziej!](if: $zak is 2)[Śmierć rodziny, i ucieczka. Byłeś bliski odkrycia tajemnicy Artonów, ale czegoś ci zabrakło.](if: $zak is 3)[Śmierć rodziny, i odzyskanie dziennika. Fen dzięki tobie odzyskał przynajmniej kawałek dziennika, a sam masz szansę dowiedzieć się co stało się 20 lat po katastrofie. [[Dalej -&gt; KoniecEg]]]
 
 Jeśli chcesz więcej, wejdź na www.gregory455.github.io, znajdziesz tam informacje o kolejnych grach, a także kontakt.
 [[Kliknij tutaj, aby przejść do menu głównego -&gt;Menu]] 
-(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="21" name=" KoniecEg" tags="" position="2506.6666666666674,499.66666666666646" size="100,100">Idziesz zarośnietą, polną drogą. Dobrze wiesz, że musi być w tym miejscu. W końcu to tu narodził się dziennik. Malnour. Ta piekielna wyspa.
-Otwierasz wrota do zrujnowanej wieży w zamku. To idealne miejsce do ukrycia się.
-Powoli wchodzisz po kamiennych i zniszczonych przez czas i naturę schodach. Jest w tym miejscu coś magicznego, jakby zatrzymało się w czasie. Po kilku minutach byłeś już na szczycie, a od niego dzieliły cię tylko drzwi.
-Wykopujesz je z zawiasów, które przez ten czas zarosły wystarczająco, aby pozwolić na taki manewr. W pomieszczeniu znajduje się wszystko to, czego się spodziewałeś. Konstrukt, narzędzia... ha, nawet katalizator! Byłeś pewny, że gdzieś tu jest. Podszedłeś do katalizatora, którego już od tak dawna nie widziałeś. Pomimo tylu lat, nadal zachował swój blask. Już miałeś sięgać po niego ręką, ale twój wyostrzony zmysł słuchu podpowiada ci, że ktoś jest za tobą. W ostatniej chwili unikając ciosu nożem, posyłasz atakującego na posadzkę, wyciągając też pistolet skałkowy Zdziwiony, odrzuca nóż i wystawia ręce do góry. Po chwili przerywa milczenie.
-&quot;Po co tu przyszedłeś&quot;
-&quot;Chciałem odzyskać moją własność&quot; - Odpowiedziałeś. Po co innego?
-Atakujący się uśmiechnął - &quot;Nie należy już do ciebie&quot;
-Stałeś jak słup soli. Co on wygaduje?
-&quot;Łżesz&quot; - Wycedziłeś.
-&quot;Nie należy już do nikogo. Spalił się lata temu. W ogóle kim ty jesteś? Skąd wiedziałeś że tu będę?&quot;
-&quot;Mam na imię Egis. Egis Arton.&quot; - Powiedziałeś, i wystrzeliłeś mu prosto w głowę.
-Kimkolwiek był, nieważne. Odzyskałeś katalizator, a on sam wystarczy do kontynuowania prac.
-Mając go i konstrukt, z łatwością odzyskasz dziennik.
+(save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="21" name=" KoniecEg" tags="" position="2506.6666666666674,499.66666666666646" size="100,100">Czując na twarzy lekki podmuch jesiennego wiatru, ruszyłeś dawno już zarośniętą, polną ścieżką. Po 3 latach poszukiwań, jesteś w końcu pewien gdzie jest osoba, która to zrobiła. Nie wiesz tylko jaki był jej cel.
+Po kilkuset metrach stałeś już przed normalnych rozmiarów domem. Pomimo tego że wyglądał na drewniany, zbudowany był z czegoś innego, co można było zauważyć dopiero z bliska. Odrzucając chwilowo podziwianie architektury, postanowiłeś dowiedzieć się, czy udało ci się go odnaleźć. Zapukałeś, i poczekałeś kilka minut. Po chwili w drzwiach pojawiła się średniej postury osoba w średnim wieku.
+&quot;Słucham?&quot; - Zapytała.
+&quot;Przyszedłem w sprawie metalu.&quot; - Odpowiedziałeś. Cóż, po części była to prawda.
+&quot;Metalu? Met... ach, tak, omówmy to w środku! Wie pan jak ludzie mogą dziwnie na to patrzeć&quot; - Odparł wesoły. Widocznie już od dawna czekał na taką wiadomość.
+W środku mieszkanie wyglądało przyzwoicie, a w powietrzu czuć było miłą atmosferę. Idąc za właścicielem, trafiłeś do dużego, bogato ozdobionego salonu. Upewniłeś się dzięki temu co do swoich podejrzeń. Nie potrzebujesz już ukrywać swojej tożsamości. Po cichu odbezpieczyłeś broń, i przygotowałeś ją do wyjęcia.
+&quot;W dzisiejszych czasach trudno o dobrej jakości stal. Wasza firma jako jedyna sprzedaje ją po tak konkurencyjnych cenach, i w takiej ilości.&quot; - Zaczął - &quot;Nie rozumiem więc waszego ostatniego posunięcia, jakim było zburzenie jednej ze stalowni. Mam nadzieję że uda się to jakoś rozwiązać, panie...&quot;
+&quot;Egis.&quot;
+Od razu zbladł. Będąc pewny że to on, wyciągnąłeś odbezpieczoną już broń, i wycelowałeś prosto w niego. Musi zapłacić za to co zrobił, choćby miał stracić swoje życie. Nie wybaczysz mu tego.
+&quot;E-egis, ale, to niemożliwe! Zniknąłeś!&quot; - Krzyczał. Czyli wiedzieli że cię nie ma. Warte zanotowania.
+&quot;Milcz! Nie masz teraz prawa głosu. Gdzie jest dziennik?!&quot; - Wycedziłeś.
+&quot;Został zniszczony ponad 20 lat temu, nie zostało nic poza kilkoma kartkami!&quot;
+&quot;Łżesz. Tyle lat kłamstw, i jeszcze ci nie dość.&quot; - Rzekłeś.
+&quot;Mówię prawdę! Proszę, nie kłamię!&quot; - Błagał. Nie chciało ci się w to wierzyć, ale dziennik naprawdę mógł zostać zniszczony. Nie jest to ogromna strata bo wszystko da się napisać od nowa, ale...
+&quot;Katalizator. Gdzie go masz.&quot; - Zapytałeś poważnym tonem.
+&quot;Ten kamień? Leży na stoliku&quot; - Odparł, i wskazał na mały drewniany stół w rogu. Leżała na nim mała skrzynka. Podszedłeś do niej, i ją otworzyłeś. Tak, katalizator jest bezpieczny. Warto było tu przyjść. Natychmiast się odwróciłeś i strzeliłeś mu w głowę. Padł na ziemię, zakrwawiając stół i całą podłogę. Wyciągnąłeś małą buteleczkę z dziwnym płynem, i wrzuciłeś do kominka. Ogień który z niego buchnął zapalił pobliski obrus, roznosząc ogień na cały pokój. &quot;Uważaj przy zabawie z ogniem, bo możesz się poparzyć. Szkoda tylko, że dopiero po tylu latach.&quot; - odparłeś, i szybko wyszedłeś z domu. Od razu udałeś się do przewoźnika, i poprosiłeś go o powdózkę do portu. Została ci teraz tylko jedna rzecz. Podróż do Malnour.
 [[Wróć do menu głównego -&gt;Menu]]
 (save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="22" name="Menu" tags="" position="2900.833333333333,1.6666666666666667" size="100,100">####Horror w Malnour: Dziennik
 [[Rozpocznij nową grę -&gt;Początek]]
