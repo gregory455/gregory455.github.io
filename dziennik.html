@@ -210,7 +210,7 @@ Pokój jest pusty jednak od razu po przekroczeniu progu czujesz się nieswojo. M
 (click: ?1z)[Po tylu latach spędzonych wśród ludzi takiej osobowości jak James dobrze wiesz, że broń w jego rękach może, a nawet będzie wykorzystana nie w celach obronnych. Wiele razy dawałeś wolną rękę takim osobom, i zawsze źle się to kończyło. Teraz masz szansę to powstrzymać, zaklejając częściowo lufę, co powinno zaskutkować wybuchem broni. |2z&gt;[Użyj kleju]
 (click: ?2z)[(set: $spreparowany_pistolet to true)(replace: ?2z)[Spreparowałeś broń.]]]
 (save-game:&quot;A&quot;)</tw-passagedata><tw-passagedata pid="10" name="Ogród" tags="" position="2576.6666666666674,1044.666666666667" size="100,100">####Ogród
-Jako że nie ma już ulewy, postanowiłeś przejść do tego miejsca. Jest ciemne, z powodu ilości drzew zasłaniających dostęp do światła słonecznego. Jego wygląd przypomina ci wielkie ogrody z bogatych posiadłości, ale o wiele bardziej zarośnięte i zaniedbane. Nikt nie był tutaj od bardzo długiego czasu.
+Jako że nie ma już ulewy, postanowiłeś przejść do tego miejsca. Jest ciemne, z powodu ilości drzew zasłaniających dostęp do światła słonecznego. Jego wygląd przypomina ci wielkie ogrody z bogatych posiadłości, ale o wiele bardziej zarośnięte i zaniedbane. Nikt nie był tutaj od bardzo długiego czasu. (if: $skrzynka_2_nieot is true)[(if: $brama_otwarta is false)[Gdzieś z tyłu ogrodu znajduje się |4a&gt;[stara brama].]]
 (if: $skrzynka_2_nieot is false)[Zacząłeś rozglądać się w poszukiwaniu jakichś wskazówek. Twoją uwagę przykuła |1a&gt;[fontanna], |2a&gt;[huśtawka], |3a&gt;[róże] i (if: $brama_otwarta is false)[|4a&gt;[stara brama]].]
 [[Wróć do posiadłości| Korytarz]]
 (if: $brama_otwarta is true)[[[Przejdź do cmentarza|Cmentarz]]]
