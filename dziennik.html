@@ -276,45 +276,34 @@ Po wejściu do pokoju od razu poczułeś typową dla starych, nieużywanych pomi
 Bardzo słabą widoczność pokój zawdzięcza sobie dlatego, że nie ma tu okna. Jedynym źródłem światła jest lampa na biurku, i mała szpara pod drzwiami.
 Cały zawalony jest różnorakimi |1a&gt;[gratami], co (pomimo jego wielkości) powoduje, że trzeba uważać na każdy krok. (click: ?1a)[Zniesiono tu chyba wszystkie nieużywane przyrządy i narzędzia: stare maszyny do szycia, maszyny do pisania, dłuta, młotki, piły, gwoździe, stare stoły, czy nawet obiekty zniszczone tak bardzo, że nie jesteś w stanie ich rozpoznać.]
 [[Wyjdź z pokoju | Korytarz]] 
-(if: $szukanie_kleju is true)[(if: $klej is false)[|1z&gt;[Szukaj kleju]]]
-(if: $medalion_otwarty is false)[|1o&gt;[Podejdź do biurka]]
-(if: $kilof is false)[(if: $znak_znaleziony is true)[|11o&gt;[Szukaj jakiegoś narzędzia do rozwalenia ściany]]]
-(if: $skrzynka_1_nieot is true)[(if: $skrzynka_1_ot is false)[|3a&gt;[Podejdź do skrzynki]]]
-(if: $skrzynka_1_ot is true)[(if: $skrzynka_2_nieot is false)[|a5&gt;[Spójrz na notatkę]]]
-(if: $skrzynka_2_nieot is true)[(if: $skrzynka_2_ot is false)[|2z&gt;[Podejdź do skrzynki]]]
-(if: $skrzynka_3_nieot is true)[(if: $skrzynka_3_ot is false)[|2x&gt;[Podejdź do skrzynki]]]
-(if: $odlamek_klucza_1 is true)[(if: $odlamek_klucza_2 is true)[(if: $klucz is false)[|1v&gt;[Sklej klucz]]]]
+(if: $szukanie_kleju is true)[(if: $klej is false)[|1z&gt;[Szukaj kleju]]](if: $medalion_otwarty is false)[|1o&gt;[Podejdź do biurka]](if: $kilof is false)[(if: $znak_znaleziony is true)[|11o&gt;[Szukaj jakiegoś narzędzia do rozwalenia ściany]]](if: $skrzynka_1_nieot is true)[(if: $skrzynka_1_ot is false)[|3a&gt;[Podejdź do skrzynki]]](if: $skrzynka_1_ot is true)[(if: $skrzynka_2_nieot is false)[|a5&gt;[Spójrz na notatkę]]](if: $skrzynka_2_nieot is true)[(if: $skrzynka_2_ot is false)[|2z&gt;[Podejdź do skrzynki]]](if: $skrzynka_3_nieot is true)[(if: $skrzynka_3_ot is false)[|2x&gt;[Podejdź do skrzynki]]](if: $odlamek_klucza_1 is true)[(if: $odlamek_klucza_2 is true)[(if: $klucz is false)[|1v&gt;[Sklej klucz]]]]
 (click: ?1v)[(set: $klucz to true)Wziąłeś kawałki klucza i skleiłeś je, używając wcześniej znalezionego kleju. Wygląda nawet solidnie.]
 (click: ?1z)[(set: $klej to true)Po kilunastu minutach znajdujesz jakiś stary, ale bardzo mocny klej. Na pewno się nada.]
 (click: ?2x)[Skrzynka z kaplicy bardzo przypomina tą ze strychu, tylko różni się mechanizmem zabezpieczającym. Aby ją otworzyć należy wpisać 4 liczby od 1 do 4. Widnieją na niej symbole W, T, A, M, a także napis chronologia. To nie będzie łatwe.|3x&gt;[Spróbuj wpisać kod]
-(click: ?3x)[(replace: ?3x)[](set: $kod to (prompt: &quot;Kod&quot;, &quot;&quot;))|4x&gt;[Kliknij przycisk](click: ?4x)[(replace: ?4x)[](if: $kod is &#39;4231&#39;)[(set: $odlamek_klucza_1 to true)(set: $skrzynka_3_ot to true)Skrzynka się otworzyła. Zawiera małą metalową część, przypominającą końcówkę klucza.](else:)[Nic się nie stało.]]]]
-(click: ?2z)[Skrzynka z ogrodu jest identyczna do wcześniejszej, poza innym mechanizmem zabezpieczającym. Tym razem można jedynie wpisać 3 liczby, od 1 do 3. Obok mechanizmu widnieje napis &quot;zerkaj daleko&quot;, razem z symbolami lasu, jeziora i ogrodu.|3z&gt;[Spróbuj wpisać kod]
-(click: ?3z)[(replace: ?3z)[](set: $kod to (prompt: &quot;Kod&quot;, &quot;&quot;))|4z&gt;[Kliknij przycisk](click: ?4z)[(replace: ?4z)[](if: $kod is &#39;231&#39;)[(set: $odlamek_klucza_2 to true)(set: $skrzynka_2_ot to true)Skrzynka się otworzyła. Zawiera małą metalową część, przypominającą końcówkę klucza.](else:)[Nic się nie stało.]]]]
-(click: ?11o)[(set: $kilof to true)Jeśli coś takiego jest, to tylko tutaj. Po zerknięciu okiem na wszelkie metalowe przedmioty, zauważyłeś coś, co będzie świetne do tego zadania. Stary zardzewiały kilof. To w końcu tylko rozwalenie ściany, a nie kopanie węgla.](click: ?3a)[Podszedłeś do biurka ze skrzynką, zapaliłeś lampę, i zacząłeś oglądać ten ukryty już od dawna w ścianie obiekt. Przypomina bardziej metalową kostkę niż skrzynię, ale jestem pewny że to ona. Mówi ci o tym mechanizm podobny do tych w sejfach, który znajduje się z przodu. Aby ją odblokować, trzeba wpisać 4 wybrane litery: K, A, S, N, Y, Z, M, O. Obok tego widnieje mały znak, który widziałeś wcześniej na ścianie. Musi mieć jakieś znaczenie.
+(click: ?3x)[(replace: ?3x)[](set: $kod to (prompt: &quot;Kod&quot;, &quot;&quot;))|4x&gt;[Kliknij przycisk](click: ?4x)[(replace: ?4x)[](if: $kod is &#39;4231&#39;)[(set: $odlamek_klucza_1 to true)(set: $skrzynka_3_ot to true)Skrzynka się otworzyła. Zawiera małą metalową część, przypominającą końcówkę klucza.](else:)[Nic się nie stało.]]]](click: ?2z)[Skrzynka z ogrodu jest identyczna do wcześniejszej, poza innym mechanizmem zabezpieczającym. Tym razem można jedynie wpisać 3 liczby, od 1 do 3. Obok mechanizmu widnieje napis &quot;zerkaj daleko&quot;, razem z symbolami lasu, jeziora i ogrodu.|3z&gt;[Spróbuj wpisać kod]
+(click: ?3z)[(replace: ?3z)[](set: $kod to (prompt: &quot;Kod&quot;, &quot;&quot;))|4z&gt;[Kliknij przycisk](click: ?4z)[(replace: ?4z)[](if: $kod is &#39;231&#39;)[(set: $odlamek_klucza_2 to true)(set: $skrzynka_2_ot to true)Skrzynka się otworzyła. Zawiera małą metalową część, przypominającą końcówkę klucza.](else:)[Nic się nie stało.]]]](click: ?11o)[(set: $kilof to true)Jeśli coś takiego jest, to tylko tutaj. Po zerknięciu okiem na wszelkie metalowe przedmioty, zauważyłeś coś, co będzie świetne do tego zadania. Stary zardzewiały kilof. To w końcu tylko rozwalenie ściany, a nie kopanie węgla.](click: ?3a)[Podszedłeś do biurka ze skrzynką, zapaliłeś lampę, i zacząłeś oglądać ten ukryty już od dawna w ścianie obiekt. Przypomina bardziej metalową kostkę niż skrzynię, ale jestem pewny że to ona. Mówi ci o tym mechanizm podobny do tych w sejfach, który znajduje się z przodu. Aby ją odblokować, trzeba wpisać 4 wybrane litery: K, A, S, N, Y, Z, M, O. Obok tego widnieje mały znak, który widziałeś wcześniej na ścianie. Musi mieć jakieś znaczenie.
 |2a&gt;[Spróbuj wpisać kod]
 (click: ?2a)[(replace: ?2a)[](set: $kod to (prompt: &quot;Kod (małe litery) &quot;, &quot;&quot;))|4a&gt;[Kliknij przycisk](click: ?4a)[(replace: ?4a)[](if: $kod is &#39;znak&#39;)[(set: $skrzynka_1_ot to true)Skrzynka się otworzyła. W środku znajdujesz małą notatkę. Kto wie, może była warta tej całej straty czasu.
 *&quot;Wiedziałem że nie będzie chciał go spalić, więc specjalnie wszystko przygotowałem, aby ktoś ko go przyślę mógł zniszczyć to diabelstwo. Klucz został złamany, ale jego odłamki nadal są wśród tego miejsca. Pierwsza część ukryta jest w najzimniejszym miejscu, a druga pośród ciszy, obok ostrego metalu&quot;*
-Mniej zszokowany niż ostatnio, zacząłeś zastanawiać się o jakich miejscach może mówić. Położyłeś notatkę na biurku, a skrzynkę rzuciłeś gdzieś w kąt. To jeszcze nie koniec.](else:)[Nic się nie stało.]]]](click: ?a5)[*&quot;Wiedziałem że nie będzie chciał go spalić, więc specjalnie wszystko przygotowałem, aby ktoś ko go przyślę mógł zniszczyć to diabelstwo. Klucz został złamany, ale jego odłamki nadal są wśród tego miejsca. Pierwsza część ukryta jest w najzimniejszym miejscu, a druga pośród ciszy, obok ostrego metalu&quot;*]
-
-(click: ?1o)[Włączyłeś lampę naftową, i rozświetliłeś większość pomieszczenia. Biurko zawalone jest różnymi obiektami, znalazła się tu nawet lupa czy nożyce. Nad nim znajduje się półka z przegródkami, mająca przyklejone nazwy: Antoni, Wad i... Derek.
+Mniej zszokowany niż ostatnio, zacząłeś zastanawiać się o jakich miejscach może mówić. Położyłeś notatkę na biurku, a skrzynkę rzuciłeś gdzieś w kąt. To jeszcze nie koniec.](else:)[Nic się nie stało.]]]](click: ?a5)[*&quot;Wiedziałem że nie będzie chciał go spalić, więc specjalnie wszystko przygotowałem, aby ktoś ko go przyślę mógł zniszczyć to diabelstwo. Klucz został złamany, ale jego odłamki nadal są wśród tego miejsca. Pierwsza część ukryta jest w najzimniejszym miejscu, a druga pośród ciszy, obok ostrego metalu&quot;*](click: ?1o)[Włączyłeś lampę naftową, i rozświetliłeś większość pomieszczenia. Biurko zawalone jest różnymi obiektami, znalazła się tu nawet lupa czy nożyce. Nad nim znajduje się półka z przegródkami, mająca przyklejone nazwy: Antoni, Wad i... Derek.
 |2o&gt;[Spójrz na przegródkę &quot;Antoni&quot;]
 |3o&gt;[Spójrz na przegródkę &quot;Wad&quot;]
 |4o&gt;[Spójrz na przegródkę &quot;Derek&quot;]
 
-(click: ?2o)[Zacząłeś przeszukiwać przegródkę Antoniego. Znajdują się tu głównie jego listy i zaproszenia na śluby. Nie znajdujesz w nich nic interesującego, poza jedną, jakby wyrwaną skądś kartką. Nie rozczytujesz z niej wiele poza zdaniem &quot;dajcie mi spokój&quot;.]
-
-(click: ?3o)[Przegródka &quot;Wad&quot; jest całkowicie pusta, poza małym dopiskiem &quot;przeniesione do biblioteki&quot;.]
-
+(click: ?2o)[Zacząłeś przeszukiwać przegródkę Antoniego. Znajdują się tu głównie jego listy i zaproszenia na śluby. Nie znajdujesz w nich nic interesującego, poza jedną, jakby wyrwaną skądś kartką. Nie rozczytujesz z niej wiele poza zdaniem &quot;dajcie mi spokój&quot;.
+]
+(click: ?3o)[Przegródka &quot;Wad&quot; jest całkowicie pusta, poza małym dopiskiem &quot;przeniesione do biblioteki&quot;.
+]
 (click: ?4o)[Zerknąłeś tylko na przegródkę Dereka, a już ilość dokumentów, listów i kartek cię przerosła. Najwidoczniej uciekając z domu, nie brał ze sobą nic związanego z Artonami.
 Odrzuciłeś wszelkie niepodejrzane kartki i koperty, zostawiając te najdziwniejsze.
 |5o&gt;[Pocięty papier]
 |6o&gt;[Notatka]
 |7o&gt;[Dziwna kartka]
 
-(click: ?5o)[Przygnieciona listami notatka. Wycięto z niej jakieś fragmenty, ale nie masz pojęcia gdzie mogą być.]
-
-(click: ?6o)[Wygląda jakby ktoś chciał ją spalić, ale zdecydował się tego nie robić. Na fragmencie napisane jest: &quot;Niech więc tak będzie. Ale nigdy, przenigdy nie pozwolę dać się tej chorej obsesji. Nawet, jakbym miał Ucie-&quot;]
-
+(click: ?5o)[Przygnieciona listami notatka. Wycięto z niej jakieś fragmenty, ale nie masz pojęcia gdzie mogą być.
+]
+(click: ?6o)[Wygląda jakby ktoś chciał ją spalić, ale zdecydował się tego nie robić. Na fragmencie napisane jest: &quot;Niech więc tak będzie. Ale nigdy, przenigdy nie pozwolę dać się tej chorej obsesji. Nawet, jakbym miał Ucie-&quot;
+]
 (click: ?7o)[Na mocno zwęglonym papierze widnieje namalowany białą farbą albo kredą obrazek, przypominający twój |o9&gt;[medalion]. Nic więcej na niej nie ma.] (click: ?o9)[Jasne! Medalion! Zdjąłeś go szybkim ruchem, i zacząłeś oglądać. Nigdy się mu bliżej nie przyglądałeś, w końcu to tylko wisiorek. Teraz jednak zauważasz, że za herbem znajduje się malutka dźwignia. Ruszyłeś nią lekko, a z medalionu wyskoczyły mocno ściśnięte |10o&gt;[zwitki papieru].]
 (click: ?10o)[Natychmiast zrozumiałeś skąd one są. Wziąłeś pociętą i niezrozumiałą wcześniej notatkę, i zacząłeś łączyć. Po kilku minutach miałeś już, co prawda pociętą, notatkę.
 *&quot;Zrobiłem błąd. Oszaleją. Znajdź go. Strych. Niebieskie koło. Kilof.&quot;*
