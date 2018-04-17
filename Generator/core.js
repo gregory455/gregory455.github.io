@@ -36,7 +36,7 @@ var sb5 = false; //Prawo sprawiedliwości
 var sb6 = false; //Ksenofilia
 var sb7 = false; //Pacyfizm
 var sb8 = false; //Ascetyzm
-var sb9 = false; //Ksenofilia
+var sb9 = false; //Ekologia
 
 //Neutralne
 var sb10 = false; //Realizm
@@ -120,6 +120,7 @@ var rl = 0; //Religia (1 - Ateista/Agnostyk, 2 - Naetus, 3 - Jedyny, 4 - Garand,
 var x = Math.floor((Math.random() * 10) + 1); //Do losowania
 var zm = 0;
 var y = 1;
+var dc = 0; //Dzieciństwo (1 - dobre, 2 - złe, 3 - brak, 4 - zabrany przez grupę)
 var wyb;
 var wyb2;
 
@@ -223,6 +224,7 @@ uf = 0;
 uf = 0;
 zm = 0;
 y = 1;
+dc = 0;
 
 //Losowanie religii
 x = Math.floor((Math.random() * 10) + 1);
@@ -268,9 +270,24 @@ if(x <= 2){
 x = Math.floor((Math.random() * 100) + 1);
 if(x <= 20){
 	bg = 3; //Bogata
+	stat5 += 1;
+	stat8 -= 1;
+	x = Math.floor((Math.random() * 100) + 1);
+	if(x <= 20){
+		stat7 += 1;
+	}
 	document.getElementById("rodzina").innerHTML = "Bogata";
 } else if(x <= 30 && x > 20){
 	bg = 1; //Biedna
+	stat1 -= 1;
+	stat3 += 1;
+	stat4 -= 1;
+	stat5 -= 1;
+	stat8 += 1;
+	x = Math.floor((Math.random() * 100) + 1);
+	if(x <= 10){
+		stat2 += 1;
+	}
 	document.getElementById("rodzina").innerHTML = "Biedna";
 } else {
 	bg = 2; //Średnio zamożna
@@ -499,4 +516,304 @@ document.getElementById("p11").innerHTML = p11;
 document.getElementById("p12").innerHTML = p12;
 document.getElementById("p13").innerHTML = p13;
 		
+//DZIECIŃSTWO---------------------------------------------------------------------------------
+x = Math.floor((Math.random() * 100) + 1); //losowanie dzieciństwa
+if(x <= 80){
+	dc = 1;
+} else if(x <= 95 && x > 80){
+	dc = 2;
+} else {
+	dc = 3;
+}
+
+if(dc == 1){
+	ranP;
+	ranS(1);
+} else if(dc == 2){
+	ranP;
+	ranP;
+	ranS(-1);
+} else if(dc == 3){
+	x = Math.floor((Math.random() * 100) + 1);
+	if(x <= 70){
+		ranP;
+		ranS(1);
+	} else if (x <= 90 && x > 70){
+		ranP;
+		ranS(1);
+		sb6 = true;
+	} else {
+		ranP;
+		ranP;
+		ranS(+1);
+		dc == 4; //Jeśli zabrany przez grupę
+	}
+}
+	
+//MŁODZIEŃCZOŚĆ-------------------------------------------------------------------------------
+if(dc == 2 || dc == 4){ //losowanie dla złej młodzieńczości
+	x = Math.floor((Math.random() * 100) + 1);
+	if(x <= 60){
+		ranP();
+		ranS(1);
+		ranS(1);
+	}
+}
+	
 };
+
+function ranP(){
+		x = Math.floor((Math.random() * 13) + 1);
+		if(x == 1){
+			p1 += 1;
+			p1u = true;
+			zm = zm + 1;
+		} else
+		if(x == 2){
+			p2 += 1;
+			p2u = true;
+			zm = zm + 1;
+		} else
+		if(x == 3){
+			p3 += 1;
+			p3u = true;
+			zm = zm + 1;
+		} else
+		if(x == 4){
+			p4 += 1;
+			p4u = true;
+			zm = zm + 1;
+		} else
+		if(x == 5){
+			p5 += 1;
+			p5u = true;
+			zm = zm + 1;
+		} else
+		if(x == 6){
+			p6 += 1;
+			p6u = true;
+			zm = zm + 1;
+		} else
+		if(x == 7){
+			p7 += 1;
+			p7u = true;
+			zm = zm + 1;
+		} else
+		if(x == 8){
+			p8 += 1;
+			p8u = true;
+			zm = zm + 1;
+		} else
+		if(x == 9){
+			p9 += 1;
+			p9u = true;
+			zm = zm + 1;
+		} else
+		if(x == 10){
+			p10 += 1;
+			p10u = true;
+			zm = zm + 1;
+		} else
+		if(x == 11){
+			p11 += 1;
+			p11u = true;
+			zm = zm + 1;
+		} else
+		if(x == 12){
+			p12 += 1;
+			p12u = true;
+			zm = zm + 1;
+		} else
+		if(x == 13){
+			p13 += 1;
+			p13u = true;
+			zm = zm + 1;
+		} else
+		if(x == 14){
+			p1 -= 1;
+			p1u = true;
+			zm = zm + 1;
+		} else
+		if(x == 15){
+			p2 -= 1;
+			p2u = true;
+			zm = zm + 1;
+		} else
+		if(x == 16){
+			p3 -= 1;
+			p3u = true;
+			zm = zm + 1;
+		} else
+		if(x == 17){
+			p4 -= 1;
+			p4u = true;
+			zm = zm + 1;
+		} else
+		if(x == 18){
+			p5 -= 1;
+			p5u = true;
+			zm = zm + 1;
+		} else
+		if(x == 19){
+			p6 -= 1;
+			p6u = true;
+			zm = zm + 1;
+		} else
+		if(x == 20){
+			p7 -= 1;
+			p7u = true;
+			zm = zm + 1;
+		} else
+		if(x == 21){
+			p8 -= 1;
+			p8u = true;
+			zm = zm + 1;
+		} else
+		if(x == 22){
+			p9 -= 1;
+			p9u = true;
+			zm = zm + 1;
+		} else
+		if(x == 23){
+			p10 -= 1;
+			p10u = true;
+			zm = zm + 1;
+		} else
+		if(x == 24){
+			p11 -= 1;
+			p11u = true;
+			zm = zm + 1;
+		} else
+		if(x == 25){
+			p12 -= 1;
+			p12u = true;
+			zm = zm + 1;
+		} else
+		if(x == 26){
+			p13 -= 1;
+			p13u = true;
+			zm = zm + 1;
+		}
+}
+
+function ranS(num){
+x = Math.floor((Math.random() * 8) + 1);
+if(x == 1){
+	stat1 += num;
+} else if(x == 2){
+	stat2 += num;
+} else if(x == 3){
+	stat3 += num;
+} else id(x == 4){
+	stat4 += num;
+} else if(x == 5){
+	stat5 += num;
+} else if(x == 6){
+	stat6 += num;
+} else id(x == 7){
+	stat7 += num;
+} else id(x == 8){
+	stat8 += num;
+}
+}
+
+function ranUp(blokada, wzrost) { //ustalanie umiejętności fizycznych. blokada aby uniemożliwić uzyskiwanie nowych umiejętności, lub wzrost tylko tych "lepszych"
+x = Math.floor((Math.random() * 9) + 1);
+if(x == 1 && u2 > blokada){
+	u2 += 1;
+} else if(x == 2 && u3 > blokada){
+	u3 += 1;
+} else if(x == 3 && u4 > blokada){
+	u4 += 1;
+} else if(x == 4 && u5 > blokada && stat6 > 6){
+	u5 += 1;
+} else if(x == 5 && u6 > blokada && stat6 > 6){
+	u6 += 1;
+} else if(x == 6 && u7 > blokada){
+	u7 += 1;
+} else if(x == 7 && u8 > blokada && stat8 > 6){
+	u8 += 1;
+} else if(x == 8 && u9 > blokada && stat6 > 5){
+	u9 += 1;
+} else if(x == 9 && u19 > blokada){
+	u10 += 1;
+}
+}
+
+function ranSB(rodzaj){ //Losowanie sposobu bycia
+	if(rodzaj == pozytywny){
+		x = Math.floor((Math.random() * 9) + 1);
+	} else if(rodzaj == neutralny){
+		x = Math.floor((Math.random() * 9) + 9);
+	} else if(rodzaj == negatywny){
+		x = Math.floor((Math.random() * 10) + 19);
+	} else if(rodzaj == poz-neut){
+		x = Math.floor((Math.random() * 18) + 1);
+	} else if(rodzaj == poz-neg){
+		while(x >= 10 || x <= 18){
+			x = Math.floor((Math.random() * 29) + 1);
+		}
+	} else if(rodzaj == neut-neg){
+		x = Math.floor((Math.random() * 19) + 10);
+	}
+	
+	if(x == 1 && sb10 == false && sb19 == false){
+		sb1 = true;
+	} else if(x == 2 && sb11 == false && sb20 == false){
+		sb2 = true;
+	} else if(x == 3 && sb12 == false && sb21 == false){
+		sb3 = true;
+	} else if(x == 4 && sb14 == false && sb22 == false){
+		sb4 = true;
+	} else if(x == 5 && sb15 == false && sb23 == false){
+		sb5 = true;
+	} else if(x == 6 && sb16 == false && sb24 == false){
+		sb6 = true;
+	} else if(x == 7 && sb17 == false && sb25 == false){
+		sb7 = true;
+	} else if(x == 8 && sb18 == false && sb28 == false){
+		sb8 = true;
+	} else if(x == 9 && sb29 == false){
+		sb9 = true;
+	} else if(x == 10 && sb1 == false && sb19 == false){
+		sb10 = true;
+	} else if(x == 11 && sb2 == false && sb20 == false){
+		sb11 = true;
+	} else if(x == 12 && sb3 == false && sb21 == false){
+		sb12 = true;
+	} else if(x == 13){
+		sb13 = true;
+	} else if(x == 14 && sb4 == false && sb22 == false){
+		sb14 = true;
+	} else if(x == 15 && sb5 == false && sb23 == false){
+		sb15 = true;
+	} else if(x == 16 && sb6 == false && sb24 == false){
+		sb16 = true;
+	} else if(x == 17 && sb7 == false && sb25 == false){
+		sb17 = true;
+	} else if(x == 18 && sb8 == false && sb28 == false){
+		sb18 = true;
+	} else if(x == 19 && sb1 == false && sb10 == false){
+		sb19 = true;
+	} else if(x == 20 && sb2 == false && sb11 == false){
+		sb20 = true;
+	} else if(x == 21 && sb3 == false && sb12 == false){
+		sb21 = true;
+	} else if(x == 22 && sb4 == false && sb14 == false){
+		sb22 = true;
+	} else if(x == 23 && sb5 == false && sb15 == false){
+		sb23 = true;
+	} else if(x == 24 && sb6 == false && sb16 == false){
+		sb24 = true;
+	} else if(x == 25 && sb7 == false && sb17 == false){
+		sb25 = true;
+	} else if(x == 26 && sb27 == false){
+		sb26 = true;
+	} else if(x == 27 && sb26 == false){
+		sb27 = true;
+	} else if(x == 28 && sb8 == false && sb18 == false){
+		sb28 = true;
+	} else if(x == 29 && sb9 == false){
+		sb29 = true;
+	}
+}
