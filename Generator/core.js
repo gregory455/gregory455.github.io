@@ -108,7 +108,7 @@ var uf9 = 0; //Bycie ważnym (bogaty)
 var uf10 = 0; //Praca dorywcza
 
 //Walka
-var uf11 = 0; //Broń jednoręczna
+var uf11 = 0; //Broń krótka
 var uf12 = 0; //Broń długa
 var uf13 = 0; //Strzelnictwo
 var uf14 = 0; //Skradanie się
@@ -123,7 +123,12 @@ var y = 1;
 var dc = 0; //Dzieciństwo (1 - dobre, 2 - złe, 3 - brak, 4 - zabrany przez grupę)
 var wyb;
 var wyb2;
-
+var blokada;
+var wzrost;
+var rodzaj;
+var num;
+var y = 0;
+var dor = 0; //Określanie dorosłości. Tylko dla zabójcy.
 
 function ustawienie1(){
 	wyb = document.getElementById("myList").value; 
@@ -208,23 +213,53 @@ p10u = false;
 p11u = false;
 p12u = false;
 p13u = false;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
-uf = 0;
+uf1 = 0;
+uf2 = 0;
+uf3 = 0;
+uf4 = 0;
+uf5 = 0;
+uf6 = 0;
+uf7 = 0;
+uf8 = 0;
+uf9 = 0;
+uf10 = 0;
+uf11 = 0;
+uf12 = 0;
+uf13 = 0;
+uf14 = 0;
 zm = 0;
 y = 1;
 dc = 0;
+dor = 0;
+document.getElementById("sb1").innerHTML = '';
+document.getElementById("sb2").innerHTML = '';
+document.getElementById("sb3").innerHTML = '';
+document.getElementById("sb4").innerHTML = '';
+document.getElementById("sb5").innerHTML = '';
+document.getElementById("sb6").innerHTML = '';
+document.getElementById("sb7").innerHTML = '';
+document.getElementById("sb8").innerHTML = '';
+document.getElementById("sb9").innerHTML = '';
+document.getElementById("sb10").innerHTML = '';
+document.getElementById("sb11").innerHTML = '';
+document.getElementById("sb12").innerHTML = '';
+document.getElementById("sb13").innerHTML = '';
+document.getElementById("sb14").innerHTML = '';
+document.getElementById("sb15").innerHTML = '';
+document.getElementById("sb16").innerHTML = '';
+document.getElementById("sb17").innerHTML = '';
+document.getElementById("sb18").innerHTML = '';
+document.getElementById("sb19").innerHTML = '';
+document.getElementById("sb20").innerHTML = '';
+document.getElementById("sb21").innerHTML = '';
+document.getElementById("sb22").innerHTML = '';
+document.getElementById("sb23").innerHTML = '';
+document.getElementById("sb24").innerHTML = '';
+document.getElementById("sb25").innerHTML = '';
+document.getElementById("sb26").innerHTML = '';
+document.getElementById("sb27").innerHTML = '';
+document.getElementById("sb28").innerHTML = '';
+document.getElementById("sb29").innerHTML = '';
 
 //Losowanie religii
 x = Math.floor((Math.random() * 10) + 1);
@@ -527,26 +562,26 @@ if(x <= 80){
 }
 
 if(dc == 1){
-	ranP;
+	ranP();
 	ranS(1);
 } else if(dc == 2){
-	ranP;
-	ranP;
+	ranP();
+	ranP();
 	ranS(-1);
 } else if(dc == 3){
 	x = Math.floor((Math.random() * 100) + 1);
 	if(x <= 70){
-		ranP;
+		ranP();
 		ranS(1);
 	} else if (x <= 90 && x > 70){
-		ranP;
+		ranP();
 		ranS(1);
 		sb6 = true;
 	} else {
-		ranP;
-		ranP;
+		ranP();
+		ranP();
 		ranS(+1);
-		dc == 4; //Jeśli zabrany przez grupę
+		dc = 4; //Jeśli zabrany przez grupę
 	}
 }
 	
@@ -555,141 +590,634 @@ if(dc == 2 || dc == 4){ //losowanie dla złej młodzieńczości
 	x = Math.floor((Math.random() * 100) + 1);
 	if(x <= 60){
 		ranP();
+		ranSB('poz0neut');
+		ranSB('poz0neut');
+		ranS(1);
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 75){
+			ranUp(0, 3);
+			ranUp(0, 2);
+			ranUp(0, 2);
+		} else if(y <= 95 && y > 75){
+			ranUp(0, 3);
+			ranUp(0, 2);
+		} else {
+			ranUp(0, 3);
+		}
+		ranUf(0, 'c0l', 1);
+		ranUf(0, 'c0l', 1);
+	} else if(x <= 95 && x > 60){
+		ranP();
+		ranSB('neut0neg');
+		ranSB('neut0neg');
 		ranS(1);
 		ranS(1);
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 60){
+			ranUp(0, 3);
+			ranUp(0, 2);
+			ranUp(0, 2);
+		} else if(y <= 90 && y > 60){
+			ranUp(0, 3);
+			ranUp(0, 2);
+		} else {
+			ranUp(0, 3);
+		}
+		ranUf(0, 'w', 1);
+		ranUf(0, 'c0l', 1);
+	} else {
+		ranP();
+		ranSB('poz0neut');
+		ranSB('poz0neut');
+		ranS(1);
+		ranS(1);
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 85){
+			ranUp(0, 4);
+			ranUp(0, 3);
+			ranUp(0, 2);
+			ranUp(0, 2);
+		} else if(y <= 95 && y > 75){
+			ranUp(0, 3);
+			ranUp(0, 2);
+		} else {
+			ranUp(0, 3);
+		}
+	}
+
+if(dc == 2){
+	u2 += 2;
+	x = Math.floor((Math.random() * 1000) + 1);
+	
+	if(x <= 166){
+		if(bg == 1){ //biedna rodzina
+			y = Math.floor((Math.random() * 100) + 1);
+			if(y <= 50){
+				stat8 -= 1;
+			} else {
+				stat8 += 1;
+			}
+			stat4 -= 1;
+			stat1 -= 1;
+			y = Math.floor((Math.random() * 100) + 1);
+			if(y <= 10 && sb5 == false && sb15 == false){
+				sb23 = true;
+			}
+			p9 += 2;
+		} else if(bg == 3){
+			stat6 += 1;
+			stat5 += 1;
+			p3 -= 1;
+		}
+	}
+	
+	if(x <= 332 && x > 166){
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 50){
+			stat8 -= 1;
+		} else {
+			stat8 += 1;
+		}
+		stat1 -= 1;
+		stat7 += 1;
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 10){
+			ranSB('negatywny');
+		}
+		p9 += 1;
+	}
+
+	if(x <= 498 && x > 332){
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 50){
+			stat8 -= 1;
+		} else {
+			stat8 += 1;
+		}
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 30 && sb4 == false && sb14 == false){
+			sb22 = true;
+		}
+		p8 -= 1;
+	}
+	
+	if(x <= 664 && x > 498){
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 50){
+			stat8 -= 2;
+		} else {
+			stat8 += 2;
+		}
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 25 && sb26){
+			sb27 = true;
+		} else if(y <= 50 && y > 25 && sb4 == false && sb14 == false){
+			sb22 = true;
+		}
+		p1 += 1;
+		p9 += 1;
+		y = Math.floor((Math.random() * 99) + 1);
+		if(y <= 33){
+			c4 += 3;
+			u3 += 1;
+			dor = 1;
+			p5 += 1;
+			p11 += 1;
+		} else if(y <= 66 && y > 33){
+			stat1 -= 2;
+			stat4 -= 1;
+			p11 += 1;
+			p9 += 1;
+		} else {
+			u3 += 1;
+			stat3 += 2;
+			stat5 += 1;
+		}
+	}
+	
+	if(x <= 830 && x > 664){
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 50){
+			stat8 -= 2;
+		} else {
+			stat8 += 2;
+		}
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 30 && sb4 == false && sb14 == false){
+			sb22 = true;
+		}
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 50){
+			u7 += 2;
+		}
+	}
+	
+	if(x > 830){
+		stat7 -= 2;
+		if(bg == 3){
+			stat5 += 1;
+			stat6 += 1;
+		}
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 75 && sb27 == false){
+			sb26 = true;
+		} else if(sb26 == false){
+			sb27 = true;
+		}
+		p1 += 2;
+	}
+			
+}
+	
+} else {
+	x = Math.floor((Math.random() * 100) + 1);
+	if(x <= 60){
+		ranP();
+		ranSB('neut0neg');
+		ranSB('neut0neg');
+		ranS(1);
+		ranS(1);
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 20){
+			ranUp(0, 3);
+			ranUp(0, 2);
+			ranUp(0, 2);
+		} else if(y <= 90 && y > 60){
+			ranUp(0, 3);
+			ranUp(0, 2);
+		} else {
+			ranUp(0, 3);
+		}
+		ranUf(0, 'w', 1);
+		ranUf(0, 'c0l', 1);
+	} else if(x <= 90 && x > 20){
+		ranP();
+		ranSB('poz0neut');
+		ranSB('poz0neut');
+		ranS(1);
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 75){
+			ranUp(0, 3);
+			ranUp(0, 2);
+			ranUp(0, 2);
+		} else if(y <= 95 && y > 75){
+			ranUp(0, 3);
+			ranUp(0, 2);
+		} else {
+			ranUp(0, 3);
+		}
+		ranUf(0, 'c0l', 1);
+		ranUf(0, 'c0l', 1);
+	} else {
+		ranP();
+		ranSB('poz0neut');
+		ranSB('poz0neut');
+		ranS(1);
+		ranS(1);
+		y = Math.floor((Math.random() * 100) + 1);
+		if(y <= 85){
+			ranUp(0, 4);
+			ranUp(0, 3);
+			ranUp(0, 2);
+			ranUp(0, 2);
+		} else if(y <= 95 && y > 75){
+			ranUp(0, 3);
+			ranUp(0, 2);
+		} else {
+			ranUp(0, 3);
+		}
 	}
 }
 	
-};
+//Dorosłość-----------------------------------------------------------------------------
 
+x = Math.floor((Math.random() * 100) + 1);
+if(x <= 30){
+	ranS(1);
+	ranS(1);
+	ranS(1);
+} else if(x <= 80 && x > 30){
+	ranS(1);
+	ranS(1);
+} else {
+	ranS(1);
+}
+
+x = Math.floor((Math.random() * 100) + 1);
+if(x <= 75){
+	ranP();
+	ranP();
+} else {
+	ranP();
+}
+
+x = Math.floor((Math.random() * 100) + 1);
+if(x <= 75){
+	ranSB('all');
+}
+
+ranUp(0, 1);
+ranUp(0, 1);
+
+x = Math.floor((Math.random() * 100) + 1);
+if(x <= 30){
+	ranUp(0, 1);
+	ranUp(0, 1);
+} else if(x <= 80 && x > 30){
+	ranUp(0, 1);
+}
+
+ranUf(0, 'c0l0w', 1);
+
+//ustalanie historii dorosłości (ostatni etap!)
+x = Math.floor((Math.random() * 100) + 1);
+
+if(x <= 2 && sb7 == false || dor == 1){
+	u3 += 1;
+	stat3 += 2;
+	stat6 += 1;
+	stat8 += 1;
+	stat4 -= 1;
+	p11 += 3;
+	y = Math.floor((Math.random() * 100) + 1);
+	if(y <= 70){
+		uf10 += 2;
+		uf14 += 2;
+	} else if(y <= 90 && y > 70){
+		uf10 += 3;
+		uf14 += 3;
+	} else {
+		uf10 += 1;
+		uf14 += 1;
+	}
+}
+
+if(x <= 7 && x > 2){
+	stat8 += 2;
+	stat6 -= 1;
+	stat1 += 1;
+	stat2 += 1;
+	ranUf(0, 'w', 2);
+	y = Math.floor((Math.random() * 100) + 1);
+	if(x <= 30 && sb7 == false && sb17 == false){
+		sb25 = true;
+	}
+	p3 -= 2;
+	p9 = 1;
+}
+
+if(x <= 17 && x > 7){ //Handlarz
+	stat7 += 2;
+	stat8 += 1;
+	y = Math.floor((Math.random() * 100) + 1);
+	if(x <= 20 && sb8 == false && sb18 == false){
+		sb28 = true;
+	}
+	p7 += 2;
+	p6 -= 1;
+}
+
+if(x <= 42 && x > 17){
+	stat1 += 1;
+	stat2 -= 1;
+	ranUf(0, 'l', 2);
+	y = Math.floor((Math.random() * 100) + 1);
+	if(y <= 50){
+		ranUf(0, 'l', 2);
+	}
+}
+
+if(x <= 72 && x > 42){
+	stat1 -= 1;
+	stat2 += 1;
+	ranUf(0, 'c', 2);
+	y = Math.floor((Math.random() * 100) + 1);
+	if(y <= 50){
+		ranUf(0, 'c', 2);
+	}
+}
+
+if(x <= 74 && x > 72){
+	stat8 += 1;
+	stat1 -= 1;
+	stat7 -= 1;
+	y = Math.floor((Math.random() * 100) + 1);
+	if(y <= 25 && sb17 == false && sb25 == false){
+		sb7 = true;
+	} else if(y <= 50 && y > 25 && sb27 == false){
+		sb26 = true;
+	}
+	p4 += 1;
+	p11 -= 1;
+}
+
+if(x <= 78 && x > 74){
+	y = Math.floor((Math.random() * 100) + 1);
+	if(y <= 50){
+		stat8 += 1;
+	} else {
+		stat8 -= 1;
+	}
+	stat7 -= 1;
+	stat4 -= 1;
+	p8 -= 2;
+	y = Math.floor((Math.random() * 100) + 1);
+	if(y <= 50){
+		p1 += 3;
+	} else {
+		p1 -= 3;
+	}
+}
+
+if(x <= 80 && x > 78){
+	stat7 += 1;
+	stat4 += 1;
+	stat8 -= 1;
+	y = Math.floor((Math.random() * 100) + 1);
+	if(y <= 20 && sb8 == false && sb18 == false){
+		sb28 = true;
+	}
+	p13 -= 1;
+}
+
+if(x <= 85 && x > 80){
+	stat1 -= 3;
+	stat4 -= 3;
+	stat8 -= 1;
+	stat5 -= 1;
+	stat6 -= 1;
+	stat7 -= 1;
+}
+
+if(x <= 95 && x > 90){
+	stat5 += 2;
+	stat6 += 1;
+	stat2 -= 2;
+	stat7 += 1;
+	stat1 -= 1;
+	p6 += 2;
+}
+
+if(x <= 100 && x > 95){
+	stat5 += 1;
+	stat7 += 2;
+	stat2 -= 1;
+	stat1 -= 1;
+	p13 -= 1;
+}
+
+
+document.getElementById("st1.1").innerHTML = stat1;
+document.getElementById("st1.2").innerHTML = stat2;
+document.getElementById("st1.3").innerHTML = stat3;
+document.getElementById("st1.4").innerHTML = stat4;
+document.getElementById("st1.5").innerHTML = stat5;
+document.getElementById("st1.6").innerHTML = stat6;
+document.getElementById("st1.7").innerHTML = stat7;
+document.getElementById("st1.8").innerHTML = stat8;
+document.getElementById("u2").innerHTML = u2;
+document.getElementById("u3").innerHTML = u3;
+document.getElementById("u4").innerHTML = u4;
+document.getElementById("u5").innerHTML = u5;
+document.getElementById("u6").innerHTML = u6;
+document.getElementById("u7").innerHTML = u7;
+document.getElementById("u8").innerHTML = u8;
+document.getElementById("u9").innerHTML = u9;
+document.getElementById("u10").innerHTML = u10;
+document.getElementById("p1").innerHTML = p1;
+document.getElementById("p2").innerHTML = p2;
+document.getElementById("p3").innerHTML = p3;
+document.getElementById("p4").innerHTML = p4;
+document.getElementById("p5").innerHTML = p5;
+document.getElementById("p6").innerHTML = p6;
+document.getElementById("p7").innerHTML = p7;
+document.getElementById("p8").innerHTML = p8;
+document.getElementById("p9").innerHTML = p9;
+document.getElementById("p10").innerHTML = p10;
+document.getElementById("uf1").innerHTML = uf1;
+document.getElementById("uf2").innerHTML = uf2;
+document.getElementById("uf3").innerHTML = uf3;
+document.getElementById("uf4").innerHTML = uf4;
+document.getElementById("uf5").innerHTML = uf5;
+document.getElementById("uf6").innerHTML = uf6;
+document.getElementById("uf7").innerHTML = uf7;
+document.getElementById("uf8").innerHTML = uf8;
+document.getElementById("uf9").innerHTML = uf9;
+document.getElementById("uf10").innerHTML = uf10;
+document.getElementById("uf11").innerHTML = uf11;
+document.getElementById("uf12").innerHTML = uf12;
+document.getElementById("uf13").innerHTML = uf13;
+document.getElementById("uf14").innerHTML = uf14;
+document.getElementById("c1").innerHTML = c1 + stat7 + stat4 - p9 - p13;
+document.getElementById("c2").innerHTML = c2 + stat6 + stat1 + p2 + p12;
+document.getElementById("c3").innerHTML = c3 + stat2 + stat8 + p5 + p10;
+document.getElementById("c4").innerHTML = c4 + stat5 + stat3 - p8 + p11;
+
+if(sb1 == true){
+	document.getElementById("sb1").innerHTML = 'Jest optymistą; ';
+} if(sb2 == true){
+	document.getElementById("sb2").innerHTML = 'Twierdzi, że ludzie powinni mieć wybór czy chcą wierzyć czy nie; ';
+} if(sb3 == true){
+	document.getElementById("sb3").innerHTML = 'Ma nadzieję, że Utopia powstanie; ';
+} if(sb4 == true){
+	document.getElementById("sb4").innerHTML = 'Mówi, że sprawiedliwość istnieje; ';
+} if(sb5 == true){
+	document.getElementById("sb5").innerHTML = 'Wierzy, że moralność jest najważniejsza podczas osądzania kogoś; ';
+} if(sb6 == true){
+	document.getElementById("sb6").innerHTML = 'Jest ksenofilem; ';
+} if(sb7 == true){
+	document.getElementById("sb7").innerHTML = 'Jest pacyfistą; ';
+} if(sb8 == true){
+	document.getElementById("sb8").innerHTML = 'Uważa, że powinno żyć się skromnie; ';
+} if(sb9 == true){
+	document.getElementById("sb9").innerHTML = 'Troszczy się o ekologię; ';
+} if(sb10 == true){
+	document.getElementById("sb10").innerHTML = 'Jest realistą; ';
+} if(sb11 == true){
+	document.getElementById("sb11").innerHTML = 'Nie zaprzecza istnieniu bogów, ale też ich nie potwierdza; ';
+} if(sb12 == true){
+	document.getElementById("sb12").innerHTML = 'Nie wierzy ani w Utopię, ani w Dystopię; ';
+} if(sb13 == true){
+	document.getElementById("sb13").innerHTML = 'Jest polityczny; ';
+} if(sb14 == true){
+	document.getElementById("sb14").innerHTML = 'Wierzy, że sprawiedliwość i niesprawiedliwość są w równych ilościach; ';
+} if(sb15 == true){
+	document.getElementById("sb15").innerHTML = 'Jego zdaniem, logika jest ważniejsza od moralności przy osądzaniu kogoś; ';
+} if(sb16 == true){
+	document.getElementById("sb16").innerHTML = 'Nie jest ani ksenofobem, ani ksenofilem; ';
+} if(sb17 == true){
+	document.getElementById("sb17").innerHTML = 'Twierdzi, że kraj nie powinien rezygnować ze środków obrony, ani ich szczególnie zwiększać; ';
+} if(sb18 == true){
+	document.getElementById("sb18").innerHTML = 'Żyje umiarkowanie; ';
+} if(sb19 == true){
+	document.getElementById("sb19").innerHTML = 'Jest pesymistą; ';
+} if(sb20 == true){
+	document.getElementById("sb20").innerHTML = 'Jest fanatykiem religijnym; ';
+} if(sb21 == true){
+	document.getElementById("sb21").innerHTML = 'Uważa, że świat zmierza ku Dystopii; ';
+} if(sb22 == true){
+	document.getElementById("sb22").innerHTML = 'Nie wierzy w sprawiedliwość; ';
+} if(sb23 == true){
+	document.getElementById("sb23").innerHTML = 'Uważa, że ten kto ma siłę, ten ma władzę; ';
+} if(sb24 == true){
+	document.getElementById("sb24").innerHTML = 'Jest ksenofobem; ';
+} if(sb25 == true){
+	document.getElementById("sb25").innerHTML = 'Wierzy, że zbrojenie się jest najlepszym pomysłem; ';
+} if(sb26 == true){
+	document.getElementById("sb26").innerHTML = 'Posłusznie wykonuje wszelkie polecenia; ';
+} if(sb27 == true){
+	document.getElementById("sb27").innerHTML = 'Nie chce nikomu podlegać; ';
+} if(sb28 == true){
+	document.getElementById("sb28").innerHTML = 'Jest chciwy; ';
+} if(sb29 == true){
+	document.getElementById("sb29").innerHTML = 'Jego zdaniem, industrialność jest dobra; ';
+}
+}
+	
+	
 function ranP(){
 		x = Math.floor((Math.random() * 13) + 1);
 		if(x == 1){
 			p1 += 1;
 			p1u = true;
 			zm = zm + 1;
-		} else
-		if(x == 2){
+		} else if(x == 2){
 			p2 += 1;
 			p2u = true;
 			zm = zm + 1;
-		} else
-		if(x == 3){
+		} else if(x == 3){
 			p3 += 1;
 			p3u = true;
 			zm = zm + 1;
-		} else
-		if(x == 4){
+		} else if(x == 4){
 			p4 += 1;
 			p4u = true;
 			zm = zm + 1;
-		} else
-		if(x == 5){
+		} else if(x == 5){
 			p5 += 1;
 			p5u = true;
 			zm = zm + 1;
-		} else
-		if(x == 6){
+		} else if(x == 6){
 			p6 += 1;
 			p6u = true;
 			zm = zm + 1;
-		} else
-		if(x == 7){
+		} else if(x == 7){
 			p7 += 1;
 			p7u = true;
 			zm = zm + 1;
-		} else
-		if(x == 8){
+		} else if(x == 8){
 			p8 += 1;
 			p8u = true;
 			zm = zm + 1;
-		} else
-		if(x == 9){
+		} else if(x == 9){
 			p9 += 1;
 			p9u = true;
 			zm = zm + 1;
-		} else
-		if(x == 10){
+		} else if(x == 10){
 			p10 += 1;
 			p10u = true;
 			zm = zm + 1;
-		} else
-		if(x == 11){
+		} else if(x == 11){
 			p11 += 1;
 			p11u = true;
 			zm = zm + 1;
-		} else
-		if(x == 12){
+		} else if(x == 12){
 			p12 += 1;
 			p12u = true;
 			zm = zm + 1;
-		} else
-		if(x == 13){
+		} else if(x == 13){
 			p13 += 1;
 			p13u = true;
 			zm = zm + 1;
-		} else
-		if(x == 14){
+		} else if(x == 14){
 			p1 -= 1;
 			p1u = true;
 			zm = zm + 1;
-		} else
-		if(x == 15){
+		} else if(x == 15){
 			p2 -= 1;
 			p2u = true;
 			zm = zm + 1;
-		} else
-		if(x == 16){
+		} else if(x == 16){
 			p3 -= 1;
 			p3u = true;
 			zm = zm + 1;
-		} else
-		if(x == 17){
+		} else if(x == 17){
 			p4 -= 1;
 			p4u = true;
 			zm = zm + 1;
-		} else
-		if(x == 18){
+		} else if(x == 18){
 			p5 -= 1;
 			p5u = true;
 			zm = zm + 1;
-		} else
-		if(x == 19){
+		} else if(x == 19){
 			p6 -= 1;
 			p6u = true;
 			zm = zm + 1;
-		} else
-		if(x == 20){
+		} else if(x == 20){
 			p7 -= 1;
 			p7u = true;
 			zm = zm + 1;
-		} else
-		if(x == 21){
+		} else if(x == 21){
 			p8 -= 1;
 			p8u = true;
 			zm = zm + 1;
-		} else
-		if(x == 22){
+		} else if(x == 22){
 			p9 -= 1;
 			p9u = true;
 			zm = zm + 1;
-		} else
-		if(x == 23){
+		} else if(x == 23){
 			p10 -= 1;
 			p10u = true;
 			zm = zm + 1;
-		} else
-		if(x == 24){
+		} else if(x == 24){
 			p11 -= 1;
 			p11u = true;
 			zm = zm + 1;
-		} else
-		if(x == 25){
+		} else if(x == 25){
 			p12 -= 1;
 			p12u = true;
 			zm = zm + 1;
-		} else
-		if(x == 26){
+		} else if(x == 26){
 			p13 -= 1;
 			p13u = true;
 			zm = zm + 1;
@@ -704,57 +1232,131 @@ if(x == 1){
 	stat2 += num;
 } else if(x == 3){
 	stat3 += num;
-} else id(x == 4){
+} else if(x == 4){
 	stat4 += num;
 } else if(x == 5){
 	stat5 += num;
 } else if(x == 6){
 	stat6 += num;
-} else id(x == 7){
+} else if(x == 7){
 	stat7 += num;
-} else id(x == 8){
+} else if(x == 8){
 	stat8 += num;
 }
 }
 
-function ranUp(blokada, wzrost) { //ustalanie umiejętności fizycznych. blokada aby uniemożliwić uzyskiwanie nowych umiejętności, lub wzrost tylko tych "lepszych"
+function ranUp(blokada, wzrost) {
+while(wzrost > 0){	//ustalanie umiejętności psychicznych. blokada aby uniemożliwić uzyskiwanie nowych umiejętności
 x = Math.floor((Math.random() * 9) + 1);
-if(x == 1 && u2 > blokada){
+if(x == 1 && u2 >= blokada){
 	u2 += 1;
-} else if(x == 2 && u3 > blokada){
+	wzrost =- 1;
+} else if(x == 2 && u3 >= blokada){
 	u3 += 1;
-} else if(x == 3 && u4 > blokada){
+	wzrost =- 1;
+} else if(x == 3 && u4 >= blokada){
 	u4 += 1;
-} else if(x == 4 && u5 > blokada && stat6 > 6){
+	wzrost =- 1;
+} else if(x == 4 && u5 >= blokada && stat6 > 6){
 	u5 += 1;
-} else if(x == 5 && u6 > blokada && stat6 > 6){
+	wzrost =- 1;
+} else if(x == 5 && u6 >= blokada && stat6 > 6){
 	u6 += 1;
-} else if(x == 6 && u7 > blokada){
+	wzrost =- 1;
+} else if(x == 6 && u7 >= blokada){
 	u7 += 1;
-} else if(x == 7 && u8 > blokada && stat8 > 6){
+	wzrost =- 1;
+} else if(x == 7 && u8 >= blokada && stat8 > 6){
 	u8 += 1;
-} else if(x == 8 && u9 > blokada && stat6 > 5){
+	wzrost =- 1;
+} else if(x == 8 && u9 >= blokada && stat6 > 5){
 	u9 += 1;
-} else if(x == 9 && u19 > blokada){
+	wzrost =- 1;
+} else if(x == 9 && u10 >= blokada){
 	u10 += 1;
+	wzrost =- 1;
+}
+}
+}
+
+function ranUf(blokada, rodzaj, wzrost) { //ustalanie umiejętności fizycznych.
+while(wzrost > 0){
+if(rodzaj == 'c'){
+	x = Math.floor((Math.random() * 5) + 1);
+} else if(rodzaj == 'l'){
+	x = Math.floor((Math.random() * 5) + 6);
+} else if(rodzaj == 'w'){
+	x = Math.floor((Math.random() * 4) + 11);
+} else if(rodzaj == 'c0l'){
+	x = Math.floor((Math.random() * 10) + 1);
+} else if(rodzaj == 'c0l0w'){
+	x = Math.floor((Math.random() * 14) + 1);
+}
+if(x == 1 && uf1 > blokada){
+	uf1 += 1;
+	wzrost =- 1;
+} else if(x == 2 && uf2 >= blokada){
+	uf2 += 1;
+	wzrost =- 1;
+} else if(x == 3 && uf3 >= blokada){
+	uf3 += 1;
+	wzrost =- 1;
+} else if(x == 4 && uf4 >= blokada){
+	uf4 += 1;
+	wzrost =- 1;
+} else if(x == 5 && uf5 >= blokada){
+	uf5 += 1;
+	wzrost =- 1;
+} else if(x == 6 && uf6 >= blokada){
+	uf6 += 1;
+	wzrost =- 1;
+} else if(x == 7 && uf7 >= blokada){
+	uf7 += 1;
+	wzrost =- 1;
+} else if(x == 8 && uf8 >= blokada){
+	uf8 += 1;
+	wzrost =- 1;
+} else if(x == 9 && uf9 >= blokada){
+	uf9 += 1;
+	wzrost =- 1;
+} else if(x == 10 && uf10 >= blokada){
+	uf10 += 1;
+	wzrost =- 1;
+} else if(x == 11 && uf11 >= blokada){
+	uf11 += 1;
+	wzrost =- 1;
+} else if(x == 12 && uf12 >= blokada){
+	uf12 += 1;
+	wzrost =- 1;
+} else if(x == 13 && uf13 >= blokada){
+	uf13 += 1;
+	wzrost =- 1;
+} else if(x == 14 && uf14 >= blokada){
+	uf14 += 1;
+	wzrost =- 1;
+}
 }
 }
 
 function ranSB(rodzaj){ //Losowanie sposobu bycia
-	if(rodzaj == pozytywny){
+	if(rodzaj == 'pozytywny'){
 		x = Math.floor((Math.random() * 9) + 1);
-	} else if(rodzaj == neutralny){
-		x = Math.floor((Math.random() * 9) + 9);
-	} else if(rodzaj == negatywny){
+	} else if(rodzaj == 'neutralny'){
+		x = Math.floor((Math.random() * 9) + 10);
+	} else if(rodzaj == 'negatywny'){
 		x = Math.floor((Math.random() * 10) + 19);
-	} else if(rodzaj == poz-neut){
+	} else if(rodzaj == 'poz0neut'){
 		x = Math.floor((Math.random() * 18) + 1);
-	} else if(rodzaj == poz-neg){
+	} else if(rodzaj == 'poz0neg'){
 		while(x >= 10 || x <= 18){
 			x = Math.floor((Math.random() * 29) + 1);
 		}
-	} else if(rodzaj == neut-neg){
+	} else if(rodzaj == 'neut0neg'){
 		x = Math.floor((Math.random() * 19) + 10);
+	} else if(rodzaj == 'all'){
+		x = Math.floor((Math.random() * 29) + 1);
+	} else {
+		x = 50;
 	}
 	
 	if(x == 1 && sb10 == false && sb19 == false){

@@ -1,0 +1,43 @@
+FUNKCJE
+
+---------------------------------------------------------------------------
+ranS(num) (Dodanie/Odjęcie punktów statystyk)
+
+num - o ile wzrośnie/spadnie losowa statystyka (można używać liczb ujemnych)
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+ranUp(blokada, wzrost) (Zwiększenie umiejętności psychicznych)
+
+blokada - blokuje wzrost danej umiejętności, jeśli jej poziom jest mniejszy od blokady
+wzrost - ile umiejętności ma wzrosnąć
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+ranP() (Przesunięcie losowego podejścia)
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+ranSB(rodzaj) (Losowanie stylu bycia)
+
+rodzaj - rodzaj stylu bycia. Do wyboru:
+	pozytywny - pozytywny styl byia
+	neutralny - neutralny styl bycia
+	negatywny - negatywny styl bycia
+	poz0neut  - pozytywny lub neutralny styl bycia
+	poz0neg   - pozytywny lub negatywny styl bycia
+	neut0neg  - neutralny lub negatywny styl bycia
+	all		  - losowy styl bycia
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+ranUf(blokada, rodzaj, wzrost) (Zwiększenie umiejętności fizycznych)
+
+blokada - blokuje wzrost danej umiejętności, jeśli jej poziom jest mniejszy od blokady
+rodzaj - rodzaj umiejętności fizycznej. Do wyboru:
+	c 		- Praca ciężka
+	l 		- Praca lekka
+	w 		- Walka
+	c0l 	- Praca ciężka i lekka
+	c0l0w 	- Wszystko
+---------------------------------------------------------------------------
